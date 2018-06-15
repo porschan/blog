@@ -2,6 +2,31 @@
 title: IntelliJ IDEA常用设置
 ---
 
+### 设置idea的类注释快捷键
+
+#### File -> Settings -> Live Templates
+
+```
+
+	1.右边的 + -> Templates Group -> 输入：LTModel
+	2.右边的 + -> Live Templates -> 为Abbreviation输入：pClassNote，为Description输入：自定义类注释
+
+	Template text:
+
+	/**
+	* @author:porschan
+	* @description:
+	* @date: Created in $TIME$ $DATE$
+	* @modified By:
+	*/
+
+	3.设置变量，点击右侧的Edit variables
+	Name	Expression	Default value	Skip if defined
+	TIME	time()								□
+	DATE	date()								□
+
+```
+
 ### 设置idea的类注释
 
 #### File -> Settings -> Editor -> File and Code Templates ,如图：
