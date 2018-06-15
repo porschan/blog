@@ -2,6 +2,36 @@
 title: IntelliJ IDEA常用设置
 ---
 
+### 设置idea的类注释
+
+#### File -> Settings -> Editor -> File and Code Templates ,如图：
+
+![](../../../../../../images/2018_06_15/20180615112543.png)
+
+```
+	/**
+	* @author:porschan
+	* @description:
+	* @date: Created in ${TIME} ${DATE}
+	* @modified By:
+	*/
+```
+
+### 设置idea的背景图
+
+#### 1.open IDEA -> File -> Settings -> Plugins ，如图
+
+![](../../../../../../images/2018_06_15/20180615111640.png)
+
+#### 2.搜索Background Image Plus,安装并重启idea.
+
+#### 3.选择图片 ，如图
+
+![](../../../../../../images/2018_06_15/20180615112045.png)
+
+![](../../../../../../images/2018_06_15/20180615112119.png)
+
+
 如果连快捷键都无法熟练的使用，那你应该熟练一下哈哈哈哈。
 
 ### 设置水平、上下分屏

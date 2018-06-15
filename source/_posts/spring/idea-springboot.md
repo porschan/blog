@@ -82,4 +82,4 @@ Description: server-system project for Spring Boot
 
 ```
 
-#### 运行com.chanchifeng.serversystem.ServerSystemApplication#main，在浏览器输入http://localhost:8080/hello，spring Boot项目搭建成功。
+#### 运行com.chanchifeng.serversystem.ServerSystemApplication#main，在浏览器输入http://localhost:8080/hello,spring Boot项目搭建成功。
