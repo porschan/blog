@@ -16,6 +16,8 @@ TAG：2014-2017、[广东东软学院](http://www.nuit.edu.cn/)、数据库管�
 
 后续至今
 
+2018年07月02日 11:39:00 - 每月同步网站内容
+
 2018年06月06日 9:23:39 - 创建[porschan.github.io](https://porschan.github.io/)网站预环境,并将网站commit至github的个人项目([porschan/blog](https://github.com/porschan/blog))及网站项目([porschan/porschan.github.io](https://github.com/porschan/porschan.github.io))。
 
 2018年04月13日 16:00:00 - 后将域名和博客指定并迁移到阿里云的云服务器ECS中，并停用原来的共享虚拟主机。
