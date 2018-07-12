@@ -20,7 +20,7 @@ title: 微信公众平台JS-SDK的config接口注入权限验证配置
 
 #### 如何获取appid和secret？
 
-这里我们获取appid和secret并不是使用真正的微信公众号的appid和secret，而且使用[接口测试账号申请](https://api.weixin.qq.com/cgi-bin/ticket/getticket?type=jsapi&access_token=11_DXAnrOx-UnocqkswgEKsJT8BrmGFSO5uy-l0M9870YFGMqD2qShzqMY3yD0TMh4YqjeE_dMyxmnI7QpBFm4maOEk7jH3nWAvFktuv2C6BvYGxt17gEN07pcHO8mmSyopQq-mbWFSknt2HkC9BHMcADANTY)的appid和secret,操作如下：
+这里我们获取appid和secret并不是使用真正的微信公众号的appid和secret，而且使用[接口测试账号申请](https://mp.weixin.qq.com/debug/cgi-bin/sandbox?t=sandbox/login)的appid和secret,操作如下：
 
 ![](../weChat-jssdk-config/loginTest.gif)
 
