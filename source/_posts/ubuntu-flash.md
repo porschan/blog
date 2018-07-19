@@ -1,5 +1,8 @@
 ---
 title: Ubuntu系统打开flash插件和关闭自动锁屏
+date: ‎2018‎-7‎-‎19‎ ‏‎13:11:49
+desc: chanchfieng.com
+tags: ubuntu
 ---
 
 Ubuntu系统的一些技巧，后续会继续补充。

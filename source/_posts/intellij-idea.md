@@ -1,5 +1,8 @@
 ---
 title: IntelliJ IDEA常用设置
+date: 2018‎-‎7‎-‎19‎ ‏‎12:54:16
+desc: chanchfieng.com
+tags: 软件
 ---
 
 ### 设置idea的类注释快捷键

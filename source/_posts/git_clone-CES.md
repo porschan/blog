@@ -1,5 +1,8 @@
 ---
-title: 继上次git clone 下来CES 服务器之后再优化
+title: 继上次git clone 下来ECS 服务器之后再优化
+date: ‎‎‎‎2018‎-7‎-‎9‎ ‏‎10:02:43
+desc: chanchfieng.com
+tags: ecs
 ---
 
 ###回顾上次代码：

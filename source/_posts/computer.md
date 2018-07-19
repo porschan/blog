@@ -1,5 +1,8 @@
 ---
 title: 计算机硬货
+date: ‎‎2018‎-‎07‎-19‎ ‏‎12:52:21
+desc: chanchfieng.com
+tags: 计算机基础
 ---
 
 计算机硬货

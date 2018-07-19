@@ -1,5 +1,8 @@
 ---
 title: Tomcat使用命令行启动之指定jdk版本
+date: 2018‎-7‎-‎19‎ ‏‎13:10:52
+desc: chanchfieng.com
+tags: tomcat
 ---
 
 准备好环境，jdk和tomcat。

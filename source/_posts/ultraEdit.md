@@ -1,5 +1,8 @@
 ---
 title: UltraEdit 常用设置
+date: 2018-07-19 11:54:25
+desc: chanchfieng.com
+tags: 软件
 ---
 
 #### UltraEdit常用快捷键
@@ -29,3 +32,8 @@ Ctrl + D ：删除当前行
 ALT + F5 ：转为大写
 
 Alt + F3 or Ctrl+F ：查找
+
+
+<div class="tip">
+  持续更新。。
+</div>

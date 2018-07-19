@@ -1,5 +1,8 @@
 ---
 title: 微信公众平台JS-SDK的config接口注入权限验证配置
+date: ‎‎2018‎-7‎-‎19‎ 13:12:43
+desc: chanchfieng.com
+tags: weChat
 ---
 
 今天，我将简单介绍一下如何通过java能完成微信公众平台JS-SDK的config接口注入权限验证配置。

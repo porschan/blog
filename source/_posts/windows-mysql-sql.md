@@ -1,5 +1,10 @@
 ---
 title: Windows 下的MySQL即时打印SQL日志
+date: ‎2017-10‎-07‎ 17:57:32
+desc: chanchfieng.com
+tags: 
+	- windows
+	- MySql
 ---
 
 两三句的SQL加上一个简单的查看日志程序就能帮助你在发现问题、编程或在某种环境下，查看MySQL的SQL操作的日志。

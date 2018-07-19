@@ -1,5 +1,8 @@
 ---
 title: 使用idea创建spring boot 项目
+date: 2018‎-‎7‎-19‎ ‏‎13:05:32
+desc: chanchfieng.com
+tags: springBoot
 ---
 
 #### 参考lindaZ的[IntelliJ IDEA 创建spring boot 的Hello World 项目](https://www.cnblogs.com/lindaZ/p/6543333.html)

@@ -1,5 +1,8 @@
 ---
 title: windows10任务栏上的时间显示秒操作
+date: ‎2018‎-‎7‎-‎13‎ 16:03:59
+desc: chanchfieng.com
+tags: windows
 ---
 
 1.快速进入注册表编辑器（Win+R之后输入regedit）。
