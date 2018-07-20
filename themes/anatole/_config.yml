@@ -1,7 +1,7 @@
 # Blog
-keywords: Hexo,HTML,CSS,Linux
-author: proschan,710437653@qq.com
-description:
+keywords: Hexo,HTML,CSS,android,Linux
+author: porschan,710437653@qq.com
+description: chanchifeng.com
 avatar: /images/favicon.png
 
 # Social Accounts
@@ -13,6 +13,14 @@ github:
 facebook: 
 
 # Comment
-duoshuo: 
-disqus: 
-gentie: 
+duoshuo:
+disqus:
+gentie:
+valine:
+  enable: true
+  appid:  8tMvHLb9m4prgDE24lXzEeLQ-gzGzoHsz
+  appkey: y5IwQdNEx3mxP3eUS47T1f41
+  notify: true
+  verify: true
+  avatar: mm
+  placeholder: 我看你对我有点看法。。
