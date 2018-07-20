@@ -23,4 +23,4 @@ valine:
   notify: true
   verify: true
   avatar: mm
-  placeholder: 我看你对我有点看法。。
+  placeholder: leave a message if necessary.
