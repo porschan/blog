@@ -1,6 +1,6 @@
 ---
 title: '[转] CentOS6.5 安装Docker'
-date: 2018/7/26 17:50:25 
+date: 2018/7/26 9:35:27 
 desc: chanchfieng.com
 tags: [CentOS,docker,[转]]
 ---
