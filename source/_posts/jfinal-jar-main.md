@@ -483,4 +483,7 @@ pom.xml：
 
 ![](../jfinal-jar-main/20180810175024.png)
 
-源码下载地址：
+
+<div class="tip">
+  源码下载地址：https://github.com/porschan/back-end-demo/tree/master/jfinal_jar_demo
+</div>
