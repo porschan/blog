@@ -1,2 +1,2 @@
 @echo off 
-echo y|xcopy D:\Codeware\profile\blog\public\*.* D:\Codeware\profile\porschan.github.io\ /s /e /y
+echo y|xcopy D:\Gitware\source.porschan.github.io\public\*.* D:\Gitware\porschan.github.io\ /s /e /y

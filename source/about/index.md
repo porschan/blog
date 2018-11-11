@@ -30,3 +30,7 @@ TAG：2014-2017、[广东东软学院](http://www.nuit.edu.cn/)、数据库管�
 2017年07月08日 20:20:00 - 博客园停更博客，[[书接上一回]在Oracle Enterprise Linux (v5.7) 中安装DB - (4/4)](https://www.cnblogs.com/chanchifeng/p/7137537.html) ,暂停博客园更新,准备搭建个人网站。
 
 2016年12月04日 11:59:00 - 在博客园发布个人第一篇博客，[火光在前，路在脚下！](https://www.cnblogs.com/chanchifeng/p/6130534.html)。
+
+### 技术路线
+
+![](porschan.png)
