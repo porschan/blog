@@ -31,6 +31,9 @@ tags: [note、hexo、github]
 
 ## git clone ##
 
+
+![](../github-hexo-windows10/20181111164528.jpg)
+
 ![](../github-hexo-windows10/20181111164550.jpg)
 
 ```
