@@ -2,7 +2,7 @@
 title: 在windows下使用bat文件跑命令
 date: 2018/11/12 13:16:56 
 desc: chanchfieng.com
-tags: [note、hexo、bat]
+tags: [note,hexo,bat]
 ---
 
 <div class="tip">

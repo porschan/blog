@@ -438,16 +438,6 @@ a:hover, a:active {
   color: #4786D6;
 }
 
-/* cc */
-.cc {
-	margin: 0px 30px;
-  display: inline-flex;
-}
-
-.cc_tips{
-	margin: 0px 30px;
-}
-
 /* share */
 .share {
   margin: 0px 30px;
@@ -702,12 +692,4 @@ a.btn {
   .share {
     display: grid;
   }
-  
-  .cc {
-  	display: grid;
-	}
-	
-  .cc_tips {
-  	display: grid;
-	}
 }

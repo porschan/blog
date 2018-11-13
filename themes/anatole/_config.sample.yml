@@ -1,14 +1,14 @@
 # Blog
 keywords: Hexo,HTML,CSS,android,Linux
 author: porschan,710437653@qq.com
-description: chanchifeng.com
+description: Carpet Diem
 avatar: /images/favicon.png
 
 # Social Accounts
-twitter: 
-rss: 
-weibo: 
-instagram: 
+# twitter: 
+# rss: 
+# weibo: 
+# instagram: 
 github: porschan
 facebook: 
 
@@ -23,4 +23,4 @@ valine:
   notify: true
   verify: true
   avatar: mm
-  placeholder: Just go go
+  placeholder: leave a message if necessary.

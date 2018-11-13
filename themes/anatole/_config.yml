@@ -5,22 +5,14 @@ description: Carpet Diem
 avatar: /images/favicon.png
 
 # Social Accounts
-twitter: 
-rss: 
-weibo: 
-instagram: 
 github: porschan
-facebook: 
 
 # Comment
-duoshuo:
-disqus:
-gentie:
-valine:
-  enable: true
-  appid:  8tMvHLb9m4prgDE24lXzEeLQ-gzGzoHsz
-  appkey: y5IwQdNEx3mxP3eUS47T1f41
-  notify: true
-  verify: true
-  avatar: mm
-  placeholder: leave a message if necessary.
+# valine:
+#   enable: true
+#   appid:  8tMvHLb9m4prgDE24lXzEeLQ-gzGzoHsz
+#   appkey: y5IwQdNEx3mxP3eUS47T1f41
+#   notify: true
+#   verify: true
+#   avatar: mm
+#   placeholder: leave a message if necessary.
