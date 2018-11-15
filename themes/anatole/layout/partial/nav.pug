@@ -20,6 +20,11 @@
         a.current(href="/links")= __('Links')					
       else
         a(href="/links")= __('Links')		
+    li
+      if is_current('readme')
+        a.current(href="/readme")= __('Readme')					
+      else
+        a(href="/readme")= __('Readme')		
   .information
     .back_btn
       li
