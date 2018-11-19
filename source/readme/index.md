@@ -6,7 +6,7 @@ desc: chanchfieng.com
 
 ### 技术路线 ###
 
-![](20181118.png)
+![](20181119.png)
 
 
 # Porschan #
@@ -34,6 +34,10 @@ desc: chanchfieng.com
 
 ----------
 
+### 数据结构和算法 ###
+
+- 您好，数据结构和算法
+
 ## Front-end ##
 
 ### HTML ###
@@ -56,7 +60,7 @@ desc: chanchfieng.com
 
 ### Markdown渲染引擎 - Hexo ###
 
-- hexo的常用命令:
+- hexo的常用命令:[https://chanchifeng.com/2018/11/16/hexo-common/](https://chanchifeng.com/2018/11/16/hexo-common/ "https://chanchifeng.com/2018/11/16/hexo-common/")
 - 使用HEXO建立主题，并发布到GITHUB:[https://chanchifeng.com/2018/11/11/hexo-github/](https://chanchifeng.com/2018/11/11/hexo-github/ "https://chanchifeng.com/2018/11/11/hexo-github/")
 - 优化HEXO目录，使本地图片能显示出来:[https://chanchifeng.com/2018/11/11/hexo-image/](https://chanchifeng.com/2018/11/11/hexo-image/ "https://chanchifeng.com/2018/11/11/hexo-image/")
 - HEXO常用命令：[https://chanchifeng.com/2018/11/11/hexo-shell/](https://chanchifeng.com/2018/11/11/hexo-shell/ "https://chanchifeng.com/2018/11/11/hexo-shell/")

@@ -1,0 +1,39 @@
+---
+title: 您好，数据结构和算法
+date: 2018-11-19 20:48:36
+desc: chanchfieng.com
+tags: [Data structure and algorithm, algorithm, 数据结构和算法]
+---
+
+<div class="tip">
+	来历：
+				
+	自身的特点：
+		
+	适合解决的问题：
+		
+	实际的应用场景：
+		
+</div>
+
+最近在买了一个课题，就是我一直想接触的数据结构和算法。课题是在极客时间中的《算法面试通关40讲》，讲师是覃超。
+
+对课程做了一下笔记：
+
+### 为什么要掌握算法与数据结构 ###
+
+1. 编程的内功修炼
+2. 去国内一流互联网公司的必要条件
+3. 硅谷互联网公司面试更是要求当场写算法题目
+4. 算法和数据结构是有趣且实用的 
+
+
+### 常用的电话面试 ###
+
+1. [collabedit.com](collabedit.com "collabedit.com")
+2. [coderpad.io](coderpad.io "coderpad.io")
+
+### 去硅谷工作的路径图 ###
+
+![](hello-algorithm/20181119205557.jpg)
+
