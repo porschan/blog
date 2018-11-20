@@ -37,3 +37,20 @@ tags: [Data structure and algorithm, algorithm, 数据结构和算法]
 
 ![](hello-algorithm/20181119205557.jpg)
 
+### 精通一个领域 ###
+
+- Chunk it up（切碎知识点）
+- Deliberate practicing（刻意练习）
+- Feedback（获得反馈）
+
+### 摘要的数据类型 ###
+
+![](hello-algorithm/20181120132621.png)
+
+### 数据结果 & 算法 & 系统设计 ###
+
+![](hello-algorithm/20181120132842.png)
+
+### 切题四件套 ###
+
+![](hello-algorithm/20181120133059.png)
