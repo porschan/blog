@@ -36,7 +36,8 @@ desc: chanchfieng.com
 
 ### 数据结构和算法 ###
 
-- 您好，数据结构和算法
+- 您好，数据结构和算法:[https://chanchifeng.com/2018/11/19/hello-algorithm/](https://chanchifeng.com/2018/11/19/hello-algorithm/ "https://chanchifeng.com/2018/11/19/hello-algorithm/")
+- 时间复杂度:
 
 ## Front-end ##
 
