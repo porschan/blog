@@ -1,5 +1,5 @@
 ---
-title: Tomcat使用命令行启动之指定jdk版本
+title: Tomcat启动之指定jdk版本
 date: 2018‎-7‎-‎19‎ ‏‎13:10:52
 desc: chanchfieng.com
 tags: tomcat
@@ -9,11 +9,12 @@ tags: tomcat
 
 ## 主要步骤
 
-1.找到Tomcat/bin/catalina.bat文件。
+1.找到Tomcat根目录的/bin/catalina.bat和setclasspath.bat文件。
 2.在文件前端添加如下。
 
 ```
-set JAVA_HOME=C:\Program Files (x86)\Java\jdk1.8.0_161
+set JAVA_HOME=C:\Program Files\Java\jdk1.8.0_152
+set JRE_HOME=C:\Program Files\Java\jdk1.8.0_152\jre
 ```
 
 3.保存，使用命令行启动。
