@@ -6,7 +6,7 @@ desc: chanchfieng.com
 
 ### 技术路线 ###
 
-![](20181129.png)
+![](20181130.png)
 
 
 # Porschan #
@@ -90,7 +90,8 @@ desc: chanchfieng.com
 #### Nginx ####
 
 - 静态网站和SpringBoot项目的配置:[https://porschan.github.io/2018/11/15/nginx-staticWeb-springBoot/](https://porschan.github.io/2018/11/15/nginx-staticWeb-springBoot/ "https://porschan.github.io/2018/11/15/nginx-staticWeb-springBoot/")
-- Nginx配置阿里云ssl证书使HTTPS生效：
+- Nginx配置阿里云ssl证书使HTTPS生效：[https://chanchifeng.com/2018/11/29/nginx-https-ali/](https://chanchifeng.com/2018/11/29/nginx-https-ali/ "https://chanchifeng.com/2018/11/29/nginx-https-ali/")
+- nginx同时保持http和https:
 
 ----------
 
@@ -100,7 +101,7 @@ desc: chanchfieng.com
 
 - Tomcat启动之指定jdk版本:[https://chanchifeng.com/2018/11/11/tomcat-jdk/](https://chanchifeng.com/2018/11/11/tomcat-jdk/ "https://chanchifeng.com/2018/11/11/tomcat-jdk/")
 - DOS TOMCAT 操作:[https://chanchifeng.com/2018/11/11/tomcat-server/](https://chanchifeng.com/2018/11/11/tomcat-server/ "https://chanchifeng.com/2018/11/11/tomcat-server/")
-- 启动多个Tomcat：
+- 启动多个Tomcat：[https://chanchifeng.com/2018/11/29/Tomcat-much/](https://chanchifeng.com/2018/11/29/Tomcat-much/ "https://chanchifeng.com/2018/11/29/Tomcat-much/")
 
 ### OS ###
 
@@ -126,7 +127,7 @@ desc: chanchfieng.com
 - WINDOWS 下的一个有用的BAT程序：[https://chanchifeng.com/2018/11/11/windows-bat/](https://chanchifeng.com/2018/11/11/windows-bat/ "https://chanchifeng.com/2018/11/11/windows-bat/")
 - WINDOWS10任务栏上的时间显示秒操作：[https://chanchifeng.com/2018/11/11/windows-second/](https://chanchifeng.com/2018/11/11/windows-second/ "https://chanchifeng.com/2018/11/11/windows-second/")
 - WINDOWS上面的发音:[https://chanchifeng.com/2018/11/11/windows-speak/](https://chanchifeng.com/2018/11/11/windows-speak/ "https://chanchifeng.com/2018/11/11/windows-speak/")
-- windows下面切换jdk版本：
+- windows下面切换jdk版本：[https://chanchifeng.com/2018/11/29/windows-jdks/](https://chanchifeng.com/2018/11/29/windows-jdks/ "https://chanchifeng.com/2018/11/29/windows-jdks/")
 
 ----------
 
