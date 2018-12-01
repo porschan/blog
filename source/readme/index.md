@@ -6,7 +6,7 @@ desc: chanchfieng.com
 
 ### 技术路线 ###
 
-![](20181130.png)
+![](20181201.png)
 
 
 # Porschan #
@@ -91,7 +91,7 @@ desc: chanchfieng.com
 
 - 静态网站和SpringBoot项目的配置:[https://porschan.github.io/2018/11/15/nginx-staticWeb-springBoot/](https://porschan.github.io/2018/11/15/nginx-staticWeb-springBoot/ "https://porschan.github.io/2018/11/15/nginx-staticWeb-springBoot/")
 - Nginx配置阿里云ssl证书使HTTPS生效：[https://chanchifeng.com/2018/11/29/nginx-https-ali/](https://chanchifeng.com/2018/11/29/nginx-https-ali/ "https://chanchifeng.com/2018/11/29/nginx-https-ali/")
-- nginx同时保持http和https:
+- nginx同时保持http和https:[https://chanchifeng.com/2018/11/30/nginx-https-http/](https://chanchifeng.com/2018/11/30/nginx-https-http/ "https://chanchifeng.com/2018/11/30/nginx-https-http/")
 
 ----------
 
@@ -128,6 +128,7 @@ desc: chanchfieng.com
 - WINDOWS10任务栏上的时间显示秒操作：[https://chanchifeng.com/2018/11/11/windows-second/](https://chanchifeng.com/2018/11/11/windows-second/ "https://chanchifeng.com/2018/11/11/windows-second/")
 - WINDOWS上面的发音:[https://chanchifeng.com/2018/11/11/windows-speak/](https://chanchifeng.com/2018/11/11/windows-speak/ "https://chanchifeng.com/2018/11/11/windows-speak/")
 - windows下面切换jdk版本：[https://chanchifeng.com/2018/11/29/windows-jdks/](https://chanchifeng.com/2018/11/29/windows-jdks/ "https://chanchifeng.com/2018/11/29/windows-jdks/")
+- windows中使用命令行关闭进程：
 
 ----------
 
