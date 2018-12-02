@@ -6,7 +6,7 @@ desc: chanchfieng.com
 
 ### 技术路线 ###
 
-![](20181201.png)
+![](20181202.png)
 
 
 # Porschan #
@@ -102,6 +102,7 @@ desc: chanchfieng.com
 - Tomcat启动之指定jdk版本:[https://chanchifeng.com/2018/11/11/tomcat-jdk/](https://chanchifeng.com/2018/11/11/tomcat-jdk/ "https://chanchifeng.com/2018/11/11/tomcat-jdk/")
 - DOS TOMCAT 操作:[https://chanchifeng.com/2018/11/11/tomcat-server/](https://chanchifeng.com/2018/11/11/tomcat-server/ "https://chanchifeng.com/2018/11/11/tomcat-server/")
 - 启动多个Tomcat：[https://chanchifeng.com/2018/11/29/Tomcat-much/](https://chanchifeng.com/2018/11/29/Tomcat-much/ "https://chanchifeng.com/2018/11/29/Tomcat-much/")
+- Tomcat安装服务之指定jdk版本：
 
 ### OS ###
 

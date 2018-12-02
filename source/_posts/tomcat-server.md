@@ -10,9 +10,13 @@ tags: [tomcat,服务,windows,dos]
 1.添加Tomcat服务：
 ```
 
-	添加服务名为tomcat的服务:service install tomcat
+	添加服务名为tomcat的服务:
 
-	添加服务名为Test的服务:service install Test
+	service install tomcat
+
+	添加服务名为Test的服务:
+
+	service install Test
 
 ```
 
