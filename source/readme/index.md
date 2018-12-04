@@ -102,7 +102,7 @@ desc: chanchfieng.com
 - Tomcat启动之指定jdk版本:[https://chanchifeng.com/2018/11/11/tomcat-jdk/](https://chanchifeng.com/2018/11/11/tomcat-jdk/ "https://chanchifeng.com/2018/11/11/tomcat-jdk/")
 - DOS TOMCAT 操作:[https://chanchifeng.com/2018/11/11/tomcat-server/](https://chanchifeng.com/2018/11/11/tomcat-server/ "https://chanchifeng.com/2018/11/11/tomcat-server/")
 - 启动多个Tomcat：[https://chanchifeng.com/2018/11/29/Tomcat-much/](https://chanchifeng.com/2018/11/29/Tomcat-much/ "https://chanchifeng.com/2018/11/29/Tomcat-much/")
-- Tomcat安装服务之指定jdk版本：
+- Tomcat安装服务之指定jdk版本：[https://chanchifeng.com/2018/12/02/tomcat-server-install/](https://chanchifeng.com/2018/12/02/tomcat-server-install/ "https://chanchifeng.com/2018/12/02/tomcat-server-install/")
 
 ### OS ###
 
@@ -129,7 +129,7 @@ desc: chanchfieng.com
 - WINDOWS10任务栏上的时间显示秒操作：[https://chanchifeng.com/2018/11/11/windows-second/](https://chanchifeng.com/2018/11/11/windows-second/ "https://chanchifeng.com/2018/11/11/windows-second/")
 - WINDOWS上面的发音:[https://chanchifeng.com/2018/11/11/windows-speak/](https://chanchifeng.com/2018/11/11/windows-speak/ "https://chanchifeng.com/2018/11/11/windows-speak/")
 - windows下面切换jdk版本：[https://chanchifeng.com/2018/11/29/windows-jdks/](https://chanchifeng.com/2018/11/29/windows-jdks/ "https://chanchifeng.com/2018/11/29/windows-jdks/")
-- windows中使用命令行关闭进程：
+- windows中使用命令行关闭进程：[https://chanchifeng.com/2018/12/01/windows-taskkill/](https://chanchifeng.com/2018/12/01/windows-taskkill/ "https://chanchifeng.com/2018/12/01/windows-taskkill/")
 
 ----------
 
