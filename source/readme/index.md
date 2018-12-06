@@ -6,7 +6,7 @@ desc: chanchfieng.com
 
 ### 技术路线 ###
 
-![](20181202.png)
+![](20181206.png)
 
 
 # Porschan #
@@ -38,6 +38,7 @@ desc: chanchfieng.com
 
 - 您好，数据结构和算法:[https://chanchifeng.com/2018/11/19/hello-algorithm/](https://chanchifeng.com/2018/11/19/hello-algorithm/ "https://chanchifeng.com/2018/11/19/hello-algorithm/")
 - 时间复杂度:[https://chanchifeng.com/2018/11/21/algorithm-BigO/](https://chanchifeng.com/2018/11/21/algorithm-BigO/ "https://chanchifeng.com/2018/11/21/algorithm-BigO/")
+- 数据结构：
 
 ## Front-end ##
 
@@ -128,8 +129,8 @@ desc: chanchfieng.com
 - WINDOWS 下的一个有用的BAT程序：[https://chanchifeng.com/2018/11/11/windows-bat/](https://chanchifeng.com/2018/11/11/windows-bat/ "https://chanchifeng.com/2018/11/11/windows-bat/")
 - WINDOWS10任务栏上的时间显示秒操作：[https://chanchifeng.com/2018/11/11/windows-second/](https://chanchifeng.com/2018/11/11/windows-second/ "https://chanchifeng.com/2018/11/11/windows-second/")
 - WINDOWS上面的发音:[https://chanchifeng.com/2018/11/11/windows-speak/](https://chanchifeng.com/2018/11/11/windows-speak/ "https://chanchifeng.com/2018/11/11/windows-speak/")
-- windows下面切换jdk版本：[https://chanchifeng.com/2018/11/29/windows-jdks/](https://chanchifeng.com/2018/11/29/windows-jdks/ "https://chanchifeng.com/2018/11/29/windows-jdks/")
-- windows中使用命令行关闭进程：[https://chanchifeng.com/2018/12/01/windows-taskkill/](https://chanchifeng.com/2018/12/01/windows-taskkill/ "https://chanchifeng.com/2018/12/01/windows-taskkill/")
+- WINDOWS下面切换jdk版本：[https://chanchifeng.com/2018/11/29/windows-jdks/](https://chanchifeng.com/2018/11/29/windows-jdks/ "https://chanchifeng.com/2018/11/29/windows-jdks/")
+- WINDOWS中使用命令行关闭进程：[https://chanchifeng.com/2018/12/01/windows-taskkill/](https://chanchifeng.com/2018/12/01/windows-taskkill/ "https://chanchifeng.com/2018/12/01/windows-taskkill/")
 
 ----------
 
