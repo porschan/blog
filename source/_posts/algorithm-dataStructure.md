@@ -51,8 +51,8 @@ tags: [algorithm , 数据结构]
 - 链表有指针指向上一个，下一个，头部或者尾部。
 - 查找慢，插入删除快速。
 - 查询Access:O(n)。
-- 插入Insert:平均O(1)。
-- 删除Delete:平均O(1)。
+- 插入Insert:O(1)，头部插入prepend:O(1),尾部插入append:O(1)。
+- 删除Delete:O(1)。
 - 链表有单链表，双链表。
 
 <div class="tip">
