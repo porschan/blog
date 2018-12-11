@@ -6,7 +6,7 @@ desc: chanchfieng.com
 
 ### 技术路线 ###
 
-![](20181208.png)
+![](20181211.png)
 
 
 # Porschan #
@@ -45,6 +45,7 @@ desc: chanchfieng.com
 ### HTML ###
 
 - 在线检查网页的不同显示尺寸:[https://chanchifeng.com/2018/10/24/ui/](https://chanchifeng.com/2018/10/24/ui/ "https://chanchifeng.com/2018/10/24/ui/")
+- 记一次canvas的打印和下载：
 
 ----------
 
