@@ -7,7 +7,7 @@ comments: false
 
 #### website
 
-[什么值得买](https://www.smzdm.com/) | [chiphell](https://www.chiphell.com/) | [zealer](http://www.zealer.com/)
+[什么值得买](https://www.smzdm.com/) | [chiphell](https://www.chiphell.com/) | [zealer](http://www.zealer.com/) | [softonic](https://en.softonic.com/)
 
 #### windows
 
