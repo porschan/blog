@@ -6,7 +6,7 @@ desc: chanchfieng.com
 
 ### 技术路线 ###
 
-![](20181211.png)
+![](20181224.png)
 
 
 # Porschan #
@@ -45,7 +45,7 @@ desc: chanchfieng.com
 ### HTML ###
 
 - 在线检查网页的不同显示尺寸:[https://chanchifeng.com/2018/10/24/ui/](https://chanchifeng.com/2018/10/24/ui/ "https://chanchifeng.com/2018/10/24/ui/")
-- 记一次canvas的打印和下载：
+- 记一次canvas的打印和下载：[https://chanchifeng.com/2018/12/11/html-canvas/](https://chanchifeng.com/2018/12/11/html-canvas/ "https://chanchifeng.com/2018/12/11/html-canvas/")
 
 ----------
 
@@ -132,6 +132,7 @@ desc: chanchfieng.com
 - WINDOWS上面的发音:[https://chanchifeng.com/2018/11/11/windows-speak/](https://chanchifeng.com/2018/11/11/windows-speak/ "https://chanchifeng.com/2018/11/11/windows-speak/")
 - WINDOWS下面切换jdk版本：[https://chanchifeng.com/2018/11/29/windows-jdks/](https://chanchifeng.com/2018/11/29/windows-jdks/ "https://chanchifeng.com/2018/11/29/windows-jdks/")
 - WINDOWS中使用命令行关闭进程：[https://chanchifeng.com/2018/12/01/windows-taskkill/](https://chanchifeng.com/2018/12/01/windows-taskkill/ "https://chanchifeng.com/2018/12/01/windows-taskkill/")
+- windows下修改hosts文件，使coursera能正常学习：
 
 ----------
 
