@@ -39,6 +39,7 @@ desc: chanchfieng.com
 - 您好，数据结构和算法:[https://chanchifeng.com/2018/11/19/hello-algorithm/](https://chanchifeng.com/2018/11/19/hello-algorithm/ "https://chanchifeng.com/2018/11/19/hello-algorithm/")
 - 时间复杂度:[https://chanchifeng.com/2018/11/21/algorithm-BigO/](https://chanchifeng.com/2018/11/21/algorithm-BigO/ "https://chanchifeng.com/2018/11/21/algorithm-BigO/")
 - 数据结构：[https://chanchifeng.com/2018/12/06/algorithm-dataStructure/](https://chanchifeng.com/2018/12/06/algorithm-dataStructure/ "https://chanchifeng.com/2018/12/06/algorithm-dataStructure/")
+- 数据结构练习 - leetcode - 两数之和:
 
 ## Front-end ##
 
@@ -89,7 +90,7 @@ desc: chanchfieng.com
 
 ### Web Server ###
 
-#### Nginx ####
+#### NGINX ####
 
 - 静态网站和SpringBoot项目的配置:[https://porschan.github.io/2018/11/15/nginx-staticWeb-springBoot/](https://porschan.github.io/2018/11/15/nginx-staticWeb-springBoot/ "https://porschan.github.io/2018/11/15/nginx-staticWeb-springBoot/")
 - Nginx配置阿里云ssl证书使HTTPS生效：[https://chanchifeng.com/2018/11/29/nginx-https-ali/](https://chanchifeng.com/2018/11/29/nginx-https-ali/ "https://chanchifeng.com/2018/11/29/nginx-https-ali/")
@@ -119,7 +120,7 @@ desc: chanchfieng.com
 
 ----------
 
-##### pi #####
+##### PI #####
 
 - 树莓派RASPBERRYPI上配置GIT:[https://chanchifeng.com/2018/11/11/raspberrypi-git/](https://chanchifeng.com/2018/11/11/raspberrypi-git/ "https://chanchifeng.com/2018/11/11/raspberrypi-git/")
 
