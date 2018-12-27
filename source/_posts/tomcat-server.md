@@ -1,8 +1,6 @@
 ---
 title: DOS tomcat 操作
-date: ‎‎2018/8/1 13:24:48  
-desc: chanchfieng.com
-tags: [tomcat,服务,windows,dos]
+date: ‎‎2018/8/1 13:24:48
 ---
 
 进入tomcat的bin目录：

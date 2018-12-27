@@ -1,8 +1,6 @@
 ---
 title: ngrok初使用
-date: ‎2018/7/20 9:36:00 
-desc: chanchfieng.com
-tags: [windows,ngrok,内网渗透]
+date: ‎2018/7/20 9:36:00
 ---
 
 # 登录ngrok #

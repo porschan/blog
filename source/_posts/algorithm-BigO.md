@@ -1,7 +1,6 @@
 ---
 title: 时间复杂度
-date: 2018/11/21 20:30:21 
-desc: chanchfieng.com
+date: 2018/11/21 20:30:21
 ---
 
 <div class="tip">

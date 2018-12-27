@@ -1,8 +1,6 @@
 ---
 title: '[转] 使用Docker部署完成，连接mysql出现的乱码'
-date: 2018/7/27 9:44:24 
-desc: chanchfieng.com
-tags: [docker,mysql,[转],乱码]
+date: 2018/7/27 9:44:24
 ---
 
 使用Docker部署完成，连接mysql出现的乱码：

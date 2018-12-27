@@ -1,7 +1,6 @@
 ---
 title: 数据结构练习 - leetcode - 两数之和
 date: 2018-12-24 20:13:39
-desc: chanchfieng.com
 ---
 
 <div class="tip">

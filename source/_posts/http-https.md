@@ -1,8 +1,6 @@
 ---
 title: 从http 到 https
 date: ‎2018‎-‎7‎-19‎ ‏‎13:04:24
-desc: chanchfieng.com
-tags: https
 ---
 
 http和https的原理和区别这里就不一一细谈，在搭建网站使用https的时候总结了以下。

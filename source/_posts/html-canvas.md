@@ -1,7 +1,6 @@
 ---
 title: 记一次canvas的打印和下载
 date: 2018-12-11 23:03:24
-desc: chanchfieng.com
 ---
 
 <div class="tip">

@@ -1,7 +1,6 @@
 ---
 title: Tomcat安装服务之指定jdk版本
 date: 2018-12-02 09:28:56
-tags: [tomcat,服务,windows]
 ---
 <div class="tip">
 	来历：

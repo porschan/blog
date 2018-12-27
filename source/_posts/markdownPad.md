@@ -1,8 +1,6 @@
 ---
 title: markdownPad2 初使用
-date: 2018/7/25 9:49:13  
-desc: chanchfieng.com
-tags: [markdownPad2,初使用]
+date: 2018/7/25 9:49:13
 ---
 
 Ctrl + I ： 斜体

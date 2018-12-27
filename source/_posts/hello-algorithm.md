@@ -1,8 +1,6 @@
 ---
 title: 您好，数据结构和算法
 date: 2018-11-19 20:48:36
-desc: chanchfieng.com
-tags: [Data structure and algorithm, algorithm, 数据结构和算法]
 ---
 
 <div class="tip">

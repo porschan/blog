@@ -1,8 +1,6 @@
 ---
 title: 查看ubunt系统版本
-date: 2018/10/21 21:53:35  
-desc: chanchfieng.com
-tags: [Linux,Ubunt,版本]
+date: 2018/10/21 21:53:35
 ---
 
 <div class="tip">

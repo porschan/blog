@@ -1,8 +1,6 @@
 ---
 title: 'sourceTree 在windows安装'
-date: ‎‎2018/7/31 14:53:03 
-desc: chanchfieng.com
-tags: [sourceTree,安装,windows]
+date: ‎‎2018/7/31 14:53:03
 ---
 
 GitHub Desktop 和 Sourcetree都是管理git仓库的图像界面，我一直在用GitHub Desktop,但是也想看看sourcetree的样子。

@@ -1,8 +1,6 @@
 ---
 title: 树莓派Raspberrypi上配置Git
 date: ‎2018‎-7‎-‎19‎ ‏‎13:10:08
-desc: chanchfieng.com
-tags: raspberrypi
 ---
 
 树莓派Raspberrypi上配置Git。

@@ -1,8 +1,6 @@
 ---
 title: frp初使用
 date: ‎‎‎2018‎-6‎-15‎ ‏‎1:04:18
-desc: chanchfieng.com
-tags: frp
 ---
 
 ## 先star[fatedier/frp](https://github.com/fatedier/frp)，再开工。

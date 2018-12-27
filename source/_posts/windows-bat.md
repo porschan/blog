@@ -1,8 +1,6 @@
 ---
 title: Windows 下的一个有用的bat程序
 date: ‎2018‎年-6‎-‎19‎ 16:21:34
-desc: chanchfieng.com
-tags: windows
 ---
 
 是日常生活中隐藏一些重要的文件的一个好方法。开门见山，看下面。

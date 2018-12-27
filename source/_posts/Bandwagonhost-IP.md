@@ -1,8 +1,6 @@
 ---
 title: Bandwagonhost 切换 IP
-date: ‎‎2018/7/24 11:01:20 
-desc: chanchfieng.com
-tags: [帮瓦工、IP]
+date: ‎‎2018/7/24 11:01:20
 ---
 # 背景 #
 

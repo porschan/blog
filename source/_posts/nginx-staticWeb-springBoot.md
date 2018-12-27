@@ -1,8 +1,6 @@
 ---
 title: 静态网站和SpringBoot项目的配置
 date: 2018-11-15 23:40:31
-desc: chanchfieng.com
-tags: [Nginx , SpringBoot , StaticWeb]
 ---
 
 

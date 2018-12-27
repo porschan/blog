@@ -1,8 +1,6 @@
 ---
 title: 梯子制造术--openVpn
 date: 2018‎-‎7‎-19‎ 13:08:52
-desc: chanchfieng.com
-tags: openVpn
 ---
 
 今天看到了[老李博客](http://www.bestlee.net/archives/28)中的CentOS快速搭建OpenVPN-AS,就提起了兴趣，之前用的是ssr,使用openVPN看起来有控制的页面，所以就开工了。

@@ -1,7 +1,6 @@
 ---
 title: 数据结构
 date: 2018-12-06 22:40:53
-tags: [algorithm , 数据结构]
 ---
 <div class="tip">
 	来历：

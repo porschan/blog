@@ -1,8 +1,6 @@
 ---
 title: 在线检查网页的不同显示尺寸
-date: 2018/10/24 13:25:20 
-desc: chanchfieng.com
-tags: [front-end,分辨率，网页]
+date: 2018/10/24 13:25:20
 ---
 
 <div class="tip">

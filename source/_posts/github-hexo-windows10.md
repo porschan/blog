@@ -1,8 +1,6 @@
 ---
 title: github下载并搭建hexo环境
-date: 2018/11/11 23:51:01  
-desc: chanchfieng.com
-tags: [note、hexo、github]
+date: 2018/11/11 23:51:01
 ---
 
 <div class="tip">

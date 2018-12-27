@@ -1,8 +1,6 @@
 ---
 title: Nginx配置阿里云ssl证书使HTTPS生效
-date: 2018/11/29 23:24:22 
-desc: chanchfieng.com
-tags: [windows , jdk]
+date: 2018/11/29 23:24:22
 ---
 
 从阿里云获取免费的SSL，解压后获取.pem和.key文件，以下直接POST数据（nginx.conf），参考：

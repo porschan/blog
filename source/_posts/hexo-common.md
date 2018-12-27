@@ -1,7 +1,6 @@
 ---
 title: hexo的常用命令
 date: 2018-11-16 23:15:07
-tags: [hexo , common]
 ---
 
 <div class="tip">

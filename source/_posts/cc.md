@@ -1,8 +1,6 @@
 ---
 title: CC许可协议
-date: 2018/11/13 15:58:07 
-desc: chanchfieng.com
-tags: [note , CC]
+date: 2018/11/13 15:58:07
 ---
 
 <div class="tip">

@@ -1,8 +1,6 @@
 ---
 title: 使用gitHub 和 gitHub Desktop 协同开发
 date: ‎‎‎‎‎2018‎-6‎-19‎ ‏‎16:19:12
-desc: chanchfieng.com
-tags: github
 ---
 
 git 对于我来说是很新鲜，一开始觉得使用git要使用命令行模式的，非常very good，非常cool,一直使用ToroiseSVN的图像界面的我，一直有点不适应，知道有了gitHub desktop,我觉得我应该研究研究一番了。

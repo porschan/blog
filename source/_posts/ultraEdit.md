@@ -1,8 +1,6 @@
 ---
 title: UltraEdit 常用设置
 date: 2018-07-19 11:54:25
-desc: chanchfieng.com
-tags: 软件
 ---
 
 #### UltraEdit常用快捷键

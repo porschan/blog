@@ -1,8 +1,6 @@
 ---
 title: ubunt开启ssh server 的服务
-date: 2018/10/24 0:02:49   
-desc: chanchfieng.com
-tags: [Linux,Ubunt,ssh]
+date: 2018/10/24 0:02:49
 ---
 
 <div class="tip">

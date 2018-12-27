@@ -1,8 +1,6 @@
 ---
 title: JavaScript - 对浏览器缓存的JS、CSS的思考
-date: ‎2018/7/28 22:54:35 
-desc: chanchfieng.com
-tags: [JavaScript]
+date: ‎2018/7/28 22:54:35
 ---
 
 ### 背景 ###

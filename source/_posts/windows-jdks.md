@@ -1,8 +1,6 @@
 ---
 title: windows下面切换jdk版本
-date: 2018/11/29 23:15:25 
-desc: chanchfieng.com
-tags: [windows , jdk]
+date: 2018/11/29 23:15:25
 ---
 
 

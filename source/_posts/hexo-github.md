@@ -1,8 +1,6 @@
 ---
 title: 使用hexo建立主题，并发布到github
 date: ‎‎2018‎-‎6‎-‎15‎ 0:28:16
-desc: chanchfieng.com
-tags: hexo
 ---
 
 ### 根据[hexo官网的概述](https://hexo.io/zh-cn/docs/index.html)和[hexo官网的建站](https://hexo.io/zh-cn/docs/setup.html)，搭建最开始的hexo博客。

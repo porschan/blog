@@ -1,8 +1,6 @@
 ---
 title: 优化hexo目录，使本地图片能显示出来
 date: ‎‎‎2018‎-6‎-19‎ ‏‎16:34:42
-desc: chanchfieng.com
-tags: hexo
 ---
 
 ### 查看了一下从此蜕变作者的[Hexo中添加本地图片](https://www.cnblogs.com/codehome/p/8428738.html?utm_source=debugrun&utm_medium=referral),提炼了一些能优化本地图片存放及编写是图片查看的问题。

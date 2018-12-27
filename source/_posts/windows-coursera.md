@@ -1,7 +1,6 @@
 ---
 title: windows下修改hosts文件，使coursera能正常学习
 date: 2018-12-24 13:11:49
-desc: chanchfieng.com
 ---
 
 <div class="tip">

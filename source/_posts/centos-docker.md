@@ -1,8 +1,6 @@
 ---
 title: '[转] CentOS6.5 安装Docker'
-date: 2018/7/26 9:35:27 
-desc: chanchfieng.com
-tags: [CentOS,docker,[转]]
+date: 2018/7/26 9:35:27
 ---
 
 ### 运行docker Linux内核版本需要在3.8以上,针对centos6.5 内核为2.6的系统需要先升级内核.不然会特别卡 ###

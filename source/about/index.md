@@ -1,7 +1,6 @@
 ---
 title: about
-date: ‎‎2018/8/8 9:49:01  
-desc: chanchfieng.com
+date: ‎‎2018/8/8 9:49:01
 ---
 
 ### 关于本站

@@ -1,8 +1,6 @@
 ---
 title: hexo常用命令
 date: ‎2018‎-‎5-7‎ 14:19:05
-desc: chanchfieng.com
-tags: hexo
 ---
 
 ## [hexo官网](https://hexo.io/zh-cn/docs/commands.html)

@@ -1,8 +1,6 @@
 ---
 title: jfinal初使用
-date: 2018/8/10 17:22:53 
-desc: chanchfieng.com
-tags: [jfinal,除使用，jar]
+date: 2018/8/10 17:22:53
 ---
 
 公司是再用jfianl开发项目，jfianl比较轻巧，使用起来比较上手，下面我就使用jfianl来编写一个具有定时器及简易web的工单的项目，并且能使用java命令及jar包的形式显示出来。

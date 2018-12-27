@@ -1,8 +1,6 @@
 ---
 title: Ubuntu 安装java
-date: 2018/8/3 17:47:22 
-desc: chanchfieng.com
-tags: [Ubuntu、java]
+date: 2018/8/3 17:47:22
 ---
 
 1.下载页面[http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
