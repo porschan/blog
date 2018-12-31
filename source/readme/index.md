@@ -5,7 +5,7 @@ date: 2018/11/15 23:57:05
 
 ### 技术路线 ###
 
-![](20181224.png)
+![](20181231.png)
 
 
 # Porschan #
@@ -38,7 +38,14 @@ date: 2018/11/15 23:57:05
 - 您好，数据结构和算法:[https://chanchifeng.com/2018/11/19/hello-algorithm/](https://chanchifeng.com/2018/11/19/hello-algorithm/ "https://chanchifeng.com/2018/11/19/hello-algorithm/")
 - 时间复杂度:[https://chanchifeng.com/2018/11/21/algorithm-BigO/](https://chanchifeng.com/2018/11/21/algorithm-BigO/ "https://chanchifeng.com/2018/11/21/algorithm-BigO/")
 - 数据结构：[https://chanchifeng.com/2018/12/06/algorithm-dataStructure/](https://chanchifeng.com/2018/12/06/algorithm-dataStructure/ "https://chanchifeng.com/2018/12/06/algorithm-dataStructure/")
-- 数据结构练习 - leetcode - 两数之和:
+- 数据结构练习 - leetcode - 两数之和:[https://chanchifeng.com/2018/12/24/leetcode-two-sum/](https://chanchifeng.com/2018/12/24/leetcode-two-sum/ "https://chanchifeng.com/2018/12/24/leetcode-two-sum/")
+
+----------
+
+### 计算机组成 ###
+- 计算机组成 - 计算机结构:
+
+
 
 ## Front-end ##
 
@@ -132,7 +139,7 @@ date: 2018/11/15 23:57:05
 - WINDOWS上面的发音:[https://chanchifeng.com/2018/11/11/windows-speak/](https://chanchifeng.com/2018/11/11/windows-speak/ "https://chanchifeng.com/2018/11/11/windows-speak/")
 - WINDOWS下面切换jdk版本：[https://chanchifeng.com/2018/11/29/windows-jdks/](https://chanchifeng.com/2018/11/29/windows-jdks/ "https://chanchifeng.com/2018/11/29/windows-jdks/")
 - WINDOWS中使用命令行关闭进程：[https://chanchifeng.com/2018/12/01/windows-taskkill/](https://chanchifeng.com/2018/12/01/windows-taskkill/ "https://chanchifeng.com/2018/12/01/windows-taskkill/")
-- windows下修改hosts文件，使coursera能正常学习：
+- windows下修改hosts文件，使coursera能正常学习：[https://chanchifeng.com/2018/12/24/windows-coursera/](https://chanchifeng.com/2018/12/24/windows-coursera/ "https://chanchifeng.com/2018/12/24/windows-coursera/")
 
 ----------
 
