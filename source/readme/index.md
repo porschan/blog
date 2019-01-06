@@ -5,7 +5,7 @@ date: 2018/11/15 23:57:05
 
 ### 技术路线 ###
 
-![](20190104.png)
+![](20190106.png)
 
 
 # Porschan #
@@ -44,6 +44,7 @@ date: 2018/11/15 23:57:05
 
 ### 计算机组成 ###
 - 计算机组成 - 计算机结构:[https://chanchifeng.com/2018/12/31/ComputerComposition101/](https://chanchifeng.com/2018/12/31/ComputerComposition101/ "https://chanchifeng.com/2018/12/31/ComputerComposition101/")
+- 计算机组成 - 冯·诺依曼结构:
 
 
 
@@ -150,7 +151,7 @@ date: 2018/11/15 23:57:05
 #### JFinal ####
 
 - JFINAL初使用：[https://chanchifeng.com/2018/08/10/jfinal-jar-main/](https://chanchifeng.com/2018/08/10/jfinal-jar-main/ "https://chanchifeng.com/2018/08/10/jfinal-jar-main/")
-- Jfinal 打完收枪 收集录:
+- Jfinal 打完收枪 收集录:[https://chanchifeng.com/2019/01/04/jfinal-bo/](https://chanchifeng.com/2019/01/04/jfinal-bo/ "·https://chanchifeng.com/2019/01/04/jfinal-bo/")
 
 ----------
 
