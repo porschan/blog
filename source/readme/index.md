@@ -5,7 +5,7 @@ date: 2018/11/15 23:57:05
 
 ### 技术路线 ###
 
-![](20190106.png)
+![](20190125.png)
 
 
 # Porschan #
@@ -44,7 +44,7 @@ date: 2018/11/15 23:57:05
 
 ### 计算机组成 ###
 - 计算机组成 - 计算机结构:[https://chanchifeng.com/2018/12/31/ComputerComposition101/](https://chanchifeng.com/2018/12/31/ComputerComposition101/ "https://chanchifeng.com/2018/12/31/ComputerComposition101/")
-- 计算机组成 - 冯·诺依曼结构:
+- 计算机组成 - 冯·诺依曼结构:[https://chanchifeng.com/2019/01/06/ComputerComposition102/](https://chanchifeng.com/2019/01/06/ComputerComposition102/ "https://chanchifeng.com/2019/01/06/ComputerComposition102/")
 
 
 
@@ -60,6 +60,7 @@ date: 2018/11/15 23:57:05
 ### JavaScript ###
 
 - JAVASCRIPT - 对浏览器缓存的JS、CSS的思考[https://chanchifeng.com/2018/11/11/JavaScript-js-css/](https://chanchifeng.com/2018/11/11/JavaScript-js-css/ "https://chanchifeng.com/2018/11/11/JavaScript-js-css/")
+- 打印及下载的js摘抄:
 
 ----------
 
