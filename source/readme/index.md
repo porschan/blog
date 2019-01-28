@@ -5,7 +5,7 @@ date: 2018/11/15 23:57:05
 
 ### 技术路线 ###
 
-![](20190125.png)
+![](20190128.png)
 
 
 # Porschan #
@@ -142,6 +142,7 @@ date: 2018/11/15 23:57:05
 - WINDOWS下面切换jdk版本：[https://chanchifeng.com/2018/11/29/windows-jdks/](https://chanchifeng.com/2018/11/29/windows-jdks/ "https://chanchifeng.com/2018/11/29/windows-jdks/")
 - WINDOWS中使用命令行关闭进程：[https://chanchifeng.com/2018/12/01/windows-taskkill/](https://chanchifeng.com/2018/12/01/windows-taskkill/ "https://chanchifeng.com/2018/12/01/windows-taskkill/")
 - windows下修改hosts文件，使coursera能正常学习：[https://chanchifeng.com/2018/12/24/windows-coursera/](https://chanchifeng.com/2018/12/24/windows-coursera/ "https://chanchifeng.com/2018/12/24/windows-coursera/")
+- windows下查看jdk版本：
 
 ----------
 
