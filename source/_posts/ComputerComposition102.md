@@ -15,7 +15,29 @@ date: 2019-01-06 14:46:49
 
 ### 课题PPT ###
 
-![](ComputerComposition102/20190106.png)
+![](ComputerComposition102/2.png)
+
+![](ComputerComposition102/3.png)
+
+![](ComputerComposition102/4.png)
+
+![](ComputerComposition102/5.png)
+
+![](ComputerComposition102/6.png)
+
+![](ComputerComposition102/7.png)
+
+![](ComputerComposition102/8.png)
+
+![](ComputerComposition102/9.png)
+
+![](ComputerComposition102/10.png)
+
+![](ComputerComposition102/11.png)
+
+![](ComputerComposition102/12.png)
+
+![](ComputerComposition102/13.png)
 
 ### 内容 ###
 
@@ -30,3 +52,8 @@ date: 2019-01-06 14:46:49
 再收到一张任务单，再花十分钟做一盘菜。 这样的效率，大家看到，是非常低的，这正好就是ENIAC的工作方式。 现在我们就能明白了冯.诺依曼结构中存储程序的概念。 建基所需要的程序和数据，通过输入设备进入了存储器 控制器发出地址给存储器，获得程序当中的对应的指令。 还可以得到相应的数据，控制器发命令给运算器， 指挥运算器对数据进行相应的运算， 运算器可能会返回一些运算的状态，比如说是否正确完成等等。 最后还会将运算的结果存放到存储器中。 最后还需要通过输出设备 将结果输出到计算机外部的某些存储介质上。 这样才能完成整个计算的过程。 现在我们已经知道了冯·诺依曼结构中最重要的部分， 那这个结构又是如何运转的呢？ 下一节我们将通过一个小故事来了解这一点。
 
 ```
+
+
+<div class="tip">
+	图片来自coursera课程中，仅用来学习并记录在博客中，如侵犯您的权利，请及时通知我。
+</div>

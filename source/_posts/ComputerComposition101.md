@@ -16,7 +16,45 @@ date: 2018-12-31 15:24:20
 
 ### 课题PPT ###
 
-![](ComputerComposition101/20181231.png)
+![](ComputerComposition101/4.png)
+
+![](ComputerComposition101/5.png)
+
+![](ComputerComposition101/6.png)
+
+![](ComputerComposition101/7.png)
+
+![](ComputerComposition101/8.png)
+
+![](ComputerComposition101/9.png)
+
+![](ComputerComposition101/10.png)
+
+![](ComputerComposition101/11.png)
+
+![](ComputerComposition101/12.png)
+
+![](ComputerComposition101/13.png)
+
+![](ComputerComposition101/14.png)
+
+![](ComputerComposition101/15.png)
+
+![](ComputerComposition101/16.png)
+
+![](ComputerComposition101/17.png)
+
+![](ComputerComposition101/18.png)
+
+![](ComputerComposition101/19.png)
+
+![](ComputerComposition101/20.png)
+
+![](ComputerComposition101/21.png)
+
+![](ComputerComposition101/22.png)
+
+![](ComputerComposition101/23.png)
 
 ### 内容 ###
 
@@ -36,3 +74,7 @@ ENIAC 的十进制，极大的简化了逻辑线路。 此外 EDVAC 还清晰的
 IBM701的揭幕仪式。 从此，IBM在这个新兴的市场上迅速扩张。 到五十年代中期，据称IBM占领了这个新兴市场的70%。 剩下的30%，有七家其他的公司所占据。 因此，媒体也戏称，当时的电子计算机市场，是“IBM和七个小矮人”的故事。 而在这七个小矮人中，也有已经并购了UNIVAC研制部门的斯普利.兰德公司。 所以我们可以说，是UNIVAC真正开启了商用计算机的时代。 从此，一批又一批的明星产品、明星公司， 和明星人物登上了历史的舞台。 现在，电子计算机已经成为了推动社会进步的重要动力。 也是我们生活中，不可或缺的组成部分。而现在计算机，基本上都采用了冯.诺伊曼结构。 因此我们从下一节开始， 将一起来探索，究竟什么才是“冯.诺伊曼结构”？
 
 ```
+
+<div class="tip">
+	图片来自coursera课程中，仅用来学习并记录在博客中，如侵犯您的权利，请及时通知我。
+</div>
