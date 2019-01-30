@@ -16,7 +16,7 @@ date: 2018-12-24 20:13:39
 
 ## 题目 ##
 
-https://leetcode.com/problems/two-sum/：[https://leetcode.com/problems/two-sum/](https://leetcode.com/problems/two-sum/ "https://leetcode.com/problems/two-sum/")
+两数之和：[https://leetcode.com/problems/reverse-linked-list/]("https://leetcode.com/problems/two-sum/ "https://leetcode.com/problems/two-sum/")
 
 ```
 
