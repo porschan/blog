@@ -26,7 +26,6 @@ date: 2018/11/15 23:57:05
 - 使用GITHUB 和 GITHUB DESKTOP 协同开发:[https://chanchifeng.com/2018/11/11/github-github_desktop/](https://chanchifeng.com/2018/11/11/github-github_desktop/ "https://chanchifeng.com/2018/11/11/github-github_desktop/")
 - HELLO WORLD:[https://chanchifeng.com/2018/11/11/hello-world/](https://chanchifeng.com/2018/11/11/hello-world/ "https://chanchifeng.com/2018/11/11/hello-world/")
 - 从HTTP 到 HTTPS:[https://chanchifeng.com/2018/11/11/http-https/](https://chanchifeng.com/2018/11/11/http-https/ "https://chanchifeng.com/2018/11/11/http-https/")
-- INTELLIJ IDEA常用设置:[https://chanchifeng.com/2018/11/11/intellij-idea/](https://chanchifeng.com/2018/11/11/intellij-idea/ "https://chanchifeng.com/2018/11/11/intellij-idea/")
 - NGROK初使用:[https://chanchifeng.com/2018/11/11/ngrok/](https://chanchifeng.com/2018/11/11/ngrok/ "https://chanchifeng.com/2018/11/11/ngrok/")
 - 常用软件备忘录:[https://chanchifeng.com/2018/11/11/note/](https://chanchifeng.com/2018/11/11/note/ "https://chanchifeng.com/2018/11/11/note/")
 - 梯子制造术--OPENVPN:[https://chanchifeng.com/2018/11/11/openVpn/](https://chanchifeng.com/2018/11/11/openVpn/ "https://chanchifeng.com/2018/11/11/openVpn/")
@@ -163,6 +162,7 @@ date: 2018/11/15 23:57:05
 - 使用IDEA创建SPRING BOOT 项目:[https://chanchifeng.com/2018/11/11/idea-springboot/](https://chanchifeng.com/2018/11/11/idea-springboot/ "https://chanchifeng.com/2018/11/11/idea-springboot/")
 - SpringBoot开发中的热部署：[https://chanchifeng.com/2018/12/08/springboot-devtools/](https://chanchifeng.com/2018/12/08/springboot-devtools/ "https://chanchifeng.com/2018/12/08/springboot-devtools/")
 - SpringBoot - hello World:
+- SpringBoot - 连接MySQL：
 
 ----------
 
@@ -171,3 +171,4 @@ date: 2018/11/15 23:57:05
 ### IntelliJ IDEA ###
 
 - 项目包名层叠：
+- INTELLIJ IDEA常用设置:[https://chanchifeng.com/2018/11/11/intellij-idea/](https://chanchifeng.com/2018/11/11/intellij-idea/ "https://chanchifeng.com/2018/11/11/intellij-idea/")
