@@ -5,7 +5,7 @@ date: 2018/11/15 23:57:05
 
 ### 技术路线 ###
 
-![](20190130.png)
+![](20190131.png)
 
 
 # Porschan #
@@ -162,3 +162,11 @@ date: 2018/11/15 23:57:05
 
 - 使用IDEA创建SPRING BOOT 项目:[https://chanchifeng.com/2018/11/11/idea-springboot/](https://chanchifeng.com/2018/11/11/idea-springboot/ "https://chanchifeng.com/2018/11/11/idea-springboot/")
 - SpringBoot开发中的热部署：[https://chanchifeng.com/2018/12/08/springboot-devtools/](https://chanchifeng.com/2018/12/08/springboot-devtools/ "https://chanchifeng.com/2018/12/08/springboot-devtools/")
+
+----------
+
+## Tool ##
+
+### IntelliJ IDEA ###
+
+- 项目包名层叠：
