@@ -163,6 +163,8 @@ date: 2018/11/15 23:57:05
 - SpringBoot开发中的热部署：[https://chanchifeng.com/2018/12/08/springboot-devtools/](https://chanchifeng.com/2018/12/08/springboot-devtools/ "https://chanchifeng.com/2018/12/08/springboot-devtools/")
 - SpringBoot - hello World:
 - SpringBoot - 连接MySQL：
+- SpringBoot - 集合druid：
+- SpringBoot - 使用jpa:
 
 ----------
 
