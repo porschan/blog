@@ -38,7 +38,7 @@ date: 2018/11/15 23:57:05
 - 时间复杂度:[https://chanchifeng.com/2018/11/21/algorithm-BigO/](https://chanchifeng.com/2018/11/21/algorithm-BigO/ "https://chanchifeng.com/2018/11/21/algorithm-BigO/")
 - 数据结构：[https://chanchifeng.com/2018/12/06/algorithm-dataStructure/](https://chanchifeng.com/2018/12/06/algorithm-dataStructure/ "https://chanchifeng.com/2018/12/06/algorithm-dataStructure/")
 - 数据结构练习 - leetcode - 两数之和:[https://chanchifeng.com/2018/12/24/leetcode-two-sum/](https://chanchifeng.com/2018/12/24/leetcode-two-sum/ "https://chanchifeng.com/2018/12/24/leetcode-two-sum/")
-- 数据结构练习 - leetcode - 反转链表:
+- 数据结构练习 - leetcode - 反转链表:[https://chanchifeng.com/2019/01/30/leetcode-reverseLinkedList/](https://chanchifeng.com/2019/01/30/leetcode-reverseLinkedList/ "https://chanchifeng.com/2019/01/30/leetcode-reverseLinkedList/")
 
 ----------
 
@@ -60,7 +60,7 @@ date: 2018/11/15 23:57:05
 ### JavaScript ###
 
 - JAVASCRIPT - 对浏览器缓存的JS、CSS的思考[https://chanchifeng.com/2018/11/11/JavaScript-js-css/](https://chanchifeng.com/2018/11/11/JavaScript-js-css/ "https://chanchifeng.com/2018/11/11/JavaScript-js-css/")
-- 打印及下载的js摘抄:
+- 打印及下载的js摘抄:[https://chanchifeng.com/2019/01/25/html-print-down/](https://chanchifeng.com/2019/01/25/html-print-down/ "https://chanchifeng.com/2019/01/25/html-print-down/")
 
 ----------
 
@@ -142,7 +142,7 @@ date: 2018/11/15 23:57:05
 - WINDOWS下面切换jdk版本：[https://chanchifeng.com/2018/11/29/windows-jdks/](https://chanchifeng.com/2018/11/29/windows-jdks/ "https://chanchifeng.com/2018/11/29/windows-jdks/")
 - WINDOWS中使用命令行关闭进程：[https://chanchifeng.com/2018/12/01/windows-taskkill/](https://chanchifeng.com/2018/12/01/windows-taskkill/ "https://chanchifeng.com/2018/12/01/windows-taskkill/")
 - windows下修改hosts文件，使coursera能正常学习：[https://chanchifeng.com/2018/12/24/windows-coursera/](https://chanchifeng.com/2018/12/24/windows-coursera/ "https://chanchifeng.com/2018/12/24/windows-coursera/")
-- windows下查看jdk版本：
+- windows下查看jdk版本：[https://chanchifeng.com/2019/01/28/windows-jdk/](https://chanchifeng.com/2019/01/28/windows-jdk/ "https://chanchifeng.com/2019/01/28/windows-jdk/")
 
 ----------
 
@@ -161,10 +161,10 @@ date: 2018/11/15 23:57:05
 
 - 使用IDEA创建SPRING BOOT 项目:[https://chanchifeng.com/2018/11/11/idea-springboot/](https://chanchifeng.com/2018/11/11/idea-springboot/ "https://chanchifeng.com/2018/11/11/idea-springboot/")
 - SpringBoot开发中的热部署：[https://chanchifeng.com/2018/12/08/springboot-devtools/](https://chanchifeng.com/2018/12/08/springboot-devtools/ "https://chanchifeng.com/2018/12/08/springboot-devtools/")
-- SpringBoot - hello World:
-- SpringBoot - 连接MySQL：
-- SpringBoot - 集合druid：
-- SpringBoot - 使用jpa:
+- SpringBoot - hello World:[https://chanchifeng.com/2019/01/31/springboot-helloworld/](https://chanchifeng.com/2019/01/31/springboot-helloworld/ "https://chanchifeng.com/2019/01/31/springboot-helloworld/")
+- SpringBoot - 连接MySQL：[https://chanchifeng.com/2019/01/31/springboot-mysql/](https://chanchifeng.com/2019/01/31/springboot-mysql/ "https://chanchifeng.com/2019/01/31/springboot-mysql/")
+- SpringBoot - 集合druid：[https://chanchifeng.com/2019/01/31/springboot-druid/](https://chanchifeng.com/2019/01/31/springboot-druid/ "https://chanchifeng.com/2019/01/31/springboot-druid/")
+- SpringBoot - 使用jpa:[https://chanchifeng.com/2019/01/31/springboot-jpa/](https://chanchifeng.com/2019/01/31/springboot-jpa/ "https://chanchifeng.com/2019/01/31/springboot-jpa/")
 
 ----------
 
@@ -172,5 +172,5 @@ date: 2018/11/15 23:57:05
 
 ### IntelliJ IDEA ###
 
-- 项目包名层叠：
+- 项目包名层叠：[https://chanchifeng.com/2019/01/31/idea-package-hidden/](https://chanchifeng.com/2019/01/31/idea-package-hidden/ "https://chanchifeng.com/2019/01/31/idea-package-hidden/")
 - INTELLIJ IDEA常用设置:[https://chanchifeng.com/2018/11/11/intellij-idea/](https://chanchifeng.com/2018/11/11/intellij-idea/ "https://chanchifeng.com/2018/11/11/intellij-idea/")
