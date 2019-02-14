@@ -46,7 +46,11 @@ date: 2018/11/15 23:57:05
 - 计算机组成 - 计算机结构:[https://chanchifeng.com/2018/12/31/ComputerComposition101/](https://chanchifeng.com/2018/12/31/ComputerComposition101/ "https://chanchifeng.com/2018/12/31/ComputerComposition101/")
 - 计算机组成 - 冯·诺依曼结构:[https://chanchifeng.com/2019/01/06/ComputerComposition102/](https://chanchifeng.com/2019/01/06/ComputerComposition102/ "https://chanchifeng.com/2019/01/06/ComputerComposition102/")
 
+### 设计模式 ###
+- 
 
+### Git ###
+-
 
 ## Front-end ##
 
