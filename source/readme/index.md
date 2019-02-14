@@ -5,7 +5,7 @@ date: 2018/11/15 23:57:05
 
 ### 技术路线 ###
 
-![](20190131.png)
+![](20190214.png)
 
 
 # Porschan #
@@ -165,6 +165,7 @@ date: 2018/11/15 23:57:05
 - SpringBoot - 连接MySQL：[https://chanchifeng.com/2019/01/31/springboot-mysql/](https://chanchifeng.com/2019/01/31/springboot-mysql/ "https://chanchifeng.com/2019/01/31/springboot-mysql/")
 - SpringBoot - 集合druid：[https://chanchifeng.com/2019/01/31/springboot-druid/](https://chanchifeng.com/2019/01/31/springboot-druid/ "https://chanchifeng.com/2019/01/31/springboot-druid/")
 - SpringBoot - 使用jpa:[https://chanchifeng.com/2019/01/31/springboot-jpa/](https://chanchifeng.com/2019/01/31/springboot-jpa/ "https://chanchifeng.com/2019/01/31/springboot-jpa/")
+- springboot - http请求:
 
 ----------
 
