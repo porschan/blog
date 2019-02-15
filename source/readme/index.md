@@ -12,18 +12,12 @@ date: 2018/11/15 23:57:05
 
 ## 个人备忘录 ##
 
-- github下载并搭建hexo环境:[https://chanchifeng.com/2018/11/11/github-hexo-windows10/](https://chanchifeng.com/2018/11/11/github-hexo-windows10/ "github下载并搭建hexo环境")
-- 在windows下使用bat文件跑命令:[https://chanchifeng.com/2018/11/12/hexo-cmd-windows-bat/](https://chanchifeng.com/2018/11/12/hexo-cmd-windows-bat/ "在windows下使用bat文件跑命令")
 - CC许可协议:[https://chanchifeng.com/2018/11/13/cc/](https://chanchifeng.com/2018/11/13/cc/ "CC许可协议")
-- ULTRAEDIT 常用设置:[https://chanchifeng.com/2018/07/19/ultraEdit/](https://chanchifeng.com/2018/07/19/ultraEdit/ "https://chanchifeng.com/2018/07/19/ultraEdit/")
 - MARKDOWNPAD2 初使用:[https://chanchifeng.com/2018/07/25/markdownPad/](https://chanchifeng.com/2018/07/25/markdownPad/ "https://chanchifeng.com/2018/07/25/markdownPad/")
 - BANDWAGONHOST 切换 IP：[https://chanchifeng.com/2018/11/11/Bandwagonhost-IP/](https://chanchifeng.com/2018/11/11/Bandwagonhost-IP/ "https://chanchifeng.com/2018/11/11/Bandwagonhost-IP/")
 - SOURCETREE 在WINDOWS安装：[https://chanchifeng.com/2018/11/11/SourceTree/](https://chanchifeng.com/2018/11/11/SourceTree/ "https://chanchifeng.com/2018/11/11/SourceTree/")
 - 计算机硬货:[https://chanchifeng.com/2018/11/11/computer/](https://chanchifeng.com/2018/11/11/computer/ "https://chanchifeng.com/2018/11/11/computer/")
 - FRP初使用:[https://chanchifeng.com/2018/11/11/frp/](https://chanchifeng.com/2018/11/11/frp/ "https://chanchifeng.com/2018/11/11/frp/")
-- 继上次GIT CLONE 下来ECS 服务器之后再优化:[https://chanchifeng.com/2018/11/11/git_clone-CES/](https://chanchifeng.com/2018/11/11/git_clone-CES/ "https://chanchifeng.com/2018/11/11/git_clone-CES/")
-- 写个定时任务，从GITHUB下载代码到阿里ECS服务器上:[https://chanchifeng.com/2018/11/11/github-ecs/](https://chanchifeng.com/2018/11/11/github-ecs/ "https://chanchifeng.com/2018/11/11/github-ecs/")
-- 使用GITHUB 和 GITHUB DESKTOP 协同开发:[https://chanchifeng.com/2018/11/11/github-github_desktop/](https://chanchifeng.com/2018/11/11/github-github_desktop/ "https://chanchifeng.com/2018/11/11/github-github_desktop/")
 - HELLO WORLD:[https://chanchifeng.com/2018/11/11/hello-world/](https://chanchifeng.com/2018/11/11/hello-world/ "https://chanchifeng.com/2018/11/11/hello-world/")
 - 从HTTP 到 HTTPS:[https://chanchifeng.com/2018/11/11/http-https/](https://chanchifeng.com/2018/11/11/http-https/ "https://chanchifeng.com/2018/11/11/http-https/")
 - NGROK初使用:[https://chanchifeng.com/2018/11/11/ngrok/](https://chanchifeng.com/2018/11/11/ngrok/ "https://chanchifeng.com/2018/11/11/ngrok/")
@@ -50,7 +44,12 @@ date: 2018/11/15 23:57:05
 - 
 
 ### Git ###
-- Git - 基本配置：
+
+- 写个定时任务，从GITHUB下载代码到阿里ECS服务器上:[https://chanchifeng.com/2018/11/11/github-ecs/](https://chanchifeng.com/2018/11/11/github-ecs/ "https://chanchifeng.com/2018/11/11/github-ecs/")
+- 继上次GIT CLONE 下来ECS 服务器之后再优化:[https://chanchifeng.com/2018/11/11/git_clone-CES/](https://chanchifeng.com/2018/11/11/git_clone-CES/ "https://chanchifeng.com/2018/11/11/git_clone-CES/")
+- 使用GITHUB 和 GITHUB DESKTOP 协同开发:[https://chanchifeng.com/2018/11/11/github-github_desktop/](https://chanchifeng.com/2018/11/11/github-github_desktop/ "https://chanchifeng.com/2018/11/11/github-github_desktop/")
+- github下载并搭建hexo环境:[https://chanchifeng.com/2018/11/11/github-hexo-windows10/](https://chanchifeng.com/2018/11/11/github-hexo-windows10/ "github下载并搭建hexo环境")
+- Git - 基本配置：[https://chanchifeng.com/2019/02/15/git-basic/](https://chanchifeng.com/2019/02/15/git-basic/ "https://chanchifeng.com/2019/02/15/git-basic/")
 
 ## Front-end ##
 
@@ -93,6 +92,12 @@ date: 2018/11/15 23:57:05
 
 - WINDOWS 下的MYSQL即时打印SQL日志：[https://chanchifeng.com/2018/11/11/windows-mysql-sql/](https://chanchifeng.com/2018/11/11/windows-mysql-sql/ "https://chanchifeng.com/2018/11/11/windows-mysql-sql/")
 
+#### NoSQL Databases ####
+
+#### Redis ####
+
+- 
+
 ### Docker ###
 
 - [转] CENTOS6.5 安装DOCKER:[https://chanchifeng.com/2018/07/26/centos-docker/](https://chanchifeng.com/2018/07/26/centos-docker/ "https://chanchifeng.com/2018/07/26/centos-docker/")
@@ -129,6 +134,7 @@ date: 2018/11/15 23:57:05
 - 查看UBUNT系统版本：[https://chanchifeng.com/2018/10/21/ubunt-version/](https://chanchifeng.com/2018/10/21/ubunt-version/ "https://chanchifeng.com/2018/10/21/ubunt-version/")
 - UBUNT开启SSH SERVER 的服务：[https://chanchifeng.com/2018/10/24/ubunt-ssh-server/](https://chanchifeng.com/2018/10/24/ubunt-ssh-server/ "https://chanchifeng.com/2018/10/24/ubunt-ssh-server/")
 - UBUNTU系统打开FLASH插件和关闭自动锁屏:[https://chanchifeng.com/2018/11/11/ubuntu-flash/](https://chanchifeng.com/2018/11/11/ubuntu-flash/ "https://chanchifeng.com/2018/11/11/ubuntu-flash/")
+- 
 
 ----------
 
@@ -147,6 +153,7 @@ date: 2018/11/15 23:57:05
 - WINDOWS中使用命令行关闭进程：[https://chanchifeng.com/2018/12/01/windows-taskkill/](https://chanchifeng.com/2018/12/01/windows-taskkill/ "https://chanchifeng.com/2018/12/01/windows-taskkill/")
 - windows下修改hosts文件，使coursera能正常学习：[https://chanchifeng.com/2018/12/24/windows-coursera/](https://chanchifeng.com/2018/12/24/windows-coursera/ "https://chanchifeng.com/2018/12/24/windows-coursera/")
 - windows下查看jdk版本：[https://chanchifeng.com/2019/01/28/windows-jdk/](https://chanchifeng.com/2019/01/28/windows-jdk/ "https://chanchifeng.com/2019/01/28/windows-jdk/")
+- 在windows下使用bat文件跑命令:[https://chanchifeng.com/2018/11/12/hexo-cmd-windows-bat/](https://chanchifeng.com/2018/11/12/hexo-cmd-windows-bat/ "在windows下使用bat文件跑命令")
 
 ----------
 
@@ -172,8 +179,8 @@ date: 2018/11/15 23:57:05
 - springboot - http请求:[https://chanchifeng.com/2019/02/14/springboot-httpRequest/](https://chanchifeng.com/2019/02/14/springboot-httpRequest/ "https://chanchifeng.com/2019/02/14/springboot-httpRequest/")
 - springboot - 使用thymeleaf模板引擎：[https://chanchifeng.com/2019/02/14/springboot-thymeleaf/](https://chanchifeng.com/2019/02/14/springboot-thymeleaf/ "https://chanchifeng.com/2019/02/14/springboot-thymeleaf/")
 - springboot - 使用 transactional 事务支持：[https://chanchifeng.com/2019/02/14/springboot-transactional/](https://chanchifeng.com/2019/02/14/springboot-transactional/ "https://chanchifeng.com/2019/02/14/springboot-transactional/")
-- springboot - 使用 filter 过滤器：
-- springboot - 使用 listener 监听器：
+- springboot - 使用 filter 过滤器：[https://chanchifeng.com/2019/02/14/springboot-filter/](https://chanchifeng.com/2019/02/14/springboot-filter/ "https://chanchifeng.com/2019/02/14/springboot-filter/")
+- springboot - 使用 listener 监听器：[https://chanchifeng.com/2019/02/14/springboot-listener/](https://chanchifeng.com/2019/02/14/springboot-listener/ "https://chanchifeng.com/2019/02/14/springboot-listener/")
 
 ----------
 
@@ -183,3 +190,7 @@ date: 2018/11/15 23:57:05
 
 - 项目包名层叠：[https://chanchifeng.com/2019/01/31/idea-package-hidden/](https://chanchifeng.com/2019/01/31/idea-package-hidden/ "https://chanchifeng.com/2019/01/31/idea-package-hidden/")
 - INTELLIJ IDEA常用设置:[https://chanchifeng.com/2018/11/11/intellij-idea/](https://chanchifeng.com/2018/11/11/intellij-idea/ "https://chanchifeng.com/2018/11/11/intellij-idea/")
+
+### ULTRAEDIT ###
+
+- ULTRAEDIT 常用设置:[https://chanchifeng.com/2018/07/19/ultraEdit/](https://chanchifeng.com/2018/07/19/ultraEdit/ "https://chanchifeng.com/2018/07/19/ultraEdit/")
