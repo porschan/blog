@@ -5,7 +5,7 @@ date: 2018/11/15 23:57:05
 
 ### 技术路线 ###
 
-![](20190214.png)
+![](20190215.png)
 
 
 # Porschan #
@@ -50,7 +50,7 @@ date: 2018/11/15 23:57:05
 - 
 
 ### Git ###
--
+- Git - 基本配置：
 
 ## Front-end ##
 
@@ -169,9 +169,9 @@ date: 2018/11/15 23:57:05
 - SpringBoot - 连接MySQL：[https://chanchifeng.com/2019/01/31/springboot-mysql/](https://chanchifeng.com/2019/01/31/springboot-mysql/ "https://chanchifeng.com/2019/01/31/springboot-mysql/")
 - SpringBoot - 集合druid：[https://chanchifeng.com/2019/01/31/springboot-druid/](https://chanchifeng.com/2019/01/31/springboot-druid/ "https://chanchifeng.com/2019/01/31/springboot-druid/")
 - SpringBoot - 使用jpa:[https://chanchifeng.com/2019/01/31/springboot-jpa/](https://chanchifeng.com/2019/01/31/springboot-jpa/ "https://chanchifeng.com/2019/01/31/springboot-jpa/")
-- springboot - http请求:
-- springboot - 使用thymeleaf模板引擎：
-- springboot - 使用 transactional 事务支持：
+- springboot - http请求:[https://chanchifeng.com/2019/02/14/springboot-httpRequest/](https://chanchifeng.com/2019/02/14/springboot-httpRequest/ "https://chanchifeng.com/2019/02/14/springboot-httpRequest/")
+- springboot - 使用thymeleaf模板引擎：[https://chanchifeng.com/2019/02/14/springboot-thymeleaf/](https://chanchifeng.com/2019/02/14/springboot-thymeleaf/ "https://chanchifeng.com/2019/02/14/springboot-thymeleaf/")
+- springboot - 使用 transactional 事务支持：[https://chanchifeng.com/2019/02/14/springboot-transactional/](https://chanchifeng.com/2019/02/14/springboot-transactional/ "https://chanchifeng.com/2019/02/14/springboot-transactional/")
 - springboot - 使用 filter 过滤器：
 - springboot - 使用 listener 监听器：
 
