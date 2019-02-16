@@ -185,6 +185,7 @@ date: 2018/11/15 23:57:05
 - springboot - 使用 transactional 事务支持：[https://chanchifeng.com/2019/02/14/springboot-transactional/](https://chanchifeng.com/2019/02/14/springboot-transactional/ "https://chanchifeng.com/2019/02/14/springboot-transactional/")
 - springboot - 使用 filter 过滤器：[https://chanchifeng.com/2019/02/14/springboot-filter/](https://chanchifeng.com/2019/02/14/springboot-filter/ "https://chanchifeng.com/2019/02/14/springboot-filter/")
 - springboot - 使用 listener 监听器：[https://chanchifeng.com/2019/02/14/springboot-listener/](https://chanchifeng.com/2019/02/14/springboot-listener/ "https://chanchifeng.com/2019/02/14/springboot-listener/")
+- springboot - 使用 redis:
 
 ----------
 
