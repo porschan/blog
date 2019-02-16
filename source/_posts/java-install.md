@@ -60,6 +60,14 @@ date: 2019-02-16 17:04:43
 
 ![](java-install/10.jpg)
 
+7.测试JDK是否安装成功
+
+1、"开始"->"运行"，键入"cmd"；
+
+2、键入命令: java -version、java、javac 几个命令，出现以下信息，说明环境变量配置成功；
+
+![](java-install/11.jpg)
+
 <div class="tip">
 	参考W3CSCHOOL的JAVA开发环境配置：[https://www.w3cschool.cn/java/java-environment-setup.html](https://www.w3cschool.cn/java/java-environment-setup.html "https://www.w3cschool.cn/java/java-environment-setup.html")		
 </div>
