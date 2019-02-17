@@ -1,5 +1,5 @@
 ---
-title: springboot - 使用 log4j
+title: springboot - 使用 log4j 日志
 date: 2019-02-17 14:58:33
 ---
 <div class="tip">
@@ -19,12 +19,11 @@ date: 2019-02-17 14:58:33
 
 ![](springboot-log4j/1.png)
 
-3.Group填写com.chanchifeng，Artifact填写mysql。
+3.Group填写com.chanchifeng，Artifact填写log4j。
 
 ![](springboot-log4j/2.png)
 
-
-4.勾选SQL中的MySQL和JDBC，点击next。
+4.点击next。
 
 ![](springboot-log4j/3.png)
 

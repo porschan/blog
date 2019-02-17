@@ -187,6 +187,7 @@ date: 2018/11/15 23:57:05
 - springboot - 使用 listener 监听器：[https://chanchifeng.com/2019/02/14/springboot-listener/](https://chanchifeng.com/2019/02/14/springboot-listener/ "https://chanchifeng.com/2019/02/14/springboot-listener/")
 - springboot - 使用 redis:[https://chanchifeng.com/2019/02/16/springboot-redis/](https://chanchifeng.com/2019/02/16/springboot-redis/ "https://chanchifeng.com/2019/02/16/springboot-redis/")
 - springboot - 使用 log4j：
+- springboot - 使用 quartz 定时器：
 
 ----------
 
