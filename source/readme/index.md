@@ -5,7 +5,7 @@ date: 2018/11/15 23:57:05
 
 ### 技术路线 ###
 
-![](20190216.png)
+![](20190217.png)
 
 
 # Porschan #
@@ -96,7 +96,7 @@ date: 2018/11/15 23:57:05
 
 #### Redis ####
 
-- Redis - windows系统安装：
+- Redis - windows系统安装：[https://chanchifeng.com/2019/02/16/redis-install/](https://chanchifeng.com/2019/02/16/redis-install/ "https://chanchifeng.com/2019/02/16/redis-install/")
 
 ### Docker ###
 
@@ -163,7 +163,7 @@ date: 2018/11/15 23:57:05
 
 #### 基础 ####
 
-- java - windows安装：
+- java - windows安装：[https://chanchifeng.com/2019/02/16/java-install/](https://chanchifeng.com/2019/02/16/java-install/ "https://chanchifeng.com/2019/02/16/java-install/")
 
 #### JFinal ####
 
@@ -185,7 +185,8 @@ date: 2018/11/15 23:57:05
 - springboot - 使用 transactional 事务支持：[https://chanchifeng.com/2019/02/14/springboot-transactional/](https://chanchifeng.com/2019/02/14/springboot-transactional/ "https://chanchifeng.com/2019/02/14/springboot-transactional/")
 - springboot - 使用 filter 过滤器：[https://chanchifeng.com/2019/02/14/springboot-filter/](https://chanchifeng.com/2019/02/14/springboot-filter/ "https://chanchifeng.com/2019/02/14/springboot-filter/")
 - springboot - 使用 listener 监听器：[https://chanchifeng.com/2019/02/14/springboot-listener/](https://chanchifeng.com/2019/02/14/springboot-listener/ "https://chanchifeng.com/2019/02/14/springboot-listener/")
-- springboot - 使用 redis:
+- springboot - 使用 redis:[https://chanchifeng.com/2019/02/16/springboot-redis/](https://chanchifeng.com/2019/02/16/springboot-redis/ "https://chanchifeng.com/2019/02/16/springboot-redis/")
+- springboot - 使用 log4j：
 
 ----------
 
