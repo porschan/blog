@@ -154,6 +154,7 @@ date: 2018/11/15 23:57:05
 - windows下修改hosts文件，使coursera能正常学习：[https://chanchifeng.com/2018/12/24/windows-coursera/](https://chanchifeng.com/2018/12/24/windows-coursera/ "https://chanchifeng.com/2018/12/24/windows-coursera/")
 - windows下查看jdk版本：[https://chanchifeng.com/2019/01/28/windows-jdk/](https://chanchifeng.com/2019/01/28/windows-jdk/ "https://chanchifeng.com/2019/01/28/windows-jdk/")
 - 在windows下使用bat文件跑命令:[https://chanchifeng.com/2018/11/12/hexo-cmd-windows-bat/](https://chanchifeng.com/2018/11/12/hexo-cmd-windows-bat/ "在windows下使用bat文件跑命令")
+- windows - 虚拟机安装 ubunt：
 
 ----------
 
