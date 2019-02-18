@@ -5,7 +5,7 @@ date: 2018/11/15 23:57:05
 
 ### 技术路线 ###
 
-![](20190217.png)
+![](20190218.png)
 
 
 # Porschan #
@@ -154,7 +154,7 @@ date: 2018/11/15 23:57:05
 - windows下修改hosts文件，使coursera能正常学习：[https://chanchifeng.com/2018/12/24/windows-coursera/](https://chanchifeng.com/2018/12/24/windows-coursera/ "https://chanchifeng.com/2018/12/24/windows-coursera/")
 - windows下查看jdk版本：[https://chanchifeng.com/2019/01/28/windows-jdk/](https://chanchifeng.com/2019/01/28/windows-jdk/ "https://chanchifeng.com/2019/01/28/windows-jdk/")
 - 在windows下使用bat文件跑命令:[https://chanchifeng.com/2018/11/12/hexo-cmd-windows-bat/](https://chanchifeng.com/2018/11/12/hexo-cmd-windows-bat/ "在windows下使用bat文件跑命令")
-- windows - 虚拟机安装 ubunt：
+- windows - 虚拟机安装 ubunt：[https://chanchifeng.com/2019/02/17/windows-install-ubunt-vm/](https://chanchifeng.com/2019/02/17/windows-install-ubunt-vm/ "https://chanchifeng.com/2019/02/17/windows-install-ubunt-vm/")
 
 ----------
 
@@ -187,8 +187,9 @@ date: 2018/11/15 23:57:05
 - springboot - 使用 filter 过滤器：[https://chanchifeng.com/2019/02/14/springboot-filter/](https://chanchifeng.com/2019/02/14/springboot-filter/ "https://chanchifeng.com/2019/02/14/springboot-filter/")
 - springboot - 使用 listener 监听器：[https://chanchifeng.com/2019/02/14/springboot-listener/](https://chanchifeng.com/2019/02/14/springboot-listener/ "https://chanchifeng.com/2019/02/14/springboot-listener/")
 - springboot - 使用 redis:[https://chanchifeng.com/2019/02/16/springboot-redis/](https://chanchifeng.com/2019/02/16/springboot-redis/ "https://chanchifeng.com/2019/02/16/springboot-redis/")
-- springboot - 使用 log4j：
-- springboot - 使用 quartz 定时器：
+- springboot - 使用 log4j：[https://chanchifeng.com/2019/02/17/springboot-log4j/](https://chanchifeng.com/2019/02/17/springboot-log4j/ "https://chanchifeng.com/2019/02/17/springboot-log4j/")
+- springboot - 使用 quartz 定时器：[https://chanchifeng.com/2019/02/17/springboot-quartz/](https://chanchifeng.com/2019/02/17/springboot-quartz/ "https://chanchifeng.com/2019/02/17/springboot-quartz/")
+- springboot - 集成 mybatis：
 
 ----------
 
