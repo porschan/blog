@@ -97,7 +97,7 @@ date: 2018/11/15 23:57:05
 
 #### MongoDB ####
 
-- MongoDB - windows系统安装：
+- MongoDB - windows系统安装：[https://chanchifeng.com/2019/02/18/mongodb-install/](https://chanchifeng.com/2019/02/18/mongodb-install/ "https://chanchifeng.com/2019/02/18/mongodb-install/")
 
 #### Redis ####
 
@@ -194,7 +194,7 @@ date: 2018/11/15 23:57:05
 - springboot - 使用 redis:[https://chanchifeng.com/2019/02/16/springboot-redis/](https://chanchifeng.com/2019/02/16/springboot-redis/ "https://chanchifeng.com/2019/02/16/springboot-redis/")
 - springboot - 使用 log4j：[https://chanchifeng.com/2019/02/17/springboot-log4j/](https://chanchifeng.com/2019/02/17/springboot-log4j/ "https://chanchifeng.com/2019/02/17/springboot-log4j/")
 - springboot - 使用 quartz 定时器：[https://chanchifeng.com/2019/02/17/springboot-quartz/](https://chanchifeng.com/2019/02/17/springboot-quartz/ "https://chanchifeng.com/2019/02/17/springboot-quartz/")
-- springboot - 集成 mybatis：
+- springboot - 集成 mybatis：[https://chanchifeng.com/2019/02/18/springboot-mybatis/](https://chanchifeng.com/2019/02/18/springboot-mybatis/ "https://chanchifeng.com/2019/02/18/springboot-mybatis/")
 
 ----------
 
