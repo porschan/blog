@@ -183,4 +183,22 @@ date: 2019-02-15 10:10:41
 	添加第一行：
 	Add readme.md
 
+	暂存区和head直接的差异，也可以检查暂存区和head完全一样（为空的情况下）：
+	git diff --cached
+	
+	工作区与暂存区的区别：
+	git diff
+	
+	只对工作区和暂存区中某个文件进行比较：
+	git diff -- readme.md
+	
+	让暂存区恢复和head一样：
+	git reset HEAD
+	
+	让工作区恢复暂存区一样：
+	git checkout -- index.html
+	
+	取消暂存区的部分文件更改：
+	git reset HEAD -- style/style.css
+
 ```
