@@ -200,5 +200,35 @@ date: 2019-02-15 10:10:41
 	
 	取消暂存区的部分文件更改：
 	git reset HEAD -- style/style.css
+	
+	消除最近几次的提交：
+	git reset --hard 5bf3fd1900
+	
+	查看不同提交的指定文件的差异：
+	git diff temp master
+	git diff temp master -- index.html
+	
+	还原头指针和工作区一样：
+	git reset --hard HEAD
+	
+	删除文件：
+	git rm README.md
+	
+	临时加塞任务：
+	git stash
+	
+	git stash list
+	
+	(把stash的东西还原到当前分支，stash list 历史依然存在，不进行删除)
+	git stash apply
+	
+	
+	(把stash的东西还原到当前分支，stash list 删除)
+	git stash pop
+	
+	查看git管控的文件类型：
+	https://github.com/github/gitignore
+	
+
 
 ```

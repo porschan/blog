@@ -204,6 +204,7 @@ date: 2018/11/15 23:57:05
 
 - 项目包名层叠：[https://chanchifeng.com/2019/01/31/idea-package-hidden/](https://chanchifeng.com/2019/01/31/idea-package-hidden/ "https://chanchifeng.com/2019/01/31/idea-package-hidden/")
 - INTELLIJ IDEA常用设置:[https://chanchifeng.com/2018/11/11/intellij-idea/](https://chanchifeng.com/2018/11/11/intellij-idea/ "https://chanchifeng.com/2018/11/11/intellij-idea/")
+- idea - 常用插件：
 
 ### ULTRAEDIT ###
 
