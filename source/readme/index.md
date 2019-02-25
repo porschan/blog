@@ -5,7 +5,7 @@ date: 2018/11/15 23:57:05
 
 ### 技术路线 ###
 
-![](20190224.png)
+![](20190225.png)
 
 
 # Porschan #
@@ -117,6 +117,7 @@ date: 2018/11/15 23:57:05
 - 静态网站和SpringBoot项目的配置:[https://porschan.github.io/2018/11/15/nginx-staticWeb-springBoot/](https://porschan.github.io/2018/11/15/nginx-staticWeb-springBoot/ "https://porschan.github.io/2018/11/15/nginx-staticWeb-springBoot/")
 - Nginx配置阿里云ssl证书使HTTPS生效：[https://chanchifeng.com/2018/11/29/nginx-https-ali/](https://chanchifeng.com/2018/11/29/nginx-https-ali/ "https://chanchifeng.com/2018/11/29/nginx-https-ali/")
 - nginx同时保持http和https:[https://chanchifeng.com/2018/11/30/nginx-https-http/](https://chanchifeng.com/2018/11/30/nginx-https-http/ "https://chanchifeng.com/2018/11/30/nginx-https-http/")
+- nginx - 编译：
 
 ----------
 
