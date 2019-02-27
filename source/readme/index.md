@@ -5,7 +5,7 @@ date: 2018/11/15 23:57:05
 
 ### 技术路线 ###
 
-![](20190225.png)
+![](20190227.png)
 
 
 # Porschan #
@@ -51,6 +51,10 @@ date: 2018/11/15 23:57:05
 - 使用GITHUB 和 GITHUB DESKTOP 协同开发:[https://chanchifeng.com/2018/11/11/github-github_desktop/](https://chanchifeng.com/2018/11/11/github-github_desktop/ "https://chanchifeng.com/2018/11/11/github-github_desktop/")
 - github下载并搭建hexo环境:[https://chanchifeng.com/2018/11/11/github-hexo-windows10/](https://chanchifeng.com/2018/11/11/github-hexo-windows10/ "github下载并搭建hexo环境")
 - Git - 基本配置：[https://chanchifeng.com/2019/02/15/git-basic/](https://chanchifeng.com/2019/02/15/git-basic/ "https://chanchifeng.com/2019/02/15/git-basic/")
+
+### 网络协议 ###
+
+-  
 
 ## Front-end ##
 
@@ -171,6 +175,10 @@ date: 2018/11/15 23:57:05
 #### 基础 ####
 
 - java - windows安装：[https://chanchifeng.com/2019/02/16/java-install/](https://chanchifeng.com/2019/02/16/java-install/ "https://chanchifeng.com/2019/02/16/java-install/")
+
+#### JVM ####
+
+- 
 
 #### JFinal ####
 
