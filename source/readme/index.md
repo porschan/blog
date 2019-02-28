@@ -165,6 +165,7 @@ date: 2018/11/15 23:57:05
 - windows下查看jdk版本：[https://chanchifeng.com/2019/01/28/windows-jdk/](https://chanchifeng.com/2019/01/28/windows-jdk/ "https://chanchifeng.com/2019/01/28/windows-jdk/")
 - 在windows下使用bat文件跑命令:[https://chanchifeng.com/2018/11/12/hexo-cmd-windows-bat/](https://chanchifeng.com/2018/11/12/hexo-cmd-windows-bat/ "在windows下使用bat文件跑命令")
 - windows - 虚拟机安装 ubunt：[https://chanchifeng.com/2019/02/17/windows-install-ubunt-vm/](https://chanchifeng.com/2019/02/17/windows-install-ubunt-vm/ "https://chanchifeng.com/2019/02/17/windows-install-ubunt-vm/")
+- activeMQ - windows系统安装：
 
 ----------
 
