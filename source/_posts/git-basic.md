@@ -229,6 +229,38 @@ date: 2019-02-15 10:10:41
 	查看git管控的文件类型：
 	https://github.com/github/gitignore
 	
-
+	如何将git仓库备份到本地：
+	
+	哑协议：
+	git clone --bare e/Gitware/git_learning/.git ya.git
+	
+	智能协议：
+	git clone --bare file://e/Gitware/git_learning/.git zhineng.git
+	
+	git remote -v
+	
+	git remote add git_learning file:///e/Gitware/git_learning/.git
+	
+	help.github.com
+	
+	配置公私钥：
+	
+	ssh-keygen -t rsa -b 4096 -C "a710437653@vip.qq.com"
+	
+	5、在git中输入命令：
+	
+	ssh -T git@github.com
+	
+	git remote add github git@github.com:asuschan/git_learning.git
+	
+	git remote -v
+	
+	git fetch github master
+	
+	git merge github/master
+	
+	git merge --allow-unrelated-histories github/master
+	
+	git push github master
 
 ```
