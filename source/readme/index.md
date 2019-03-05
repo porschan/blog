@@ -5,7 +5,7 @@ date: 2018/11/15 23:57:05
 
 ### 技术路线 ###
 
-![](20190304.png)
+![](20190305.png)
 
 # Porschan #
 
@@ -170,6 +170,10 @@ date: 2018/11/15 23:57:05
 
 ## Back-end ##
 
+### Maven ###
+
+- Maven - 单独下载pom.xml里的Jar包：
+
 ### Java ###
 
 #### 基础 ####
@@ -206,6 +210,7 @@ date: 2018/11/15 23:57:05
 - springboot - 使用 log4j：[https://chanchifeng.com/2019/02/17/springboot-log4j/](https://chanchifeng.com/2019/02/17/springboot-log4j/ "https://chanchifeng.com/2019/02/17/springboot-log4j/")
 - springboot - 使用 quartz 定时器：[https://chanchifeng.com/2019/02/17/springboot-quartz/](https://chanchifeng.com/2019/02/17/springboot-quartz/ "https://chanchifeng.com/2019/02/17/springboot-quartz/")
 - springboot - 集成 mybatis：[https://chanchifeng.com/2019/02/18/springboot-mybatis/](https://chanchifeng.com/2019/02/18/springboot-mybatis/ "https://chanchifeng.com/2019/02/18/springboot-mybatis/")
+- springboot - 使用 ActiveMQ：[https://chanchifeng.com/2019/03/04/springboot-activemq/](https://chanchifeng.com/2019/03/04/springboot-activemq/ "https://chanchifeng.com/2019/03/04/springboot-activemq/")
 
 ----------
 
