@@ -42,7 +42,7 @@ date: 2018/11/15 23:57:05
 
 ### 设计模式 ###
 
-- 设计模式 - 策略模式: 
+- 设计模式 - 策略模式: [https://chanchifeng.com/2019/03/06/designPattern-strategyPattern/](https://chanchifeng.com/2019/03/06/designPattern-strategyPattern/ "https://chanchifeng.com/2019/03/06/designPattern-strategyPattern/")
 
 ### Git ###
 
@@ -212,7 +212,7 @@ date: 2018/11/15 23:57:05
 - springboot - 使用 quartz 定时器：[https://chanchifeng.com/2019/02/17/springboot-quartz/](https://chanchifeng.com/2019/02/17/springboot-quartz/ "https://chanchifeng.com/2019/02/17/springboot-quartz/")
 - springboot - 集成 mybatis：[https://chanchifeng.com/2019/02/18/springboot-mybatis/](https://chanchifeng.com/2019/02/18/springboot-mybatis/ "https://chanchifeng.com/2019/02/18/springboot-mybatis/")
 - springboot - 使用 ActiveMQ：[https://chanchifeng.com/2019/03/04/springboot-activemq/](https://chanchifeng.com/2019/03/04/springboot-activemq/ "https://chanchifeng.com/2019/03/04/springboot-activemq/")
-- springboot - 使用 @Async 异步调用:
+- springboot - 使用 @Async 异步调用:[https://chanchifeng.com/2019/03/06/springboot-async/](https://chanchifeng.com/2019/03/06/springboot-async/ "https://chanchifeng.com/2019/03/06/springboot-async/")
 
 ----------
 
