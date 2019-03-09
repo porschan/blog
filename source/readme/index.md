@@ -5,7 +5,7 @@ date: 2018/11/15 23:57:05
 
 ### 技术路线 ###
 
-![](20190306.png)
+![](20190309.png)
 
 # Porschan #
 
@@ -43,6 +43,7 @@ date: 2018/11/15 23:57:05
 ### 设计模式 ###
 
 - 设计模式 - 策略模式: [https://chanchifeng.com/2019/03/06/designPattern-strategyPattern/](https://chanchifeng.com/2019/03/06/designPattern-strategyPattern/ "https://chanchifeng.com/2019/03/06/designPattern-strategyPattern/")
+- 设计模式 - 观察者模式:
 
 ### Git ###
 
