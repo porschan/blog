@@ -5,7 +5,7 @@ date: 2018/11/15 23:57:05
 
 ### 技术路线 ###
 
-![](20190309.png)
+![](20190313.png)
 
 # Porschan #
 
@@ -55,7 +55,7 @@ date: 2018/11/15 23:57:05
 
 ### 网络协议 ###
 
--  
+-  网络协议 - 基础知识点：
 
 ## Front-end ##
 
@@ -183,8 +183,6 @@ date: 2018/11/15 23:57:05
 - java - windows安装：[https://chanchifeng.com/2019/02/16/java-install/](https://chanchifeng.com/2019/02/16/java-install/ "https://chanchifeng.com/2019/02/16/java-install/")
 
 #### JVM ####
-
-- JVM - 基础知识点
 
 - JVM - 基础知识点:[https://chanchifeng.com/2019/03/03/jvm-basic/](https://chanchifeng.com/2019/03/03/jvm-basic/ "https://chanchifeng.com/2019/03/03/jvm-basic/")
 
