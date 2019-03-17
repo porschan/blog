@@ -263,4 +263,40 @@ date: 2019-02-15 10:10:41
 	
 	git push github master
 
+	不同人修改了不同的文件如何处理:
+	
+	模拟：
+	
+	需要同提前将项目成员添加到github上里面
+	
+	1.项目的所有者在github上面，创建分支。
+	
+	git config --add --local user.name 'porschan'
+	git config --add --local user.email '710437653@qq.com'
+	
+	 git branch -av
+	 git checkout -b feature/add_git_commands origin/feature/add_git_commands
+	 
+	 git branch -v
+	git add -u
+	
+	拉取项目最新
+	git fetch github
+	
+	git fetch github
+	
+	git merge github/feature/add_git_commands
+	
+	同一个人修改了文件。
+	
+	git pull
+	
+	git mv index.html index.htm
+	
+	向集成分支执行push -f操作
+	git push -f origin feature/add_git_commands
+	
+	github上面查找项目
+	git 最好 学习 资料 in:readme
+
 ```
