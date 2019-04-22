@@ -3,17 +3,6 @@ title: 启动多个Tomcat
 date: 2018/11/29 23:07:44
 ---
 
-<div class="tip">
-	来历：
-				
-	自身的特点：
-		
-	适合解决的问题：
-		
-	实际的应用场景：
-		
-</div>
-
 	其要点在于如何设置Tomcat的配置文件。
 
 <div class="tip">

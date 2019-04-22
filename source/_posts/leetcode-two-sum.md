@@ -3,17 +3,6 @@ title: 数据结构练习 - leetcode - 两数之和
 date: 2018-12-24 20:13:39
 ---
 
-<div class="tip">
-	来历：
-				
-	自身的特点：
-		
-	适合解决的问题：
-		
-	实际的应用场景：
-		
-</div>
-
 ## 题目 ##
 
 两数之和：[https://leetcode.com/problems/reverse-linked-list/]("https://leetcode.com/problems/two-sum/ "https://leetcode.com/problems/two-sum/")

@@ -2,16 +2,6 @@
 title: Redis - windows系统安装
 date: 2019-02-16 17:33:50
 ---
-<div class="tip">
-	来历：
-				
-	自身的特点：
-		
-	适合解决的问题：
-		
-	实际的应用场景：
-		
-</div>
 
 1.在浏览器中输入：[https://github.com/MicrosoftArchive/redis/releases](https://github.com/MicrosoftArchive/redis/releases "https://github.com/MicrosoftArchive/redis/releases")
 

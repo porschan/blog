@@ -2,16 +2,6 @@
 title: SpringBoot - 使用jpa
 date: 2019-01-31 16:28:09
 ---
-<div class="tip">
-	来历：
-				
-	自身的特点：
-		
-	适合解决的问题：
-		
-	实际的应用场景：
-		
-</div>
 
 1.在springBootStudio项目中添加Module。
 

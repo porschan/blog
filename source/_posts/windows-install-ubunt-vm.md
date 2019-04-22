@@ -2,16 +2,6 @@
 title: windows - 虚拟机安装 ubunt
 date: 2019-02-17 16:50:36
 ---
-<div class="tip">
-	来历：
-				
-	自身的特点：
-		
-	适合解决的问题：
-		
-	实际的应用场景：
-		
-</div>
 1.这里使用的VMware Workstation软件，打开该软件。
 
 2.点击创建新的虚拟机，如下图：

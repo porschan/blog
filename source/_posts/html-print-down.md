@@ -3,18 +3,6 @@ title: 打印及下载的js摘抄
 date: 2019-01-25 15:09:53
 ---
 
-<div class="tip">
-	来历：
-				
-	自身的特点：
-		
-	适合解决的问题：
-		
-	实际的应用场景：
-		
-</div>
-
-
 [打印及下载的js下载](https://github.com/porschan/front-end-demo/tree/master/%E6%89%93%E5%8D%B0js "https://github.com/porschan/front-end-demo/tree/master/%E6%89%93%E5%8D%B0js")
 
 ```

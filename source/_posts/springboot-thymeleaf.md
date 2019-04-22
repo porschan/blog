@@ -2,16 +2,6 @@
 title: springboot - 使用thymeleaf模板引擎
 date: 2019-02-14 11:16:48
 ---
-<div class="tip">
-	来历：
-				
-	自身的特点：
-		
-	适合解决的问题：
-		
-	实际的应用场景：
-		
-</div>
 
 1.在springBootStudio项目中添加Module。
 

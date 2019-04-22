@@ -2,16 +2,6 @@
 title: SpringBoot - hello World
 date: 2019-01-31 11:28:43
 ---
-<div class="tip">
-	来历：
-				
-	自身的特点：
-		
-	适合解决的问题：
-		
-	实际的应用场景：
-		
-</div>
 
 1.新建一个空项目。
 

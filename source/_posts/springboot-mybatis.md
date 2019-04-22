@@ -2,16 +2,7 @@
 title: springboot - 集成 mybatis
 date: 2019-02-18 14:41:42
 ---
-<div class="tip">
-	来历：
-				
-	自身的特点：
-		
-	适合解决的问题：
-		
-	实际的应用场景：
-		
-</div>
+
 1.在springBootStudio项目中添加Module。
 
 2.选择Spring Initializr，点击next。

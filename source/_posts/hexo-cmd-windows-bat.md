@@ -3,16 +3,6 @@ title: 在windows下使用bat文件跑命令
 date: 2018/11/12 13:16:56
 ---
 
-<div class="tip">
-	来历：
-		
-	自身的特点：
-
-	适合解决的问题：
-		
-	实际的应用场景：去掉繁琐的hexo目录及手动复制public文件夹到github项目中。
-</div>
-
 ## 一次执行hexo clean,hexo generate,hexo server的hexo命令 ##
 
 catalina.bat：

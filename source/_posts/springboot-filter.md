@@ -2,16 +2,6 @@
 title: springboot - 使用 filter 过滤器
 date: 2019-02-14 14:58:47
 ---
-<div class="tip">
-	来历：
-				
-	自身的特点：
-		
-	适合解决的问题：
-		
-	实际的应用场景：
-		
-</div>
 
 1.在springBootStudio项目中添加Module。
 

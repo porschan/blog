@@ -2,16 +2,6 @@
 title: springboot - 使用 @Async 异步调用
 date: 2019-03-06 20:19:50
 ---
-<div class="tip">
-	来历：
-				
-	自身的特点：
-		
-	适合解决的问题：
-		
-	实际的应用场景：
-		
-</div>
 
 1.在springBootStudio项目中添加Module。
 
@@ -122,5 +112,5 @@ date: 2019-03-06 20:19:50
 
 <div class="tip">
 	参考：springboot之异步调用@Async[https://www.cnblogs.com/xuwenjin/p/8858050.html](https://www.cnblogs.com/xuwenjin/p/8858050.html "https://www.cnblogs.com/xuwenjin/p/8858050.html")
-		
+
 </div>

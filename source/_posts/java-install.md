@@ -2,16 +2,6 @@
 title: java - windows安装
 date: 2019-02-16 17:04:43
 ---
-<div class="tip">
-	来历：
-				
-	自身的特点：
-		
-	适合解决的问题：
-		
-	实际的应用场景：
-		
-</div>
 
 ### windows上面的安装包为jdk-8u152-windows-x64.exe ###
 

@@ -3,18 +3,6 @@ title: 静态网站和SpringBoot项目的配置
 date: 2018-11-15 23:40:31
 ---
 
-
-<div class="tip">
-	来历：
-		
-	自身的特点：
-		
-	适合解决的问题：
-		解决了一个服务器中多个项目用同一个端口的问题。
-	实际的应用场景:
-		
-</div>
-
 ### 找到对应Nginx的位置 ###
 
 ![](nginx-staticWeb-springBoot/20181115234435.png)

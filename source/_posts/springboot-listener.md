@@ -2,16 +2,6 @@
 title: springboot - 使用 listener 监听器
 date: 2019-02-14 15:55:16
 ---
-<div class="tip">
-	来历：
-				
-	自身的特点：
-		
-	适合解决的问题：
-		
-	实际的应用场景：
-		
-</div>
 
 ### 在原本的项目中使用listener监听器 ###
 

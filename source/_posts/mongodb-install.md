@@ -2,16 +2,6 @@
 title: mongodb - windows系统安装
 date: 2019-02-18 15:09:14
 ---
-<div class="tip">
-	来历：
-				
-	自身的特点：
-		
-	适合解决的问题：
-		
-	实际的应用场景：
-		
-</div>
 
 1.在浏览器中输入：[https://www.mongodb.com/download-center/community](https://www.mongodb.com/download-center/community "https://www.mongodb.com/download-center/community")
 

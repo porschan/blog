@@ -2,16 +2,6 @@
 title: nginx同时保持http和https
 date: 2018/11/30 23:35:19
 ---
-<div class="tip">
-	来历：
-				
-	自身的特点：
-		
-	适合解决的问题：
-		
-	实际的应用场景：
-		
-</div>
 
 我使用的nginx版本是1.9.7，直接post：
 
@@ -115,5 +105,5 @@ http {
 
 <div class="tip">
 	参考：nginx 配置站点 支持 http协议 80端口 https协议 443端口同时兼容访问 实例[https://www.jiloc.com/40422.html](https://www.jiloc.com/40422.html "https://www.jiloc.com/40422.html")
-		
+
 </div>

@@ -2,16 +2,6 @@
 title: springboot - 使用 transactional 事务支持
 date: 2019-02-14 13:13:48
 ---
-<div class="tip">
-	来历：
-				
-	自身的特点：
-		
-	适合解决的问题：
-		
-	实际的应用场景：
-		
-</div>
 
 ### 在原本的项目中使用transactional的事务支持 ###
 

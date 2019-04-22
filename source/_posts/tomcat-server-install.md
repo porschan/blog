@@ -2,16 +2,6 @@
 title: Tomcat安装服务之指定jdk版本
 date: 2018-12-02 09:28:56
 ---
-<div class="tip">
-	来历：
-				
-	自身的特点：
-		
-	适合解决的问题：
-		
-	实际的应用场景：
-		
-</div>
 
 ## 操作步骤 ##
 
@@ -50,5 +40,5 @@ date: 2018-12-02 09:28:56
 
 	在windows中安装tomcat服务参考：
 	DOS TOMCAT 操作:[https://chanchifeng.com/2018/11/11/tomcat-server/](https://chanchifeng.com/2018/11/11/tomcat-server/ "https://chanchifeng.com/2018/11/11/tomcat-server/")
-		
+
 </div>

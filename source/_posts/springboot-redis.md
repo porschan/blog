@@ -2,16 +2,6 @@
 title: springboot - 使用 redis
 date: 2019-02-16 20:04:03
 ---
-<div class="tip">
-	来历：
-				
-	自身的特点：
-		
-	适合解决的问题：
-		
-	实际的应用场景：
-		
-</div>
 
 1.关于redis在windows系统如何安装，可以参考过完文章（Redis - windows系统安装）。
 

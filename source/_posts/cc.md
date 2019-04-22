@@ -3,17 +3,6 @@ title: CC许可协议
 date: 2018/11/13 15:58:07
 ---
 
-<div class="tip">
-	来历：
-				
-	自身的特点：
-		
-	适合解决的问题：
-		
-	实际的应用场景：
-		
-</div>
-
 ### 进入creativecommons官方选择认证协议 ###
 
 [https://creativecommons.org/choose/](https://creativecommons.org/choose/ "许可协议要点")
