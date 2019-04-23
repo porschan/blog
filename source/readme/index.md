@@ -5,7 +5,7 @@ date: 2018/11/15 23:57:05
 
 ### 技术路线 ###
 
-![](20190409.png)
+![](20190423.png)
 
 # Porschan #
 
@@ -167,6 +167,7 @@ date: 2018/11/15 23:57:05
 - 在windows下使用bat文件跑命令:[https://chanchifeng.com/2018/11/12/hexo-cmd-windows-bat/](https://chanchifeng.com/2018/11/12/hexo-cmd-windows-bat/ "在windows下使用bat文件跑命令")
 - windows - 虚拟机安装 ubunt：[https://chanchifeng.com/2019/02/17/windows-install-ubunt-vm/](https://chanchifeng.com/2019/02/17/windows-install-ubunt-vm/ "https://chanchifeng.com/2019/02/17/windows-install-ubunt-vm/")
 - activeMQ - windows系统安装：[https://chanchifeng.com/2019/02/28/windows-activeMQ-install/](https://chanchifeng.com/2019/02/28/windows-activeMQ-install/ "https://chanchifeng.com/2019/02/28/windows-activeMQ-install/")
+- JDK - windows系统安装:
 
 ----------
 
