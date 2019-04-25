@@ -88,7 +88,7 @@ ctrl + alt + L
 
 1.点击[Color Themes 网站](http://color-themes.com/?view=index)，并下载主题包，如下图所示：
 
-![](../intellij-idea/20180719104511.png)
+![](intellij-idea/20180719104511.png)
 
 2.根据公网提供的修改过程如下：
 
@@ -96,7 +96,13 @@ ctrl + alt + L
 
 	How to install a theme?
 	Select «File» → «Import Setting» from the main menu and follow the instructions. After the IDE restarted go to the Preferences, expand «Editor» → «Colors and fonts» tab and choose the installed theme.
-
 ```
 
 我在用Obsidian主题。
+
+### 更换idea的字体：
+
+```
+	File -> Settings -> Editor -> Font 
+	在Font项中，选择字体即可。
+````

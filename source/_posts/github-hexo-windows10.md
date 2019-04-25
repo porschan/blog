@@ -5,36 +5,36 @@ date: 2018/11/11 23:51:01
 
 ## 前提：环境预先搭建完成 ##
 
-![](../github-hexo-windows10/20181111235623.jpg)
+![](github-hexo-windows10/20181111235623.jpg)
 
 ```
+	安装hexo:
+	$ npm install -g hexo-cli
+	
 	$ node -v
 
 	$ hexo -v
 
 	$ git --version
-
-
 ```
 
 ## git clone ##
 
 
-![](../github-hexo-windows10/20181111164528.jpg)
+![](github-hexo-windows10/20181111164528.jpg)
 
-![](../github-hexo-windows10/20181111164550.jpg)
+![](github-hexo-windows10/20181111164550.jpg)
 
 ```
 	$ git clone https://github.com/porschan/source.porschan.github.io.git
-
 ```
 
 ## [可选]不使用npm install ##
 
 官方的推荐的使用如下：
-![](../github-hexo-windows10/20181112000623.jpg)
+![](github-hexo-windows10/20181112000623.jpg)
 我遇到的报错如下：
-![](../github-hexo-windows10/20181112000814.jpg)
+![](github-hexo-windows10/20181112000814.jpg)
 
 切换npm为cnpm:
 ```
@@ -43,15 +43,12 @@ date: 2018/11/11 23:51:01
 	$ cnpm install vue-cli -g
 
 	$ cnpm install
-
-
 ```
 
 ## [可选]遇到markdownPad不能直接显示图片 ##
 
 ```
 	$ npm install hexo-asset-image --save
-
 ```
 
 ## 最后运行hexo ##
@@ -60,7 +57,6 @@ date: 2018/11/11 23:51:01
 	$ hexo generate
 
 	$ hexo server
-
 ```
 
 ## 预览效果 ##

@@ -5,7 +5,7 @@ date: 2018/11/15 23:57:05
 
 ### 技术路线 ###
 
-![](20190423.png)
+![](20190425.png)
 
 # Porschan #
 
@@ -43,7 +43,14 @@ date: 2018/11/15 23:57:05
 ### 设计模式 ###
 
 - 设计模式 - 策略模式: [https://chanchifeng.com/2019/03/06/designPattern-strategyPattern/](https://chanchifeng.com/2019/03/06/designPattern-strategyPattern/ "https://chanchifeng.com/2019/03/06/designPattern-strategyPattern/")
+
 - 设计模式 - 观察者模式:[https://chanchifeng.com/2019/03/09/designPattern-observerPattern/](https://chanchifeng.com/2019/03/09/designPattern-observerPattern/ "https://chanchifeng.com/2019/03/09/designPattern-observerPattern/")
+
+- 设计模式 - 策略模式:
+
+- 设计模式 - 单例模式:
+
+  
 
 ### Git ###
 
@@ -158,16 +165,27 @@ date: 2018/11/15 23:57:05
 #### Windows ####
 
 - WINDOWS 下的一个有用的BAT程序：[https://chanchifeng.com/2018/11/11/windows-bat/](https://chanchifeng.com/2018/11/11/windows-bat/ "https://chanchifeng.com/2018/11/11/windows-bat/")
+
 - WINDOWS10任务栏上的时间显示秒操作：[https://chanchifeng.com/2018/11/11/windows-second/](https://chanchifeng.com/2018/11/11/windows-second/ "https://chanchifeng.com/2018/11/11/windows-second/")
+
 - WINDOWS上面的发音:[https://chanchifeng.com/2018/11/11/windows-speak/](https://chanchifeng.com/2018/11/11/windows-speak/ "https://chanchifeng.com/2018/11/11/windows-speak/")
+
 - WINDOWS下面切换jdk版本：[https://chanchifeng.com/2018/11/29/windows-jdks/](https://chanchifeng.com/2018/11/29/windows-jdks/ "https://chanchifeng.com/2018/11/29/windows-jdks/")
+
 - WINDOWS中使用命令行关闭进程：[https://chanchifeng.com/2018/12/01/windows-taskkill/](https://chanchifeng.com/2018/12/01/windows-taskkill/ "https://chanchifeng.com/2018/12/01/windows-taskkill/")
+
 - windows下修改hosts文件，使coursera能正常学习：[https://chanchifeng.com/2018/12/24/windows-coursera/](https://chanchifeng.com/2018/12/24/windows-coursera/ "https://chanchifeng.com/2018/12/24/windows-coursera/")
+
 - windows下查看jdk版本：[https://chanchifeng.com/2019/01/28/windows-jdk/](https://chanchifeng.com/2019/01/28/windows-jdk/ "https://chanchifeng.com/2019/01/28/windows-jdk/")
+
 - 在windows下使用bat文件跑命令:[https://chanchifeng.com/2018/11/12/hexo-cmd-windows-bat/](https://chanchifeng.com/2018/11/12/hexo-cmd-windows-bat/ "在windows下使用bat文件跑命令")
+
 - windows - 虚拟机安装 ubunt：[https://chanchifeng.com/2019/02/17/windows-install-ubunt-vm/](https://chanchifeng.com/2019/02/17/windows-install-ubunt-vm/ "https://chanchifeng.com/2019/02/17/windows-install-ubunt-vm/")
+
 - activeMQ - windows系统安装：[https://chanchifeng.com/2019/02/28/windows-activeMQ-install/](https://chanchifeng.com/2019/02/28/windows-activeMQ-install/ "https://chanchifeng.com/2019/02/28/windows-activeMQ-install/")
-- JDK - windows系统安装:
+- JDK - windows系统安装:[https://chanchifeng.com/2019/04/23/windows-jdk-install/](https://chanchifeng.com/2019/04/23/windows-jdk-install/"https://chanchifeng.com/2019/04/23/windows-jdk-install/")
+
+  
 
 ----------
 
