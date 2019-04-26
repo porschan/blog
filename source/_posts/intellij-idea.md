@@ -106,3 +106,7 @@ ctrl + alt + L
 	File -> Settings -> Editor -> Font 
 	在Font项中，选择字体即可。
 ````
+
+### 取消默认打开项目：
+
+![](intellij-idea/20190425164008.png)
