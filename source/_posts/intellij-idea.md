@@ -25,7 +25,6 @@ File -> Settings -> Live Templates
 	Name	Expression	Default value	Skip if defined
 	TIME	time()								□
 	DATE	date()								□
-
 ```
 
 ### 设置idea的类注释
@@ -103,8 +102,8 @@ ctrl + alt + L
 ### 更换idea的字体：
 
 ```
-	File -> Settings -> Editor -> Font 
-	在Font项中，选择字体即可。
+    File -> Settings -> Editor -> Font 
+    在Font项中，选择字体即可。
 ````
 
 ### 取消默认打开项目：
