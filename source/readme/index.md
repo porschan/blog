@@ -50,9 +50,9 @@ date: 2018/11/15 23:57:05
 
 - 设计模式 - 单例模式:[https://chanchifeng.com/2019/04/25/designPattern-singletonPattern/ (https://chanchifeng.com/2019/04/25/designPattern-singletonPattern/ "https://chanchifeng.com/2019/04/25/designPattern-singletonPattern/")
 
-- 设计模式 - 工厂模式:
+- 设计模式 - 工厂模式:[https://chanchifeng.com/2019/04/26/designPattern-factoryPattern/ (https://chanchifeng.com/2019/04/26/designPattern-factoryPattern/ "https://chanchifeng.com/2019/04/26/designPattern-factoryPattern/")
 
-- 设计模式 - 命令模式：
+- 设计模式 - 命令模式：[https://chanchifeng.com/2019/04/27/designPattern-commandPattern/  (https://chanchifeng.com/2019/04/27/designPattern-commandPattern/ "https://chanchifeng.com/2019/04/27/designPattern-commandPattern/")
 
 - 设计模式 - 适配器模式：
 
@@ -238,7 +238,7 @@ date: 2018/11/15 23:57:05
 - springboot - 使用 ActiveMQ：[https://chanchifeng.com/2019/03/04/springboot-activemq/](https://chanchifeng.com/2019/03/04/springboot-activemq/ "https://chanchifeng.com/2019/03/04/springboot-activemq/")
 - springboot - 使用 @Async 异步调用:[https://chanchifeng.com/2019/03/06/springboot-async/](https://chanchifeng.com/2019/03/06/springboot-async/ "https://chanchifeng.com/2019/03/06/springboot-async/")
 
-#### SpringBoot ####
+#### SpringMVC ####
 
 - 使用IDEA创建SPRING MVC 项目:[https://chanchifeng.com/2019/04/26/springMVC-create/](https://chanchifeng.com/2019/04/26/springMVC-create/ "https://chanchifeng.com/2019/04/26/springMVC-create/")
 
