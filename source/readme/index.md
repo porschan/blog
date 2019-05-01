@@ -5,99 +5,97 @@ date: 2018/11/15 23:57:05
 
 ### 技术路线 ###
 
-![](20190427.png)
+![](20190501.png)
 
 # Porschan #
 
 ## 个人备忘录 ##
 
-- CC许可协议:[https://chanchifeng.com/2018/11/13/cc/](https://chanchifeng.com/2018/11/13/cc/ "CC许可协议")
-- MARKDOWNPAD2 初使用:[https://chanchifeng.com/2018/07/25/markdownPad/](https://chanchifeng.com/2018/07/25/markdownPad/ "https://chanchifeng.com/2018/07/25/markdownPad/")
-- BANDWAGONHOST 切换 IP：[https://chanchifeng.com/2019/04/22/Bandwagonhost-IP/](https://chanchifeng.com/2019/04/22/Bandwagonhost-IP/ "https://chanchifeng.com/2019/04/22/Bandwagonhost-IP/")
-- SOURCETREE 在WINDOWS安装：[https://chanchifeng.com/2019/04/22/SourceTree/](https://chanchifeng.com/2019/04/22/SourceTree/ "https://chanchifeng.com/2019/04/22/SourceTree/")
-- 计算机硬货:[https://chanchifeng.com/2019/04/22/computer/](https://chanchifeng.com/2019/04/22/computer/ "https://chanchifeng.com/2019/04/22/computer/")
-- FRP初使用:[https://chanchifeng.com/2019/04/22/frp/](https://chanchifeng.com/2019/04/22/frp/ “ "https://chanchifeng.com/2019/04/22/frp/"”)
-- HELLO WORLD:[https://chanchifeng.com/2019/04/22/hello-world/](https://chanchifeng.com/2019/04/22/hello-world/ "https://chanchifeng.com/2019/04/22/hello-world/")
-- 从HTTP 到 HTTPS:[https://chanchifeng.com/2019/04/22/http-https/](https://chanchifeng.com/2019/04/22/http-https/ "https://chanchifeng.com/2019/04/22/http-https/")
-- NGROK初使用:[https://chanchifeng.com/2019/04/22/ngrok/](https://chanchifeng.com/2019/04/22/ngrok/ "https://chanchifeng.com/2019/04/22/ngrok/")
-- 常用软件备忘录:[https://chanchifeng.com/2019/04/22/note/](https://chanchifeng.com/2019/04/22/note/ "https://chanchifeng.com/2019/04/22/note/")
-- 梯子制造术--OPENVPN:[https://chanchifeng.com/2019/04/22/openVpn/](https://chanchifeng.com/2019/04/22/openVpn/ "https://chanchifeng.com/2019/04/22/openVpn/")
+- [CC许可协议](https://chanchifeng.com/2018/11/13/cc/ "CC许可协议")
+- [MarkdownPad2 初使用](https://chanchifeng.com/2018/07/25/markdownPad/ "MARKDOWNPAD2 初使用")
+- [BandwagonHost 切换 IP](https://chanchifeng.com/2019/04/22/Bandwagonhost-IP/ "BANDWAGONHOST 切换 IP")
+- [Sourcetree 在Windows安装](https://chanchifeng.com/2019/04/22/SourceTree/ "SOURCETREE 在WINDOWS安装")
+- [计算机硬货](https://chanchifeng.com/2019/04/22/computer/ "计算机硬货")
+- [FRP初使用](https://chanchifeng.com/2019/04/22/frp/ "FRP初使用")
+- [Hello World](https://chanchifeng.com/2019/04/22/hello-world/ "HELLO WORLD")
+- [从HTTP 到 HTTPS](https://chanchifeng.com/2019/04/22/http-https/ "从HTTP 到 HTTPS")
+- [Ngrok初使用](https://chanchifeng.com/2019/04/22/ngrok/ "NGROK初使用")
+- [常用软件备忘录](https://chanchifeng.com/2019/04/22/note/ "常用软件备忘录")
+- [梯子制造术 -  OpenVPN](https://chanchifeng.com/2019/04/22/openVpn/ "梯子制造术--OPENVPN")
 
 ----------
 
 ### 数据结构和算法 ###
 
-- 您好，数据结构和算法:[https://chanchifeng.com/2018/11/19/hello-algorithm/](https://chanchifeng.com/2018/11/19/hello-algorithm/ "https://chanchifeng.com/2018/11/19/hello-algorithm/")
-- 时间复杂度:[https://chanchifeng.com/2018/11/21/algorithm-BigO/](https://chanchifeng.com/2018/11/21/algorithm-BigO/ "https://chanchifeng.com/2018/11/21/algorithm-BigO/")
-- 数据结构：[https://chanchifeng.com/2018/12/06/algorithm-dataStructure/](https://chanchifeng.com/2018/12/06/algorithm-dataStructure/ "https://chanchifeng.com/2018/12/06/algorithm-dataStructure/")
-- 数据结构练习 - leetcode - 两数之和:[https://chanchifeng.com/2018/12/24/leetcode-two-sum/](https://chanchifeng.com/2018/12/24/leetcode-two-sum/ "https://chanchifeng.com/2018/12/24/leetcode-two-sum/")
-- 数据结构练习 - leetcode - 反转链表:[https://chanchifeng.com/2019/01/30/leetcode-reverseLinkedList/](https://chanchifeng.com/2019/01/30/leetcode-reverseLinkedList/ "https://chanchifeng.com/2019/01/30/leetcode-reverseLinkedList/")
+- [您好，数据结构和算法](https://chanchifeng.com/2018/11/19/hello-algorithm/ "您好，数据结构和算法")
+- [时间复杂度](https://chanchifeng.com/2018/11/21/algorithm-BigO/ "时间复杂度")
+- [数据结构](https://chanchifeng.com/2018/12/06/algorithm-dataStructure/ "数据结构")
+- [数据结构练习 - leetcode - 两数之和](https://chanchifeng.com/2018/12/24/leetcode-two-sum/ "数据结构练习 - leetcode - 两数之和")
+- [数据结构练习 - leetcode - 反转链表](https://chanchifeng.com/2019/01/30/leetcode-reverseLinkedList/ "数据结构练习 - leetcode - 反转链表")
 
 ----------
 
 ### 计算机组成 ###
 
-- 计算机组成 - 计算机结构:[https://chanchifeng.com/2018/12/31/ComputerComposition101/](https://chanchifeng.com/2018/12/31/ComputerComposition101/ "https://chanchifeng.com/2018/12/31/ComputerComposition101/")
-- 计算机组成 - 冯·诺依曼结构:[https://chanchifeng.com/2019/01/06/ComputerComposition102/](https://chanchifeng.com/2019/01/06/ComputerComposition102/ "https://chanchifeng.com/2019/01/06/ComputerComposition102/")
+- [计算机组成 - 计算机结构](https://chanchifeng.com/2018/12/31/ComputerComposition101/ "计算机组成 - 计算机结构")
+- [计算机组成 - 冯·诺依曼结构](https://chanchifeng.com/2019/01/06/ComputerComposition102/ "计算机组成 - 冯·诺依曼结构")
 
 ### 设计模式 ###
 
-- 设计模式 - 策略模式: [https://chanchifeng.com/2019/03/06/designPattern-strategyPattern/](https://chanchifeng.com/2019/03/06/designPattern-strategyPattern/ "https://chanchifeng.com/2019/03/06/designPattern-strategyPattern/")
+- [设计模式 - 策略模式](https://chanchifeng.com/2019/03/06/designPattern-strategyPattern/ "设计模式 - 策略模式")
 
-- 设计模式 - 观察者模式:[https://chanchifeng.com/2019/03/09/designPattern-observerPattern/](https://chanchifeng.com/2019/03/09/designPattern-observerPattern/ "https://chanchifeng.com/2019/03/09/designPattern-observerPattern/")
+- [设计模式 - 观察者模式](https://chanchifeng.com/2019/03/09/designPattern-observerPattern/ "设计模式 - 观察者模式")
 
-- 设计模式 - 装饰者模式:[https://chanchifeng.com/2019/04/25/designPattern-decoratorPattern/  (https://chanchifeng.com/2019/04/25/designPattern-decoratorPattern/ "https://chanchifeng.com/2019/04/25/designPattern-decoratorPattern/")
+- [设计模式 - 装饰者模式](https://chanchifeng.com/2019/04/25/designPattern-decoratorPattern/ "设计模式 - 装饰者模式")
 
-- 设计模式 - 单例模式:[https://chanchifeng.com/2019/04/25/designPattern-singletonPattern/ (https://chanchifeng.com/2019/04/25/designPattern-singletonPattern/ "https://chanchifeng.com/2019/04/25/designPattern-singletonPattern/")
+- [设计模式 - 单例模式](https://chanchifeng.com/2019/04/25/designPattern-singletonPattern/ "设计模式 - 单例模式")
 
-- 设计模式 - 工厂模式:[https://chanchifeng.com/2019/04/26/designPattern-factoryPattern/ (https://chanchifeng.com/2019/04/26/designPattern-factoryPattern/ "https://chanchifeng.com/2019/04/26/designPattern-factoryPattern/")
+- [设计模式 - 工厂模式](https://chanchifeng.com/2019/04/26/designPattern-factoryPattern/ "设计模式 - 工厂模式")
 
-- 设计模式 - 命令模式：[https://chanchifeng.com/2019/04/27/designPattern-commandPattern/  (https://chanchifeng.com/2019/04/27/designPattern-commandPattern/ "https://chanchifeng.com/2019/04/27/designPattern-commandPattern/")
+- [设计模式 - 命令模式](https://chanchifeng.com/2019/04/27/designPattern-commandPattern/ "设计模式 - 命令模式")
 
-- 设计模式 - 适配器模式：[https://chanchifeng.com/2019/04/29/designPattern-adapterPattern/  (https://chanchifeng.com/2019/04/29/designPattern-adapterPattern/ "https://chanchifeng.com/2019/04/29/designPattern-adapterPattern/")
-
-  
+- [设计模式 - 适配器模式](https://chanchifeng.com/2019/04/29/designPattern-adapterPattern/ "设计模式 - 适配器模式")
 
 ### Git ###
 
-- 写个定时任务，从GITHUB下载代码到阿里ECS服务器上:[https://chanchifeng.com/2019/04/22/github-ecs/](https://chanchifeng.com/2019/04/22/github-ecs/ "https://chanchifeng.com/2019/04/22/github-ecs/")
-- 继上次GIT CLONE 下来ECS 服务器之后再优化:[https://chanchifeng.com/2019/04/22/git_clone-CES/](https://chanchifeng.com/2019/04/22/git_clone-CES/ "https://chanchifeng.com/2019/04/22/git_clone-CES/")
-- 使用GITHUB 和 GITHUB DESKTOP 协同开发:[https://chanchifeng.com/2019/04/22/github-github_desktop/](https://chanchifeng.com/2019/04/22/github-github_desktop/ "https://chanchifeng.com/2019/04/22/github-github_desktop/")
-- github下载并搭建hexo环境:[https://chanchifeng.com/2018/11/11/github-hexo-windows10/](https://chanchifeng.com/2018/11/11/github-hexo-windows10/ "github下载并搭建hexo环境")
-- Git - 基本配置：[https://chanchifeng.com/2019/02/15/git-basic/](https://chanchifeng.com/2019/02/15/git-basic/ "https://chanchifeng.com/2019/02/15/git-basic/")
+- [写个定时任务，从Github下载代码到阿里ECS服务器上](https://chanchifeng.com/2019/04/22/github-ecs/ "写个定时任务，从GITHUB下载代码到阿里ECS服务器上")
+- [继上次GIT CLONE 下来ECS 服务器之后再优化](https://chanchifeng.com/2019/04/22/git_clone-CES/ "继上次GIT CLONE 下来ECS 服务器之后再优化")
+- [使用Github 和 Github Desktop 协同开发](https://chanchifeng.com/2019/04/22/github-github_desktop/ "使用GITHUB 和 GITHUB DESKTOP 协同开发")
+- [Github下载并搭建Hexo环境](https://chanchifeng.com/2018/11/11/github-hexo-windows10/ "github下载并搭建hexo环境")
+- [Git - 基本配置](https://chanchifeng.com/2019/02/15/git-basic/ "Git - 基本配置")
 
 ### 网络协议 ###
 
--  网络协议 - 基础知识点：[https://chanchifeng.com/2019/03/13/networkProtocol-basic/](https://chanchifeng.com/2019/03/13/networkProtocol-basic/ "https://chanchifeng.com/2019/03/13/networkProtocol-basic/")
+- [网络协议 - 基础知识点](https://chanchifeng.com/2019/03/13/networkProtocol-basic/ "网络协议 - 基础知识点")
 
 ## Front-end ##
 
 ### HTML ###
 
-- 在线检查网页的不同显示尺寸:[https://chanchifeng.com/2018/10/24/ui/](https://chanchifeng.com/2018/10/24/ui/ "https://chanchifeng.com/2018/10/24/ui/")
-- 记一次canvas的打印和下载：[https://chanchifeng.com/2018/12/11/html-canvas/](https://chanchifeng.com/2018/12/11/html-canvas/ "https://chanchifeng.com/2018/12/11/html-canvas/")
+- [在线检查网页的不同显示尺寸](https://chanchifeng.com/2018/10/24/ui/ "在线检查网页的不同显示尺寸")
+- [记一次canvas的打印和下载](https://chanchifeng.com/2018/12/11/html-canvas/ "记一次canvas的打印和下载")
 
 ----------
 
 ### JavaScript ###
 
-- JAVASCRIPT - 对浏览器缓存的JS、CSS的思考[https://chanchifeng.com/2019/04/22/JavaScript-js-css/](https://chanchifeng.com/2019/04/22/JavaScript-js-css/ "https://chanchifeng.com/2019/04/22/JavaScript-js-css/")
-- 打印及下载的js摘抄:[https://chanchifeng.com/2019/01/25/html-print-down/](https://chanchifeng.com/2019/01/25/html-print-down/ "https://chanchifeng.com/2019/01/25/html-print-down/")
+- [ Javascript- 对浏览器缓存的JS、CSS的思考](https://chanchifeng.com/2019/04/22/JavaScript-js-css/ "JAVASCRIPT - 对浏览器缓存的JS、CSS的思考")
+- [打印及下载的js摘抄](https://chanchifeng.com/2019/01/25/html-print-down/ "打印及下载的js摘抄")
 
 ----------
 
 ### 微信小程序 ###
 
-- 微信公众平台JS-SDK的CONFIG接口注入权限验证配置：[https://chanchifeng.com/2019/04/22/weChat-jssdk-config/](https://chanchifeng.com/2019/04/22/weChat-jssdk-config/ "https://chanchifeng.com/2019/04/22/weChat-jssdk-config/")
+- [微信公众平台JS-SDK的CONFIG接口注入权限验证配置](https://chanchifeng.com/2019/04/22/weChat-jssdk-config/ "微信公众平台JS-SDK的CONFIG接口注入权限验证配置")
 
 ----------
 
 ### Markdown渲染引擎 - Hexo ###
 
-- hexo的常用命令:[https://chanchifeng.com/2018/11/16/hexo-common/](https://chanchifeng.com/2018/11/16/hexo-common/ "https://chanchifeng.com/2018/11/16/hexo-common/")
-- 使用HEXO建立主题，并发布到GITHUB:[https://chanchifeng.com/2019/04/22/hexo-github/](https://chanchifeng.com/2019/04/22/hexo-github/ "https://chanchifeng.com/2019/04/22/hexo-github/")
-- 优化HEXO目录，使本地图片能显示出来:[https://chanchifeng.com/2019/04/22/hexo-image/](https://chanchifeng.com/2019/04/22/hexo-image/ "https://chanchifeng.com/2019/04/22/hexo-image/")
-- HEXO常用命令：[https://chanchifeng.com/2019/04/22/hexo-shell/](https://chanchifeng.com/2019/04/22/hexo-shell/ "https://chanchifeng.com/2019/04/22/hexo-shell/")
+- [Hexo的常用命令](https://chanchifeng.com/2018/11/16/hexo-common/ "hexo的常用命令")
+- [使用Hexo建立主题，并发布到Github](https://chanchifeng.com/2019/04/22/hexo-github/ "使用HEXO建立主题，并发布到GITHUB")
+- [优化Hexo目录，使本地图片能显示出来](https://chanchifeng.com/2019/04/22/hexo-image/ "优化HEXO目录，使本地图片能显示出来")
+- [Hexo常用命令](https://chanchifeng.com/2019/04/22/hexo-shell/ "HEXO常用命令")
 
 ----------
 
@@ -109,22 +107,22 @@ date: 2018/11/15 23:57:05
 
 #### MySQL ####
 
-- WINDOWS 下的MYSQL即时打印SQL日志：[https://chanchifeng.com/2019/04/22/windows-mysql-sql/](https://chanchifeng.com/2019/04/22/windows-mysql-sql/ "https://chanchifeng.com/2019/04/22/windows-mysql-sql/")
+- [Windows 下的 MySQL 即时打印 SQL 日志](https://chanchifeng.com/2019/04/22/windows-mysql-sql/ "WINDOWS 下的MYSQL即时打印SQL日志")
 
 #### NoSQL Databases ####
 
 #### MongoDB ####
 
-- MongoDB - windows系统安装：[https://chanchifeng.com/2019/02/18/mongodb-install/](https://chanchifeng.com/2019/02/18/mongodb-install/ "https://chanchifeng.com/2019/02/18/mongodb-install/")
+- [MongoDB - Windows系统安装](https://chanchifeng.com/2019/02/18/mongodb-install/ "MongoDB - windows系统安装")
 
 #### Redis ####
 
-- Redis - windows系统安装：[https://chanchifeng.com/2019/02/16/redis-install/](https://chanchifeng.com/2019/02/16/redis-install/ "https://chanchifeng.com/2019/02/16/redis-install/")
+- [Redis - Windows系统安装](https://chanchifeng.com/2019/02/16/redis-install/ "Redis - windows系统安装")
 
 ### Docker ###
 
-- [转] CENTOS6.5 安装DOCKER:[https://chanchifeng.com/2018/07/26/centos-docker/](https://chanchifeng.com/2018/07/26/centos-docker/ "https://chanchifeng.com/2018/07/26/centos-docker/")
-- [转] 使用DOCKER部署完成，连接MYSQL出现的乱码:[https://chanchifeng.com/2018/07/27/docker-mysql-navicat/](https://chanchifeng.com/2018/07/27/docker-mysql-navicat/ "https://chanchifeng.com/2018/07/27/docker-mysql-navicat/")
+- [转 -  CentOS 6.5 安装Docker](https://chanchifeng.com/2018/07/26/centos-docker/ "转 -  CENTOS6.5 安装DOCKER")
+- [转 - 使用 Docker 部署完成，连接MYSQL出现的乱码](https://chanchifeng.com/2018/07/27/docker-mysql-navicat/ "转 - 使用DOCKER部署完成，连接MYSQL出现的乱码")
 
 ----------
 
@@ -132,10 +130,10 @@ date: 2018/11/15 23:57:05
 
 #### NGINX ####
 
-- 静态网站和SpringBoot项目的配置:[https://porschan.github.io/2018/11/15/nginx-staticWeb-springBoot/](https://porschan.github.io/2018/11/15/nginx-staticWeb-springBoot/ "https://porschan.github.io/2018/11/15/nginx-staticWeb-springBoot/")
-- Nginx配置阿里云ssl证书使HTTPS生效：[https://chanchifeng.com/2018/11/29/nginx-https-ali/](https://chanchifeng.com/2018/11/29/nginx-https-ali/ "https://chanchifeng.com/2018/11/29/nginx-https-ali/")
-- nginx同时保持http和https:[https://chanchifeng.com/2018/11/30/nginx-https-http/](https://chanchifeng.com/2018/11/30/nginx-https-http/ "https://chanchifeng.com/2018/11/30/nginx-https-http/")
-- nginx - 编译：[https://chanchifeng.com/2019/02/25/nginx-install/](https://chanchifeng.com/2019/02/25/nginx-install/ "https://chanchifeng.com/2019/02/25/nginx-install/")
+- [静态网站和SpringBoot项目的配置](https://porschan.github.io/2018/11/15/nginx-staticWeb-springBoot/ "静态网站和SpringBoot项目的配置")
+- [Nginx配置阿里云ssl证书使HTTPS生效](https://chanchifeng.com/2018/11/29/nginx-https-ali/ "Nginx配置阿里云ssl证书使HTTPS生效")
+- [Nginx同时保持 HTTP 和 HTTPS](https://chanchifeng.com/2018/11/30/nginx-https-http/ "nginx同时保持http和https")
+- [Nginx - 编译](https://chanchifeng.com/2019/02/25/nginx-install/ "nginx - 编译")
 
 ----------
 
@@ -143,10 +141,10 @@ date: 2018/11/15 23:57:05
 
 #### Tomcat ####
 
-- Tomcat启动之指定jdk版本:[https://chanchifeng.com/2019/04/22/tomcat-jdk/](https://chanchifeng.com/2019/04/22/tomcat-jdk/ "https://chanchifeng.com/2019/04/22/tomcat-jdk/")
-- DOS TOMCAT 操作:[https://chanchifeng.com/2019/04/22/tomcat-server/](https://chanchifeng.com/2019/04/22/tomcat-server/ "https://chanchifeng.com/2019/04/22/tomcat-server/")
-- 启动多个Tomcat：[https://chanchifeng.com/2018/11/29/Tomcat-much/](https://chanchifeng.com/2018/11/29/Tomcat-much/ "https://chanchifeng.com/2018/11/29/Tomcat-much/")
-- Tomcat安装服务之指定jdk版本：[https://chanchifeng.com/2018/12/02/tomcat-server-install/](https://chanchifeng.com/2018/12/02/tomcat-server-install/ "https://chanchifeng.com/2018/12/02/tomcat-server-install/")
+- [Tomcat 启动之指定 JDK 版本](https://chanchifeng.com/2019/04/22/tomcat-jdk/ "Tomcat启动之指定jdk版本")
+- [DOS Tomcat 操作](https://chanchifeng.com/2019/04/22/tomcat-server/ "DOS TOMCAT 操作")
+- [启动多个Tomcat](https://chanchifeng.com/2018/11/29/Tomcat-much/ "启动多个Tomcat")
+- [Tomcat安装服务之指定jdk版本](https://chanchifeng.com/2018/12/02/tomcat-server-install/ "Tomcat安装服务之指定jdk版本")
 
 ### OS ###
 
@@ -154,42 +152,41 @@ date: 2018/11/15 23:57:05
 
 ##### UBUNT #####
 
-- UBUNTU 安装JAVA:[https://chanchifeng.com/2018/08/03/ubuntu-java/](https://chanchifeng.com/2018/08/03/ubuntu-java/ "https://chanchifeng.com/2018/08/03/ubuntu-java/")
-- 查看UBUNT系统版本：[https://chanchifeng.com/2018/10/21/ubunt-version/](https://chanchifeng.com/2018/10/21/ubunt-version/ "https://chanchifeng.com/2018/10/21/ubunt-version/")
-- UBUNT开启SSH SERVER 的服务：[https://chanchifeng.com/2018/10/24/ubunt-ssh-server/](https://chanchifeng.com/2018/10/24/ubunt-ssh-server/ "https://chanchifeng.com/2018/10/24/ubunt-ssh-server/")
-- UBUNTU系统打开FLASH插件和关闭自动锁屏:[https://chanchifeng.com/2019/04/22/ubuntu-flash/](https://chanchifeng.com/2019/04/22/ubuntu-flash/ "https://chanchifeng.com/2019/04/22/ubuntu-flash/")
-- 
+- [Ubuntu 安装 Java](https://chanchifeng.com/2018/08/03/ubuntu-java/ "UBUNTU 安装JAVA")
+- [查看Ubuntu系统版本](https://chanchifeng.com/2018/10/21/ubunt-version/ "查看UBUNT系统版本")
+- [Ubuntu 开启 SSH SERVER 的服务](https://chanchifeng.com/2018/10/24/ubunt-ssh-server/ "UBUNT开启SSH SERVER 的服务")
+- [Ubuntu系统打开 FLASH 插件和关闭自动锁屏](https://chanchifeng.com/2019/04/22/ubuntu-flash/ "UBUNTU系统打开FLASH插件和关闭自动锁屏")
 
 ----------
 
 ##### PI #####
 
-- 树莓派RASPBERRYPI上配置GIT:[https://chanchifeng.com/2019/04/22/raspberrypi-git/](https://chanchifeng.com/2019/04/22/raspberrypi-git/ "https://chanchifeng.com/2019/04/22/raspberrypi-git/")
+- [树莓派PasperryPI上配置GIT](https://chanchifeng.com/2019/04/22/raspberrypi-git/ "树莓派RASPBERRYPI上配置GIT")
 
 ----------
 
 #### Windows ####
 
-- WINDOWS 下的一个有用的BAT程序：[https://chanchifeng.com/2019/04/22/windows-bat/](https://chanchifeng.com/2019/04/22/windows-bat/ "https://chanchifeng.com/2019/04/22/windows-bat/")
+- [Windows 下的一个有用的BAT程序](https://chanchifeng.com/2019/04/22/windows-bat/ "WINDOWS 下的一个有用的BAT程序")
 
-- WINDOWS10任务栏上的时间显示秒操作：[https://chanchifeng.com/2019/04/22/windows-second/](https://chanchifeng.com/2019/04/22/windows-second/ "https://chanchifeng.com/2019/04/22/windows-second/")
+- [Windows 10任务栏上的时间显示秒操作](https://chanchifeng.com/2019/04/22/windows-second/ "WINDOWS10任务栏上的时间显示秒操作")
 
-- WINDOWS上面的发音:[https://chanchifeng.com/2019/04/22/windows-speak/](https://chanchifeng.com/2019/04/22/windows-speak/ "https://chanchifeng.com/2019/04/22/windows-speak/")
+- [Windows上面的发音](https://chanchifeng.com/2019/04/22/windows-speak/ "WINDOWS上面的发音")
 
-- WINDOWS下面切换jdk版本：[https://chanchifeng.com/2018/11/29/windows-jdks/](https://chanchifeng.com/2018/11/29/windows-jdks/ "https://chanchifeng.com/2018/11/29/windows-jdks/")
+- [Windows 下面切换JDK版本](https://chanchifeng.com/2018/11/29/windows-jdks/ "WINDOWS下面切换jdk版本")
 
-- WINDOWS中使用命令行关闭进程：[https://chanchifeng.com/2018/12/01/windows-taskkill/](https://chanchifeng.com/2018/12/01/windows-taskkill/ "https://chanchifeng.com/2018/12/01/windows-taskkill/")
+- [Windows中使用命令行关闭进程](https://chanchifeng.com/2018/12/01/windows-taskkill/ "WINDOWS中使用命令行关闭进程")
 
-- windows下修改hosts文件，使coursera能正常学习：[https://chanchifeng.com/2018/12/24/windows-coursera/](https://chanchifeng.com/2018/12/24/windows-coursera/ "https://chanchifeng.com/2018/12/24/windows-coursera/")
+- [Windows下修改 hosts 文件，使 coursera 能正常学习](https://chanchifeng.com/2018/12/24/windows-coursera/ "windows下修改hosts文件，使coursera能正常学习")
 
-- windows下查看jdk版本：[https://chanchifeng.com/2019/01/28/windows-jdk/](https://chanchifeng.com/2019/01/28/windows-jdk/ "https://chanchifeng.com/2019/01/28/windows-jdk/")
+- [Windows 下查看jdk版本](https://chanchifeng.com/2019/01/28/windows-jdk/ "windows下查看jdk版本")
 
-- 在windows下使用bat文件跑命令:[https://chanchifeng.com/2018/11/12/hexo-cmd-windows-bat/](https://chanchifeng.com/2018/11/12/hexo-cmd-windows-bat/ "在windows下使用bat文件跑命令")
+- [在Windows 下使用bat文件跑命令](https://chanchifeng.com/2018/11/12/hexo-cmd-windows-bat/ "在windows下使用bat文件跑命令")
 
-- windows - 虚拟机安装 ubunt：[https://chanchifeng.com/2019/02/17/windows-install-ubunt-vm/](https://chanchifeng.com/2019/02/17/windows-install-ubunt-vm/ "https://chanchifeng.com/2019/02/17/windows-install-ubunt-vm/")
+- [Windows - 虚拟机安装 ubunt](https://chanchifeng.com/2019/02/17/windows-install-ubunt-vm/ "windows - 虚拟机安装 ubunt")
 
-- activeMQ - windows系统安装：[https://chanchifeng.com/2019/02/28/windows-activeMQ-install/](https://chanchifeng.com/2019/02/28/windows-activeMQ-install/ "https://chanchifeng.com/2019/02/28/windows-activeMQ-install/")
-- JDK - windows系统安装:[https://chanchifeng.com/2019/04/23/windows-jdk-install/](https://chanchifeng.com/2019/04/23/windows-jdk-install/"https://chanchifeng.com/2019/04/23/windows-jdk-install/")
+- [ActiveMQ - Windows系统安装](https://chanchifeng.com/2019/02/28/windows-activeMQ-install/ "activeMQ - windows系统安装")
+- [JDK - Windows系统安装](https://chanchifeng.com/2019/04/23/windows-jdk-install/"JDK - windows系统安装")
 
 ----------
 
@@ -197,50 +194,46 @@ date: 2018/11/15 23:57:05
 
 ### Maven ###
 
-- Maven - 单独下载pom.xml里的Jar包：[https://chanchifeng.com/2019/03/05/maven-down/](https://chanchifeng.com/2019/03/05/maven-down/ "https://chanchifeng.com/2019/03/05/maven-down/")
+- [Maven - 单独下载pom.xml里的JAR包](https://chanchifeng.com/2019/03/05/maven-down/ "Maven - 单独下载pom.xml里的Jar包")
 
 ### Java ###
 
 #### 基础 ####
 
-- java - windows安装：[https://chanchifeng.com/2019/02/16/java-install/](https://chanchifeng.com/2019/02/16/java-install/ "https://chanchifeng.com/2019/02/16/java-install/")
+- [JAVA - Windows安装](https://chanchifeng.com/2019/02/16/java-install/ "java - windows安装")
 
 #### JVM ####
 
-- JVM - 基础知识点:[https://chanchifeng.com/2019/03/03/jvm-basic/](https://chanchifeng.com/2019/03/03/jvm-basic/ "https://chanchifeng.com/2019/03/03/jvm-basic/")
+- [JVM - 基础知识点](https://chanchifeng.com/2019/03/03/jvm-basic/ "JVM - 基础知识点")
 
 #### JFinal ####
 
-- JFINAL初使用：[https://chanchifeng.com/2018/08/10/jfinal-jar-main/](https://chanchifeng.com/2018/08/10/jfinal-jar-main/ "https://chanchifeng.com/2018/08/10/jfinal-jar-main/")
-- Jfinal 打完收枪 收集录:[https://chanchifeng.com/2019/01/04/jfinal-bo/](https://chanchifeng.com/2019/01/04/jfinal-bo/ "·https://chanchifeng.com/2019/01/04/jfinal-bo/")
-
-#### SSH ####
-
-- 使用 MAVEN 搭建 SSH ：
+- [JFINAL初使用](https://chanchifeng.com/2018/08/10/jfinal-jar-main/ "JFINAL初使用")
+- [JFINAL 打完收枪 收集录](https://chanchifeng.com/2019/01/04/jfinal-bo/ "JFINAL 打完收枪 收集录")
 
 #### SpringBoot ####
 
-- 使用IDEA创建SPRING BOOT 项目:[https://chanchifeng.com/2019/04/22/idea-springboot/](https://chanchifeng.com/2019/04/22/idea-springboot/ "https://chanchifeng.com/2019/04/22/idea-springboot/")
-- SpringBoot开发中的热部署：[https://chanchifeng.com/2018/12/08/springboot-devtools/](https://chanchifeng.com/2018/12/08/springboot-devtools/ "https://chanchifeng.com/2018/12/08/springboot-devtools/")
-- SpringBoot - hello World:[https://chanchifeng.com/2019/01/31/springboot-helloworld/](https://chanchifeng.com/2019/01/31/springboot-helloworld/ "https://chanchifeng.com/2019/01/31/springboot-helloworld/")
-- SpringBoot - 连接MySQL：[https://chanchifeng.com/2019/01/31/springboot-mysql/](https://chanchifeng.com/2019/01/31/springboot-mysql/ "https://chanchifeng.com/2019/01/31/springboot-mysql/")
-- SpringBoot - 集合druid：[https://chanchifeng.com/2019/01/31/springboot-druid/](https://chanchifeng.com/2019/01/31/springboot-druid/ "https://chanchifeng.com/2019/01/31/springboot-druid/")
-- SpringBoot - 使用jpa:[https://chanchifeng.com/2019/01/31/springboot-jpa/](https://chanchifeng.com/2019/01/31/springboot-jpa/ "https://chanchifeng.com/2019/01/31/springboot-jpa/")
-- springboot - http请求:[https://chanchifeng.com/2019/02/14/springboot-httpRequest/](https://chanchifeng.com/2019/02/14/springboot-httpRequest/ "https://chanchifeng.com/2019/02/14/springboot-httpRequest/")
-- springboot - 使用thymeleaf模板引擎：[https://chanchifeng.com/2019/02/14/springboot-thymeleaf/](https://chanchifeng.com/2019/02/14/springboot-thymeleaf/ "https://chanchifeng.com/2019/02/14/springboot-thymeleaf/")
-- springboot - 使用 transactional 事务支持：[https://chanchifeng.com/2019/02/14/springboot-transactional/](https://chanchifeng.com/2019/02/14/springboot-transactional/ "https://chanchifeng.com/2019/02/14/springboot-transactional/")
-- springboot - 使用 filter 过滤器：[https://chanchifeng.com/2019/02/14/springboot-filter/](https://chanchifeng.com/2019/02/14/springboot-filter/ "https://chanchifeng.com/2019/02/14/springboot-filter/")
-- springboot - 使用 listener 监听器：[https://chanchifeng.com/2019/02/14/springboot-listener/](https://chanchifeng.com/2019/02/14/springboot-listener/ "https://chanchifeng.com/2019/02/14/springboot-listener/")
-- springboot - 使用 redis:[https://chanchifeng.com/2019/02/16/springboot-redis/](https://chanchifeng.com/2019/02/16/springboot-redis/ "https://chanchifeng.com/2019/02/16/springboot-redis/")
-- springboot - 使用 log4j：[https://chanchifeng.com/2019/02/17/springboot-log4j/](https://chanchifeng.com/2019/02/17/springboot-log4j/ "https://chanchifeng.com/2019/02/17/springboot-log4j/")
-- springboot - 使用 quartz 定时器：[https://chanchifeng.com/2019/02/17/springboot-quartz/](https://chanchifeng.com/2019/02/17/springboot-quartz/ "https://chanchifeng.com/2019/02/17/springboot-quartz/")
-- springboot - 集成 mybatis：[https://chanchifeng.com/2019/02/18/springboot-mybatis/](https://chanchifeng.com/2019/02/18/springboot-mybatis/ "https://chanchifeng.com/2019/02/18/springboot-mybatis/")
-- springboot - 使用 ActiveMQ：[https://chanchifeng.com/2019/03/04/springboot-activemq/](https://chanchifeng.com/2019/03/04/springboot-activemq/ "https://chanchifeng.com/2019/03/04/springboot-activemq/")
-- springboot - 使用 @Async 异步调用:[https://chanchifeng.com/2019/03/06/springboot-async/](https://chanchifeng.com/2019/03/06/springboot-async/ "https://chanchifeng.com/2019/03/06/springboot-async/")
+- [使用 IDEA 创建SpringBoot 项目](https://chanchifeng.com/2019/04/22/idea-springboot/ "使用IDEA创建SPRING BOOT 项目")
+- [SpringBoot 开发中的热部署](https://chanchifeng.com/2018/12/08/springboot-devtools/ "SpringBoot开发中的热部署")
+- [SpringBoot -Hello World](https://chanchifeng.com/2019/01/31/springboot-helloworld/ "SpringBoot - hello World")
+- [SpringBoot - 连接MySQL](https://chanchifeng.com/2019/01/31/springboot-mysql/ "SpringBoot - 连接MySQL")
+- [SpringBoot - 集合Druid](https://chanchifeng.com/2019/01/31/springboot-druid/ "SpringBoot - 集合druid")
+- [SpringBoot - 使用JPA](https://chanchifeng.com/2019/01/31/springboot-jpa/ "SpringBoot - 使用jpa")
+- [SpringBoot - HTTP请求](https://chanchifeng.com/2019/02/14/springboot-httpRequest/ "springboot - http请求")
+- [SpringBoot - 使用 Thymeleaf 模板引擎](https://chanchifeng.com/2019/02/14/springboot-thymeleaf/ "springboot - 使用thymeleaf模板引擎")
+- [SpringBoot - 使用 Transactional 事务支持](https://chanchifeng.com/2019/02/14/springboot-transactional/ "springboot - 使用 transactional 事务支持")
+- [SpringBoot - 使用 Filter 过滤器](https://chanchifeng.com/2019/02/14/springboot-filter/ "springboot - 使用 filter 过滤器")
+- [SpringBoot - 使用 Listener 监听器](https://chanchifeng.com/2019/02/14/springboot-listener/ "springboot - 使用 listener 监听器")
+- [SpringBoot - 使用 Redis](https://chanchifeng.com/2019/02/16/springboot-redis/ "springboot - 使用 redis")
+- [SpringBoot - 使用 Log4j](https://chanchifeng.com/2019/02/17/springboot-log4j/ "springboot - 使用 log4j")
+- [SpringBoot - 使用 Quartz 定时器](https://chanchifeng.com/2019/02/17/springboot-quartz/ "springboot - 使用 quartz 定时器")
+- [SpringBoot - 集成 Mybatis](https://chanchifeng.com/2019/02/18/springboot-mybatis/ "springboot - 集成 mybatis")
+- [SpringBoot - 使用 ActiveMQ](https://chanchifeng.com/2019/03/04/springboot-activemq/ "springboot - 使用 ActiveMQ")
+- [SpringBoot - 使用 @Async 异步调用](https://chanchifeng.com/2019/03/06/springboot-async/ "springboot - 使用 @Async 异步调用")
 
 #### SpringMVC ####
 
-- 使用IDEA创建SPRING MVC 项目:[https://chanchifeng.com/2019/04/26/springMVC-create/](https://chanchifeng.com/2019/04/26/springMVC-create/ "https://chanchifeng.com/2019/04/26/springMVC-create/")
+- [使用 IDEA 创建 SpringMVC 项目](https://chanchifeng.com/2019/04/26/springMVC-create/ "使用IDEA创建SPRING MVC 项目")
 
 ----------
 
@@ -248,10 +241,10 @@ date: 2018/11/15 23:57:05
 
 ### IntelliJ IDEA ###
 
-- 项目包名层叠：[https://chanchifeng.com/2019/01/31/idea-package-hidden/](https://chanchifeng.com/2019/01/31/idea-package-hidden/ "https://chanchifeng.com/2019/01/31/idea-package-hidden/")
-- INTELLIJ IDEA常用设置:[https://chanchifeng.com/2019/04/22/intellij-idea/](https://chanchifeng.com/2019/04/22/intellij-idea/ "https://chanchifeng.com/2019/04/22/intellij-idea/")
-- idea - 常用插件：[https://chanchifeng.com/2019/02/24/idea-plug/](https://chanchifeng.com/2019/02/24/idea-plug/ "https://chanchifeng.com/2019/02/24/idea-plug/")
+- [项目包名层叠](https://chanchifeng.com/2019/01/31/idea-package-hidden/ "项目包名层叠")
+- [IDEA 常用设置](https://chanchifeng.com/2019/04/22/intellij-idea/ "IDEA常用设置")
+- [IDEA - 常用插件](https://chanchifeng.com/2019/02/24/idea-plug/ "IDEA - 常用插件")
 
 ### ULTRAEDIT ###
 
-- ULTRAEDIT 常用设置:[https://chanchifeng.com/2018/07/19/ultraEdit/](https://chanchifeng.com/2018/07/19/ultraEdit/ "https://chanchifeng.com/2018/07/19/ultraEdit/")
+- [ULTRAEDIT 常用设置](https://chanchifeng.com/2018/07/19/ultraEdit/ "ULTRAEDIT 常用设置")  
