@@ -77,9 +77,9 @@ date: 2018/11/15 23:57:05
 
 - [设计模式 - 迭代器模式](https://chanchifeng.com/2019/05/04/designPattern-iteratormodePattern/ "设计模式 - 迭代器模式")
 
-- [设计模式 - 组合模式]( "设计模式 - 组合模式")
+- [设计模式 - 组合模式](https://chanchifeng.com/2019/05/05/designPattern-composemodePattern/ "设计模式 - 组合模式")
 
-- [设计模式 - 状态模式]( "设计模式 - 状态模式")
+- [设计模式 - 状态模式](https://chanchifeng.com/2019/05/06/designPattern-statemodePattern/ "设计模式 - 状态模式")
 
 - [设计模式 - 代理模式]( "设计模式 - 代理模式")
 
