@@ -81,8 +81,9 @@ date: 2018/11/15 23:57:05
 
 - [设计模式 - 状态模式](https://chanchifeng.com/2019/05/06/designPattern-statemodePattern/ "设计模式 - 状态模式")
 
-- [设计模式 - 代理模式]( "设计模式 - 代理模式")
+- [设计模式 - 代理模式](https://chanchifeng.com/2019/05/07/designPattern-agentmodePattern/ "设计模式 - 代理模式")
 
+- [设计模式 - 复合模式]( "设计模式 - 复合模式")
 
 ### Git ###
 
