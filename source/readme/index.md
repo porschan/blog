@@ -83,9 +83,9 @@ date: 2018/11/15 23:57:05
 
 - [设计模式 - 代理模式](https://chanchifeng.com/2019/05/07/designPattern-agentmodePattern/ "设计模式 - 代理模式")
 
-- [设计模式 - 复合模式]( "设计模式 - 复合模式")
+- [设计模式 - 复合模式](https://chanchifeng.com/2019/05/08/designPattern-compoundPattern/ "设计模式 - 复合模式")
 
-- [设计模式 - 桥接模式]( "设计模式 - 桥接模式")
+- [设计模式 - 桥接模式](https://chanchifeng.com/2019/05/09/designPattern-bridgemsPattern/ "设计模式 - 桥接模式")
 
 ### Git ###
 
