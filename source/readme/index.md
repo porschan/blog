@@ -87,6 +87,10 @@ date: 2018/11/15 23:57:05
 
 - [设计模式 - 桥接模式](https://chanchifeng.com/2019/05/09/designPattern-bridgemsPattern/ "设计模式 - 桥接模式")
 
+- [设计模式 - 生成器模式]( "设计模式 - 生成器模式")
+
+- [设计模式 - 责任链模式]( "设计模式 - 责任链模式")
+
 ### Git ###
 
 - [写个定时任务，从Github下载代码到阿里ECS服务器上](https://chanchifeng.com/2019/04/22/github-ecs/ "写个定时任务，从GITHUB下载代码到阿里ECS服务器上")
