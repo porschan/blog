@@ -21,82 +21,82 @@ date: 2019-05-07 09:51:31
 a.创建一个理财的接口：
 
 ```java
-    /**
-     * 理财
-     */
-    public interface ManageMoney {
-        public void financing();
-    }
+/**
+ * 理财
+ */
+public interface ManageMoney {
+	public void financing();
+}
 ```
 
 b.创建一个理财的场所，比如现实中的上交所：
 
 ```java
-    /**
-     * 上交所
-     */
-    public class TradeStock implements ManageMoney{
+/**
+ * 上交所
+ */
+public class TradeStock implements ManageMoney{
 
-        @Override
-        public void financing() {
-            trade();
-        }
+	@Override
+	public void financing() {
+		trade();
+	}
 
-        private boolean hasExperience;
+	private boolean hasExperience;
 
-        public TradeStock(){
+	public TradeStock(){
 
-        }
+	}
 
-        public TradeStock(boolean hasExperience){
-            this.hasExperience = hasExperience;
-        }
+	public TradeStock(boolean hasExperience){
+		this.hasExperience = hasExperience;
+	}
 
-        private void trade() {
-            if(hasExperience){
-                System.out.println("上交所：您可以买股票了");
-            }else{
-                System.out.println("上交所：请学会股票知识再来买吧");
-            }
-        }
-    }
+	private void trade() {
+		if(hasExperience){
+			System.out.println("上交所：您可以买股票了");
+		}else{
+			System.out.println("上交所：请学会股票知识再来买吧");
+		}
+	}
+}
 ```
 
 c.实现一个有理财的理财经理：
 
 ```java
-    public class FinancialManager implements ManageMoney {
+public class FinancialManager implements ManageMoney {
 
-        private TradeStock tradeStock;
+	private TradeStock tradeStock;
 
-        public FinancialManager(){
-            tradeStock = new TradeStock(true);
-        }
+	public FinancialManager(){
+		tradeStock = new TradeStock(true);
+	}
 
-        @Override
-        public void financing() {
-            System.out.println("理财经理：开始炒股");
-            tradeStock.financing();
-        }
-    }
+	@Override
+	public void financing() {
+		System.out.println("理财经理：开始炒股");
+		tradeStock.financing();
+	}
+}
 ```
 
 d.客户端使用：
 
 ```java
-    public class App {
-        public static void main(String[] args) {
-            System.out.println("我：要理财，对炒股不太懂");
-            ManageMoney manageMoney = new FinancialManager();
-            System.out.println("我：找一个理财经理吧，更加方便");
-            manageMoney.financing();
-            System.out.println("我等着收钱就好了");
-            System.out.println("=======================");
-            System.out.println("我：我不懂，但是想自己炒股试试");
-            TradeStock managenMoneyOwn = new TradeStock();
-            managenMoneyOwn.financing();
-        }
-    }
+public class App {
+	public static void main(String[] args) {
+		System.out.println("我：要理财，对炒股不太懂");
+		ManageMoney manageMoney = new FinancialManager();
+		System.out.println("我：找一个理财经理吧，更加方便");
+		manageMoney.financing();
+		System.out.println("我等着收钱就好了");
+		System.out.println("=======================");
+		System.out.println("我：我不懂，但是想自己炒股试试");
+		TradeStock managenMoneyOwn = new TradeStock();
+		managenMoneyOwn.financing();
+	}
+}
 ```
 
 客户端的输出结果：
@@ -144,64 +144,62 @@ RM I代理端通过RM I查询到服务端，建立联系，通过接口调用远
 a.制作远程接口：接口文件：
 
 ```java
-    public interface MyRemote extends Remote{
+public interface MyRemote extends Remote{
 
-        public String sayHello() throws RemoteException;
+	public String sayHello() throws RemoteException;
 
-    }
+}
 ```
 b.远程接口的实现：Service文件 & RM I服务端注册，开启服务:
 
 ```java
-    @SuppressWarnings("serial")
-    public class MyRemoteImpl extends UnicastRemoteObject implements MyRemote{
+@SuppressWarnings("serial")
+public class MyRemoteImpl extends UnicastRemoteObject implements MyRemote{
 
-        protected MyRemoteImpl() throws RemoteException {
-            super();
-        }
+	protected MyRemoteImpl() throws RemoteException {
+		super();
+	}
 
-        @Override
-        public String sayHello() throws RemoteException {
-            return "Hello World!";
-        }
+	@Override
+	public String sayHello() throws RemoteException {
+		return "Hello World!";
+	}
 
-        public static void main(String[] args) {
+	public static void main(String[] args) {
 
-            try {
-                MyRemote service=new MyRemoteImpl();
-                LocateRegistry.createRegistry(6600);
-                Naming.rebind("rmi://127.0.0.1:6600/RemoteHello", service);
-                System.out.println("Success.");
-            } catch (Exception e) {
-                e.printStackTrace();
-                System.out.println( e.toString());
-            } 
-
-
-        }
-    }
+		try {
+			MyRemote service=new MyRemoteImpl();
+			LocateRegistry.createRegistry(6600);
+			Naming.rebind("rmi://127.0.0.1:6600/RemoteHello", service);
+			System.out.println("Success.");
+		} catch (Exception e) {
+			e.printStackTrace();
+			System.out.println( e.toString());
+		}
+	}
+}
 ```
 
 c.RM I代理端通过RM I查询到服务端，建立联系，通过接口调用远程方法：
 
 ```java
-    public class MyRemoteClient {
+public class MyRemoteClient {
 
-        public static void main(String[] args) {
-            new MyRemoteClient().go();
-        }
+	public static void main(String[] args) {
+		new MyRemoteClient().go();
+	}
 
-        public void go() {
-            try {
-                MyRemote service = (MyRemote) Naming.lookup("rmi://127.0.0.1:6600/RemoteHello");
-                String s = service.sayHello();
-                System.out.println(s);
+	public void go() {
+		try {
+			MyRemote service = (MyRemote) Naming.lookup("rmi://127.0.0.1:6600/RemoteHello");
+			String s = service.sayHello();
+			System.out.println(s);
 
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }
-    }
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+}
 ```
 
 d.测试结果：

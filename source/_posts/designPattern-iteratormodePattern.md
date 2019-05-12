@@ -11,223 +11,223 @@ a.定义一个菜单类型：
 
 ```java
 
-    public class MenuItem {
-        private String name, description;
-        private boolean vegetable;
-        private float price;
+public class MenuItem {
+    private String name, description;
+    private boolean vegetable;
+    private float price;
 
-        public MenuItem(String name, String description, boolean vegetable, float price) {
-            this.name = name;
-            this.description = description;
-            this.vegetable = vegetable;
-            this.price = price;
+    public MenuItem(String name, String description, boolean vegetable, float price) {
+        this.name = name;
+        this.description = description;
+        this.vegetable = vegetable;
+        this.price = price;
 
-        }
-
-        public String getName() {
-            return name;
-        }
-
-        public String getDescription() {
-            return description;
-        }
-
-        public float getPrice() {
-            return price;
-        }
-
-        public boolean isVegetable() {
-            return vegetable;
-        }
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public float getPrice() {
+        return price;
+    }
+
+    public boolean isVegetable() {
+        return vegetable;
+    }
+}
 ```
 
 b1.蛋糕的菜单：
 
 ```java
-    public class CakeMenu {
+public class CakeMenu {
 
-        private ArrayList<MenuItem> menuItems;
+    private ArrayList<MenuItem> menuItems;
 
 
-        public CakeMenu() {
-            menuItems = new ArrayList<MenuItem>();
+    public CakeMenu() {
+        menuItems = new ArrayList<MenuItem>();
 
-            addItem("KFC Cake Breakfast", "boiled eggs&toast&cabbage", true, 3.99f);
-            addItem("MDL Cake Breakfast", "fried eggs&toast", false, 3.59f);
-            addItem("Stawberry Cake", "fresh stawberry", true, 3.29f);
-            addItem("Regular Cake Breakfast", "toast&sausage", true, 2.59f);
-        }
-
-        private void addItem(String name, String description, boolean vegetable,
-                             float price) {
-            MenuItem menuItem = new MenuItem(name, description, vegetable, price);
-            menuItems.add(menuItem);
-        }
-
-        public ArrayList<MenuItem> getIterator() {
-            return menuItems;
-        }
-
+        addItem("KFC Cake Breakfast", "boiled eggs&toast&cabbage", true, 3.99f);
+        addItem("MDL Cake Breakfast", "fried eggs&toast", false, 3.59f);
+        addItem("Stawberry Cake", "fresh stawberry", true, 3.29f);
+        addItem("Regular Cake Breakfast", "toast&sausage", true, 2.59f);
     }
+
+    private void addItem(String name, String description, boolean vegetable,
+                         float price) {
+        MenuItem menuItem = new MenuItem(name, description, vegetable, price);
+        menuItems.add(menuItem);
+    }
+
+    public ArrayList<MenuItem> getIterator() {
+        return menuItems;
+    }
+
+}
 ```
 
 b2.午餐的菜单：
 
 ```java
-    public class DinnerMenu {
+public class DinnerMenu {
 
-        private final static int Max_Items = 5;
-        private int numberOfItems = 0;
-        private MenuItem[] menuItems;
+    private final static int Max_Items = 5;
+    private int numberOfItems = 0;
+    private MenuItem[] menuItems;
 
-        public  DinnerMenu() {
-            menuItems=new MenuItem[Max_Items] ;
+    public  DinnerMenu() {
+        menuItems=new MenuItem[Max_Items] ;
 
-            addItem("vegetable Blt","bacon&lettuce&tomato&cabbage",true,3.58f);
-            addItem("Blt","bacon&lettuce&tomato",false,3.00f);
-            addItem("bean soup","bean&potato salad",true,3.28f);
-            addItem("hotdog","onions&cheese&bread",false,3.05f);
-        }
-
-        private void addItem(String name, String description, boolean vegetable,
-                             float price) {
-            MenuItem menuItem = new MenuItem(name, description, vegetable, price);
-            if (numberOfItems >= Max_Items) {
-                System.err.println("sorry,menu is full!can not add another item");
-            } else {
-                menuItems[numberOfItems] = menuItem;
-                numberOfItems++;
-            }
-
-        }
-
-        public MenuItem[] getIterator() {
-            return menuItems;
-        }
+        addItem("vegetable Blt","bacon&lettuce&tomato&cabbage",true,3.58f);
+        addItem("Blt","bacon&lettuce&tomato",false,3.00f);
+        addItem("bean soup","bean&potato salad",true,3.28f);
+        addItem("hotdog","onions&cheese&bread",false,3.05f);
     }
+
+    private void addItem(String name, String description, boolean vegetable,
+                         float price) {
+        MenuItem menuItem = new MenuItem(name, description, vegetable, price);
+        if (numberOfItems >= Max_Items) {
+            System.err.println("sorry,menu is full!can not add another item");
+        } else {
+            menuItems[numberOfItems] = menuItem;
+            numberOfItems++;
+        }
+
+    }
+
+    public MenuItem[] getIterator() {
+        return menuItems;
+    }
+}
 ```
 
 c.定义迭代器里的元素标准：
 
 ```java
-    public interface Iterator {
+public interface Iterator {
 
-        public boolean hasNext();
-        public Object next();
+    public boolean hasNext();
+    public Object next();
 
-    }
+}
 ```
 
 d1.蛋糕菜单转换为元素标准：
 ```java
-    public class CakeIterator implements Iterator {
+public class CakeIterator implements Iterator {
 
-        private ArrayList<MenuItem> menuItems;
+    private ArrayList<MenuItem> menuItems;
 
-        private int position = 0;
+    private int position = 0;
 
-        public CakeIterator() {
-            menuItems = new CakeMenu().getIterator();
-            position = 0;
-        }
-
-        @Override
-        public boolean hasNext() {
-            if (position < menuItems.size()) {
-                return true;
-            }
-
-            return false;
-        }
-
-        @Override
-        public Object next() {
-            MenuItem menuItem = menuItems.get(position);
-            position++;
-            return menuItem;
-        }
+    public CakeIterator() {
+        menuItems = new CakeMenu().getIterator();
+        position = 0;
     }
+
+    @Override
+    public boolean hasNext() {
+        if (position < menuItems.size()) {
+            return true;
+        }
+
+        return false;
+    }
+
+    @Override
+    public Object next() {
+        MenuItem menuItem = menuItems.get(position);
+        position++;
+        return menuItem;
+    }
+}
 ```
 
 d2.午餐菜单转换为元素标准：
 ```java
-    public class DinnerMenuIterator implements Iterator {
+public class DinnerMenuIterator implements Iterator {
 
-        private int numberOfItems = 0;
-        private MenuItem[] menuItems;
-        private int position;
+    private int numberOfItems = 0;
+    private MenuItem[] menuItems;
+    private int position;
 
-        public DinnerMenuIterator() {
-            menuItems = new DinnerMenu().getIterator();
-            position = 0;
-            numberOfItems = menuItems.length - 1;
-        }
-
-        @Override
-        public boolean hasNext() {
-            // TODO Auto-generated method stub
-            if (position < numberOfItems) {
-                return true;
-            }
-
-            return false;
-        }
-
-        @Override
-        public Object next() {
-            // TODO Auto-generated method stub
-            MenuItem menuItem = menuItems[position];
-            position++;
-            return menuItem;
-        }
-
+    public DinnerMenuIterator() {
+        menuItems = new DinnerMenu().getIterator();
+        position = 0;
+        numberOfItems = menuItems.length - 1;
     }
+
+    @Override
+    public boolean hasNext() {
+        // TODO Auto-generated method stub
+        if (position < numberOfItems) {
+            return true;
+        }
+
+        return false;
+    }
+
+    @Override
+    public Object next() {
+        // TODO Auto-generated method stub
+        MenuItem menuItem = menuItems[position];
+        position++;
+        return menuItem;
+    }
+
+}
 ```
 
 e.使用对象：
 ```java
-    public class Waitress {
-        private ArrayList<Iterator> iterators = new ArrayList<Iterator>();
+public class Waitress {
+    private ArrayList<Iterator> iterators = new ArrayList<Iterator>();
 
 
-        public Waitress() {}
+    public Waitress() {}
 
-        public void addIterator(Iterator iterator) {
-            iterators.add(iterator);
-        }
+    public void addIterator(Iterator iterator) {
+        iterators.add(iterator);
+    }
 
-        public void printMenu() {
-            Iterator iterator;
-            MenuItem menuItem;
-            for (int i = 0, len = iterators.size(); i < len; i++) {
-                iterator = iterators.get(i);
+    public void printMenu() {
+        Iterator iterator;
+        MenuItem menuItem;
+        for (int i = 0, len = iterators.size(); i < len; i++) {
+            iterator = iterators.get(i);
 
-                while (iterator.hasNext()) {
-                    menuItem = (MenuItem) iterator.next();
-                    System.out.println(menuItem.getName() + "***" + menuItem.getPrice() + "***" + menuItem.getDescription());
+            while (iterator.hasNext()) {
+                menuItem = (MenuItem) iterator.next();
+                System.out.println(menuItem.getName() + "***" + menuItem.getPrice() + "***" + menuItem.getDescription());
 
-                }
             }
         }
     }
+}
 ```
 
 客户端使用：
 ```java
-    public class App {
-        public static void main(String[] args) {
-            Waitress mWaitress=new Waitress();
+public class App {
+    public static void main(String[] args) {
+        Waitress mWaitress=new Waitress();
 
-            CakeIterator cakeIterator = new CakeIterator();
-            mWaitress.addIterator(cakeIterator);
+        CakeIterator cakeIterator = new CakeIterator();
+        mWaitress.addIterator(cakeIterator);
 
-            DinnerMenuIterator dinnerMenuIterator = new DinnerMenuIterator();
-            mWaitress.addIterator(dinnerMenuIterator);
+        DinnerMenuIterator dinnerMenuIterator = new DinnerMenuIterator();
+        mWaitress.addIterator(dinnerMenuIterator);
 
-            mWaitress.printMenu();
-        }
+        mWaitress.printMenu();
     }
+}
 ```
 
 #### 单一责任原则 (单一职责原则)
@@ -238,110 +238,97 @@ e.使用对象：
 
 a.需求：实现拍照和播放音乐，那先定义两个功能接口（参照《大话设计模式》）:
 
-```
-    //具有照相的功能的接口
-    interface IPhotograph
-    {
-    void Photograph();
-    }
+```java
+//具有照相的功能的接口
+interface IPhotograph{
+	void Photograph();
+}
 ```
 
 ```java
-　　//具有播放音乐功能的接口
-    interface IPlayMusic
-    {
-        void PlayMusic();
-    }
+//具有播放音乐功能的接口
+interface IPlayMusic{
+    void PlayMusic();
+}
 ```
 
 b.不遵循单一原则的设计，播放音乐及拍照功能的改变都会引起变化:
-```
+```java
 //实现照相、播放音乐的手机类
-    public class MobilePhone : IPhotograph, IPlayMusic
-    {
-        //拍照
-        public void Photograph()
-        {
-            Console.WriteLine("拍照片");
-        }
+public class MobilePhone : IPhotograph, IPlayMusic{
+	//拍照
+	public void Photograph(){
+		Console.WriteLine("拍照片");
+	}
 
-        //播放音乐
-        public void PlayMusic()
-        {
-            Console.WriteLine("播放音乐");
-        }
-    }
+	//播放音乐
+	public void PlayMusic(){
+		Console.WriteLine("播放音乐");
+	}
+}
 ```
 
 c.不遵循单一原则的设计,客户端使用：
-```
-    class Program
-        {
-            static void Main(string[] args)
-            {
-                IPlayMusic musicPlayer;
-                IPhotograph photographer;
+```java
+class Program{
+	static void Main(string[] args){
+		IPlayMusic musicPlayer;
+		IPhotograph photographer;
 
-                MobilePhone phone = new MobilePhone();
-                musicPlayer = phone;
-                photographer = phone;
+		MobilePhone phone = new MobilePhone();
+		musicPlayer = phone;
+		photographer = phone;
 
-                //播放音乐
-                musicPlayer.PlayMusic();
-                //拍照
-                photographer.Photograph();
-                Console.ReadLine();
-            }
-        }
+		//播放音乐
+		musicPlayer.PlayMusic();
+		//拍照
+		photographer.Photograph();
+		Console.ReadLine();
+	}
+}
 ```
 
 d.遵循单一原则的设计，引发改变的只有播放音乐功能的变化:
 
-```
+```java
 //实现播放音乐功能的音乐播放器类
-    class MusicPlayer : IPlayMusic
-    {
-        public void PlayMusic()
-        {
-            Console.WriteLine("播放音乐");
-        }
-    }
+class MusicPlayer : IPlayMusic{
+	public void PlayMusic(){
+		Console.WriteLine("播放音乐");
+	}
+}
 ```
 
-```
-    //实现照相功能的摄像机类
-    class Carmera : IPhotograph
-    {
-        public void Photograph()
-        {
-            Console.WriteLine("拍照片");
-        }
-    }
+```java
+//实现照相功能的摄像机类
+class Carmera : IPhotograph{
+	public void Photograph(){
+		Console.WriteLine("拍照片");
+	}
+}
 ```
 
 e.遵循单一原则的设计,客户端使用：
-```
-class Program
-    {
-        static void Main(string[] args)
-        {
-            IPlayMusic musicPlayer;
-            IPhotograph photographer;
+```java
+class Program{
+	static void Main(string[] args){
+		IPlayMusic musicPlayer;
+		IPhotograph photographer;
 
-            //MobilePhone phone = new MobilePhone();
-            //musicPlayer = phone;
-            //photographer = phone;
+		//MobilePhone phone = new MobilePhone();
+		//musicPlayer = phone;
+		//photographer = phone;
 
-            musicPlayer = new MusicPlayer();
-            photographer = new Carmera();
+		musicPlayer = new MusicPlayer();
+		photographer = new Carmera();
 
-            //播放音乐
-            musicPlayer.PlayMusic();
-            //拍照
-            photographer.Photograph();
-            Console.ReadLine();
-        }
-    }
+		//播放音乐
+		musicPlayer.PlayMusic();
+		//拍照
+		photographer.Photograph();
+		Console.ReadLine();
+	}
+}
 ```
 
 使用单一职责原则在于：软件设计真正要做的许多内容，就是发现职责并把那些职责互相分离。单一职责原则可以使类的复杂度降低，实现什么职责都有清晰明确的定义；类的可读性提高，复杂度降低（复杂度降低肯定可读性提高）；可读性提高了，代码就更容易维护；变更（需求是肯定会变的，程序员都知道）引起的风险（包括测试的难度，以及需要测试的范围）降低。

@@ -13,23 +13,23 @@ date: 2019-04-25 15:46:06
 
 单例模式的例子：
 
-```
-    public class Singleton {
+```java
+public class Singleton {
 
-        private static Singleton uniqeInstance = null;
+	private static Singleton uniqeInstance = null;
 
-        private Singleton() {
-        }
+	private Singleton() {
+	}
 
-        public static Singleton getInstance() {
-            if (uniqeInstance == null) {
-                uniqeInstance = new Singleton();
-            }
-            return uniqeInstance;
+	public static Singleton getInstance() {
+		if (uniqeInstance == null) {
+			uniqeInstance = new Singleton();
+		}
+		return uniqeInstance;
 
-        }
+	}
 
-    }
+}
 ```
 
 1.单例模式在多线程中的优化：
@@ -39,105 +39,105 @@ date: 2019-04-25 15:46:06
 - 双重检查加锁
 
 1.1.同步（synchronized）getInstance方法：
-```
-    public class ChocolateFactory {
+```java
+public class ChocolateFactory {
 
-        private boolean empty;
-        private boolean boiled;
-        public static ChocolateFactory uniqueInstance = null;
+	private boolean empty;
+	private boolean boiled;
+	public static ChocolateFactory uniqueInstance = null;
 
-        private ChocolateFactory() {
-            empty = true;
-            boiled = false;
-        }
+	private ChocolateFactory() {
+		empty = true;
+		boiled = false;
+	}
 
-        public static synchronized ChocolateFactory getInstance() {
+	public static synchronized ChocolateFactory getInstance() {
 
-            if (uniqueInstance == null) {
-            	uniqueInstance = new ChocolateFactory();
-            }
+		if (uniqueInstance == null) {
+			uniqueInstance = new ChocolateFactory();
+		}
 
-            return uniqueInstance;
+		return uniqueInstance;
 
-        }
+	}
 
-        public void fill() {
-            if (empty) {
-                // 添加原料巧克力动作
-                empty = false;
-                boiled = false;
-            }
-        }
+	public void fill() {
+		if (empty) {
+			// 添加原料巧克力动作
+			empty = false;
+			boiled = false;
+		}
+	}
 
-        public void drain() {
-            if ((!empty) && boiled) {
-                // 排出巧克力动作
-                empty = true;
-            }
-        }
+	public void drain() {
+		if ((!empty) && boiled) {
+			// 排出巧克力动作
+			empty = true;
+		}
+	}
 
-        public void boil() {
-            if ((!empty) && (!boiled)) {
-                // 煮沸
-                boiled = true;
-            }
-        }
-    }
+	public void boil() {
+		if ((!empty) && (!boiled)) {
+			// 煮沸
+			boiled = true;
+		}
+	}
+}
 ```
 
 1.2.“急切”创建实例：
 
-```
-	public volatile static ChocolateFactory uniqueInstance = new ChocolateFactory();
+```java
+public volatile static ChocolateFactory uniqueInstance = new ChocolateFactory();
 ```
 
 1.3双重检查加锁:
-```
-    public class ChocolateFactory {
+```java
+public class ChocolateFactory {
 
-        private boolean empty;
-        private boolean boiled;
-        public volatile static ChocolateFactory uniqueInstance = null;
+	private boolean empty;
+	private boolean boiled;
+	public volatile static ChocolateFactory uniqueInstance = null;
 
-        private ChocolateFactory() {
-            empty = true;
-            boiled = false;
-        }
+	private ChocolateFactory() {
+		empty = true;
+		boiled = false;
+	}
 
-        public static synchronized ChocolateFactory getInstance() {
+	public static synchronized ChocolateFactory getInstance() {
 
-            if (uniqueInstance == null) {
-                synchronized (ChocolateFactory.class) {
-                    if (uniqueInstance == null) {
-                        uniqueInstance = new ChocolateFactory();
-                    }
-                }
-            }
+		if (uniqueInstance == null) {
+			synchronized (ChocolateFactory.class) {
+				if (uniqueInstance == null) {
+					uniqueInstance = new ChocolateFactory();
+				}
+			}
+		}
 
-            return uniqueInstance;
+		return uniqueInstance;
 
-        }
+	}
 
-        public void fill() {
-            if (empty) {
-                // 添加原料巧克力动作
-                empty = false;
-                boiled = false;
-            }
-        }
+	public void fill() {
+		if (empty) {
+			// 添加原料巧克力动作
+			empty = false;
+			boiled = false;
+		}
+	}
 
-        public void drain() {
-            if ((!empty) && boiled) {
-                // 排出巧克力动作
-                empty = true;
-            }
-        }
+	public void drain() {
+		if ((!empty) && boiled) {
+			// 排出巧克力动作
+			empty = true;
+		}
+	}
 
-        public void boil() {
-            if ((!empty) && (!boiled)) {
-                // 煮沸
-                boiled = true;
-            }
-        }
-    }
+	public void boil() {
+		if ((!empty) && (!boiled)) {
+			// 煮沸
+			boiled = true;
+		}
+	}
+}
 ```

@@ -20,45 +20,45 @@ date: 2019-04-29 19:59:17
 
 多重继承，其中继承的目标接口部分达到适配目的，而继承被适配者类的部分达到通过调用被适配者里面的方法来实现目标接口的功能。
 
-```
-    // 已存在的、具有特殊功能、但不符合我们既有的标准接口的类
-    class Adaptee {
-        public void specificRequest() {
-            System.out.println("被适配类 具有特殊功能...");
-        }
-    }
+```java
+// 已存在的、具有特殊功能、但不符合我们既有的标准接口的类
+class Adaptee {
+	public void specificRequest() {
+		System.out.println("被适配类 具有特殊功能...");
+	}
+}
 
-    // 目标接口，或称为标准接口
-    interface Target {
-        public void request();
-    }
+// 目标接口，或称为标准接口
+interface Target {
+	public void request();
+}
 
-    // 具体目标类，只提供普通功能
-    class ConcreteTarget implements Target {
-        public void request() {
-            System.out.println("普通类 具有普通功能...");
-        }
-    }
+// 具体目标类，只提供普通功能
+class ConcreteTarget implements Target {
+	public void request() {
+		System.out.println("普通类 具有普通功能...");
+	}
+}
 
-    // 适配器类，继承了被适配类，同时实现标准接口
-    class Adapter extends Adaptee implements Target{
-        public void request() {
-            super.specificRequest();
-        }
-    }
+// 适配器类，继承了被适配类，同时实现标准接口
+class Adapter extends Adaptee implements Target{
+	public void request() {
+		super.specificRequest();
+	}
+}
 
-    // 测试类
-    public class Client {
-        public static void main(String[] args) {
-            // 使用普通功能类
-            Target concreteTarget = new ConcreteTarget();//实例化一个普通类
-            concreteTarget.request();
+// 测试类
+public class Client {
+	public static void main(String[] args) {
+		// 使用普通功能类
+		Target concreteTarget = new ConcreteTarget();//实例化一个普通类
+		concreteTarget.request();
 
-            // 使用特殊功能类，即适配类
-            Target adapter = new Adapter();
-            adapter.request();
-        }
-    }
+		// 使用特殊功能类，即适配类
+		Target adapter = new Adapter();
+		adapter.request();
+	}
+}
 ```
 
 虽然Java不支持多重继承，但是使用接口的方式能实现类似多重继承的功能。
@@ -67,36 +67,36 @@ date: 2019-04-29 19:59:17
 
 不使用多继承或继承的方式，而是使用直接关联，或者称为委托的方式。
 
-```
-    // 适配器类，直接关联被适配类，同时实现标准接口
-    class Adapter implements Target{
-        // 直接关联被适配类
-        private Adaptee adaptee;
+```java
+// 适配器类，直接关联被适配类，同时实现标准接口
+class Adapter implements Target{
+	// 直接关联被适配类
+	private Adaptee adaptee;
 
-        // 可以通过构造函数传入具体需要适配的被适配类对象
-        public Adapter (Adaptee adaptee) {
-            this.adaptee = adaptee;
-        }
+	// 可以通过构造函数传入具体需要适配的被适配类对象
+	public Adapter (Adaptee adaptee) {
+		this.adaptee = adaptee;
+	}
 
-        public void request() {
-            // 这里是使用委托的方式完成特殊功能
-            this.adaptee.specificRequest();
-        }
-    }
+	public void request() {
+		// 这里是使用委托的方式完成特殊功能
+		this.adaptee.specificRequest();
+	}
+}
 
-    // 测试类
-    public class Client {
-        public static void main(String[] args) {
-            // 使用普通功能类
-            Target concreteTarget = new ConcreteTarget();
-            concreteTarget.request();
+// 测试类
+public class Client {
+	public static void main(String[] args) {
+		// 使用普通功能类
+		Target concreteTarget = new ConcreteTarget();
+		concreteTarget.request();
 
-            // 使用特殊功能类，即适配类，
-            // 需要先创建一个被适配类的对象作为参数
-            Target adapter = new Adapter(new Adaptee());
-            adapter.request();
-        }
-    }
+		// 使用特殊功能类，即适配类，
+		// 需要先创建一个被适配类的对象作为参数
+		Target adapter = new Adapter(new Adaptee());
+		adapter.request();
+	}
+}
 ```
 
 对象适配器和类适配器使用了不同的方法实现适配，对象适配器使用组合，类适配器使用了继承。

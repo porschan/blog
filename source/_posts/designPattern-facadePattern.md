@@ -12,95 +12,95 @@ date: 2019-05-04 14:40:27
 行政审批接口:
 
 ```java
-    interface Executive{
-        public void approve();
-    }
+interface Executive{
+    public void approve();
+}
 ```
 
 卫生局类的定义：
 ```java
-    class HealthOffice implements Executive{
+class HealthOffice implements Executive{
 
-        @Override
-        public void approve() {
-            System.out.println("卫生局通过审批");
-        }
+    @Override
+    public void approve() {
+        System.out.println("卫生局通过审批");
     }
+}
 ```
 
 税务局类的定义：
 ```java
-    class RevenueOffice implements Executive{
+class RevenueOffice implements Executive{
 
-        @Override
-        public void approve() {
-            System.out.println("税务局完成登记，定时回去收税");
-        }
+    @Override
+    public void approve() {
+        System.out.println("税务局完成登记，定时回去收税");
     }
+}
 ```
 
 工商局类的定义：
 ```java
-    class SaicOffice implements Executive{
+class SaicOffice implements Executive{
 
-        @Override
-        public void approve() {
-            System.out.println("工商局完成审核，办法营业执照");
-        }
+    @Override
+    public void approve() {
+        System.out.println("工商局完成审核，办法营业执照");
     }
+}
 ```
 
 客户端:
 ```java
-    public class FacadeTest {
+public class FacadeTest {
 
-        public static void main(String[] args) {
-            System.out.println("开始办理行政手续...");
+    public static void main(String[] args) {
+        System.out.println("开始办理行政手续...");
 
-            HealthOffice ho = new HealthOffice();
-            RevenueOffice ro = new RevenueOffice();
-            SaicOffice so = new SaicOffice();
+        HealthOffice ho = new HealthOffice();
+        RevenueOffice ro = new RevenueOffice();
+        SaicOffice so = new SaicOffice();
 
-            ho.approve();
-            ro.approve();
-            so.approve();
+        ho.approve();
+        ro.approve();
+        so.approve();
 
-            System.out.println("行政手续终于办完了");
-        }
+        System.out.println("行政手续终于办完了");
     }
+}
 ```
 
 将改为外观设计模式如下，定义一个外观类：
 ```java
-    class ApproveFacade {
+class ApproveFacade {
 
-        public ApproveFacade() {
-
-        }
-
-        public void wholeApprove() {
-            new HealthOffice().approve();
-            new RevenueOffice().approve();
-            new SaicOffice().approve();
-        }
+    public ApproveFacade() {
 
     }
+
+    public void wholeApprove() {
+        new HealthOffice().approve();
+        new RevenueOffice().approve();
+        new SaicOffice().approve();
+    }
+
+}
 ```
 
 客户端使用：
 ```java
-    public class FacadeTest {
+public class FacadeTest {
 
-        public static void main(String[] args) {
-            System.out.println("开始办理行政手续...");
+    public static void main(String[] args) {
+        System.out.println("开始办理行政手续...");
 
-            ApproveFacade af = new ApproveFacade();
-            af.wholeApprove();
+        ApproveFacade af = new ApproveFacade();
+        af.wholeApprove();
 
-            System.out.println("行政手续终于办完了");
-        }
-
+        System.out.println("行政手续终于办完了");
     }
+
+}
 ```
 
 外观模式的目的不是给予子系统添加新的功能接口，而是为了让外部减少与子系统内多个模块的交互，松散耦合，从而让外部能够更简单地使用子系统。
