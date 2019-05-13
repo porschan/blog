@@ -308,6 +308,8 @@ date: 2018/11/15 23:57:05
 
 - [SpringBoot - 使用 @Async 异步调用](https://chanchifeng.com/2019/03/06/springboot-async/ "springboot - 使用 @Async 异步调用")
 
+- [SpringBoot - 使用 MongoDB]( "SpringBoot - 使用 MongoDB")
+
 #### SpringMVC ####
 
 - [使用 IDEA 创建 SpringMVC 项目](https://chanchifeng.com/2019/04/26/springMVC-create/ "使用IDEA创建SPRING MVC 项目")
