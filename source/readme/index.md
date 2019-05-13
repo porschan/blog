@@ -87,9 +87,13 @@ date: 2018/11/15 23:57:05
 
 - [设计模式 - 桥接模式](https://chanchifeng.com/2019/05/09/designPattern-bridgemsPattern/ "设计模式 - 桥接模式")
 
-- [设计模式 - 生成器模式]( "设计模式 - 生成器模式")
+- [设计模式 - 生成器模式](https://chanchifeng.com/2019/05/12/designPattern-builderPattern/ "设计模式 - 生成器模式")
 
-- [设计模式 - 责任链模式]( "设计模式 - 责任链模式")
+- [设计模式 - 责任链模式](https://chanchifeng.com/2019/05/12/designPattern-chainPattern/ "设计模式 - 责任链模式")
+
+- [设计模式 - 蝇量模式]( "设计模式 - 蝇量模式")
+
+- [设计模式 - 解释器模式]( "设计模式 - 解释器模式")
 
 ### Git ###
 
