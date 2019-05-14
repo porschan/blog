@@ -25,11 +25,15 @@ date: 2019-05-13 17:06:53
 
 ![](springboot-mongodb/4.png)
 
-7.项目机构：
+7.删除自动生成的mvn：
+
+![](springboot-mongodb/5.png)
+
+8.项目结构：
 
 ![](springboot-mongodb/7.png)
 
-8.在pom.xml添加依赖：
+9.在pom.xml添加依赖：
 
 ```
 <dependencies>
@@ -63,7 +67,7 @@ date: 2019-05-13 17:06:53
 </dependencies>
 ```
 
-9.在resources下创建mongoDB的配置文件：
+10.在resources下创建mongoDB的配置文件：
 
 ```
 # MongoDB
@@ -74,7 +78,7 @@ mongo.name=test
 mongo.port=27017
 ```
 
-10.创建config包，在其下创建DataSourceConfig：
+11.创建config包，在其下创建DataSourceConfig：
 
 ```java
 import com.mongodb.MongoClient;
@@ -114,7 +118,7 @@ public class DataSourceConfig extends AbstractMongoConfiguration {
 }
 ```
 
-11.创建models包，在其下创建User：
+12.创建models包，在其下创建User：
 
 ```java
 import org.springframework.data.annotation.Id;
@@ -238,7 +242,7 @@ public class User {
 }
 ```
 
-12.创建repositories包，在其下创建UserRepository：
+13.创建repositories包，在其下创建UserRepository：
 
 ```java
 import com.chanchifeng.mongodb.models.User;
@@ -251,7 +255,7 @@ public interface UserRepository extends MongoRepository<User, String> {
 }
 ```
 
-13.[测试]在test包下创建resources文件夹，在其下创建data-source.properties：
+14.[测试]在test包下创建resources文件夹，在其下创建data-source.properties：
 
 ```
 # MongoDB
@@ -262,7 +266,7 @@ mongo.name=test
 mongo.port=27017
 ```
 
-14.[测试]创建DataSourceConfig：
+15.[测试]创建DataSourceConfig：
 
 ```java
 import com.mongodb.MongoClient;
@@ -298,7 +302,8 @@ public class DataSourceConfig extends AbstractMongoConfiguration {
     }
 }
 ```
-15.[测试]在MongodbApplicationTests编写测试案例：
+
+16.[测试]在MongodbApplicationTests编写测试案例：
 
 ```java
 import com.chanchifeng.mongodb.models.User;
@@ -353,6 +358,6 @@ public class MongodbApplicationTests {
 }
 ```
 
-16.测试结果：
+17.测试结果：
 
 ![](springboot-mongodb/6.png)
