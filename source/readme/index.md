@@ -91,9 +91,13 @@ date: 2018/11/15 23:57:05
 
 - [设计模式 - 责任链模式](https://chanchifeng.com/2019/05/12/designPattern-chainPattern/ "设计模式 - 责任链模式")
 
-- [设计模式 - 蝇量模式]( "设计模式 - 蝇量模式")
+- [设计模式 - 蝇量模式](https://chanchifeng.com/2019/05/13/designPattern-flyweightPattern/ "设计模式 - 蝇量模式")
 
-- [设计模式 - 解释器模式]( "设计模式 - 解释器模式")
+- [设计模式 - 解释器模式](https://chanchifeng.com/2019/05/13/designPattern-interpreterPattern/ "设计模式 - 解释器模式")
+
+- [设计模式 - 中介者模式]( "设计模式 - 中介者模式")
+
+- [设计模式 - 备忘录模式]( "设计模式 - 备忘录模式")
 
 ### Git ###
 
@@ -251,7 +255,7 @@ date: 2018/11/15 23:57:05
 
 - [ActiveMQ - Windows系统安装](https://chanchifeng.com/2019/02/28/windows-activeMQ-install/ "activeMQ - windows系统安装")
 
-- [JDK - Windows系统安装](https://chanchifeng.com/2019/04/23/windows-jdk-install/"JDK - windows系统安装")
+- [JDK - Windows系统安装](https://chanchifeng.com/2019/04/23/windows-jdk-install/ "JDK - windows系统安装")
 
 ----------
 
@@ -314,7 +318,7 @@ date: 2018/11/15 23:57:05
 
 - [SpringBoot - 使用 @Async 异步调用](https://chanchifeng.com/2019/03/06/springboot-async/ "springboot - 使用 @Async 异步调用")
 
-- [SpringBoot - 使用 MongoDB]( "SpringBoot - 使用 MongoDB")
+- [SpringBoot - 使用 MongoDB](https://chanchifeng.com/2019/05/13/springboot-mongodb/ "SpringBoot - 使用 MongoDB")
 
 - [SpringBoot - 使用neo4j]( "SpringBoot - 使用neo4j")
 
