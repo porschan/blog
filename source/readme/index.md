@@ -334,14 +334,14 @@ date: 2018/11/15 23:57:05
 
 #### 框架整合 ####
 
-| 项目                       | 内容 | 链接 | 备注 |
-| -------------------------- | ---- | ---- | ---- |
-| Struts-Spring-Hibernate    |      |      |      |
-| Struts-Spring-MyBatis      |      |      |      |
-| SpringMVC-Spring-Hibernate |      |      |      |
-| SpringMVC-Spring-MyBatis   |      |      |      |
-| SpringBoot-JPA             |      |      |      |
-| SpringBoot-MyBatis         |      |      |      |
+| 项目                       | 内容                                                 | 链接 | 备注 |
+| -------------------------- | ---------------------------------------------------- | ---- | ---- |
+| Struts-Spring-Hibernate    | 使用 IDEA 中创建 Struts-Spring-Hibernate 的 web 项目 |      |      |
+| Struts-Spring-MyBatis      |                                                      |      |      |
+| SpringMVC-Spring-Hibernate |                                                      |      |      |
+| SpringMVC-Spring-MyBatis   |                                                      |      |      |
+| SpringBoot-JPA             |                                                      |      |      |
+| SpringBoot-MyBatis         |                                                      |      |      |
 
 ----------
 
