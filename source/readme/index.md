@@ -5,7 +5,7 @@ date: 2018/11/15 23:57:05
 
 ### 技术路线 ###
 
-![](20190513.png)
+![](20190519.png)
 
 # Porschan #
 
@@ -95,15 +95,15 @@ date: 2018/11/15 23:57:05
 
 - [设计模式 - 解释器模式](https://chanchifeng.com/2019/05/13/designPattern-interpreterPattern/ "设计模式 - 解释器模式")
 
-- [设计模式 - 中介者模式]( "设计模式 - 中介者模式")
+- [设计模式 - 中介者模式](https://chanchifeng.com/2019/05/15/designPattern-mediatorPattern/ "设计模式 - 中介者模式")
 
-- [设计模式 - 备忘录模式]( "设计模式 - 备忘录模式")
+- [设计模式 - 备忘录模式](https://chanchifeng.com/2019/05/15/designPattern-mementoPattern/ "设计模式 - 备忘录模式")
 
-- [设计模式 - 原型模式]( "设计模式 - 原型模式")
+- [设计模式 - 原型模式](https://chanchifeng.com/2019/05/16/designPattern-protoPattern/ "设计模式 - 原型模式")
 
-- [设计模式 - 访问者模式]( "设计模式 - 访问者模式")
+- [设计模式 - 访问者模式](https://chanchifeng.com/2019/05/16/designPattern-visitorPattern/ "设计模式 - 访问者模式")
 
-- [设计模式 - 概要]( "设计模式 - 概要")
+- [设计模式 - 概要](https://chanchifeng.com/2019/05/16/designPattern-basic/ "设计模式 - 概要")
 
 ### Git ###
 
@@ -181,7 +181,7 @@ date: 2018/11/15 23:57:05
 
 #### neo4j ####
 
-- [NEO4J - Windows系统安装]( "NEO4J - Windows系统安装")
+- [NEO4J - Windows系统安装](https://chanchifeng.com/2019/05/13/neo4j-install-windows/ "NEO4J - Windows系统安装")
 
 ### Docker ###
 
@@ -326,11 +326,22 @@ date: 2018/11/15 23:57:05
 
 - [SpringBoot - 使用 MongoDB](https://chanchifeng.com/2019/05/13/springboot-mongodb/ "SpringBoot - 使用 MongoDB")
 
-- [SpringBoot - 使用neo4j]( "SpringBoot - 使用neo4j")
+- [SpringBoot - 使用neo4j](https://chanchifeng.com/2019/05/14/springboot-neo4j/ "SpringBoot - 使用neo4j")
 
 #### SpringMVC ####
 
 - [使用 IDEA 创建 SpringMVC 项目](https://chanchifeng.com/2019/04/26/springMVC-create/ "使用IDEA创建SPRING MVC 项目")
+
+#### 框架整合 ####
+
+| 项目                       | 内容 | 链接 | 备注 |
+| -------------------------- | ---- | ---- | ---- |
+| Struts-Spring-Hibernate    |      |      |      |
+| Struts-Spring-MyBatis      |      |      |      |
+| SpringMVC-Spring-Hibernate |      |      |      |
+| SpringMVC-Spring-MyBatis   |      |      |      |
+| SpringBoot-JPA             |      |      |      |
+| SpringBoot-MyBatis         |      |      |      |
 
 ----------
 

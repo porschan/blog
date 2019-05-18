@@ -157,3 +157,5 @@ public class MainTest {
 ```
 
 *.将已经提前实现完成的接口内的方法的对象传入超类中的方法，并能将继承超类的实体对象强制转化为目标对象，从而将接口内的方法抽离出来。
+
+![](designPattern-visitorPattern/1.png)
