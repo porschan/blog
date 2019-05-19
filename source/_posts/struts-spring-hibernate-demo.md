@@ -3,6 +3,8 @@ title: 使用 IDEA 中创建 Struts-Spring-Hibernate 的 web 项目
 date: 2019-05-18 23:59:20
 ---
 
+> 以下例子主要使用了sxjlinux在csdn上面的例子：[idea使用Maven创建web服务，并搭建ssh框架使用tomcat运行](https://blog.csdn.net/sunxiaoju/article/details/81007709)
+
 1.新建一个空项目。
 
 2.选择maven工程，这里简历的是最基础的maven工程，不需要自带的模板，如下图：
@@ -830,7 +832,42 @@ public class User {
 </beans>
 ```
 
-47.添加web容器的Tomcat，如下图所示：
+47.web.xml：
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+
+    <display-name>Archetype Created Web Application</display-name>
+
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>classpath:applicationContext.xml</param-value>
+    </context-param>
+
+    <!-- 配置 Struts2 的 Filter -->
+
+    <filter>
+        <filter-name>struts2</filter-name>
+        <filter-class>org.apache.struts2.dispatcher.filter.StrutsPrepareAndExecuteFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>struts2</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
+
+</web-app>
+```
+
+48.添加web容器的Tomcat，如下图所示：
 
 ![](struts-spring-hibernate-demo/32.ng)
 
@@ -838,22 +875,22 @@ public class User {
 
 ![](struts-spring-hibernate-demo/34.png)
 
-48.点击Fix，操作如下图所示：
+49.点击Fix，操作如下图所示：
 
 ![](struts-spring-hibernate-demo/35.png)
 
-49.添加war，操作如下图：
+50.添加war，操作如下图：
 
 ![](struts-spring-hibernate-demo/36.png)
 
-50.修改项目路径，操作如下图所示：
+51.修改项目路径，操作如下图所示：
 
 ![](struts-spring-hibernate-demo/37.png)
 
-51.启动Tomcat，如下图所示：
+52.启动Tomcat，如下图所示：
 
 ![](struts-spring-hibernate-demo/38.png)
 
-52.测试应用，在浏览器上输入http://localhost:8080/webapp3/user_m1。
+53.测试应用，在浏览器上输入http://localhost:8080/webapp3/user_m1。
 
 ![](struts-spring-hibernate-demo/41.png)
