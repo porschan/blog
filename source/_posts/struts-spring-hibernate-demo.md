@@ -894,3 +894,5 @@ public class User {
 53.测试应用，在浏览器上输入http://localhost:8080/webapp3/user_m1。
 
 ![](struts-spring-hibernate-demo/41.png)
+
+> Github：[Struts-Spring-Hibernate/demo](https://github.com/porschan/Struts-Spring-Hibernate)
