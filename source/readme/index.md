@@ -334,14 +334,23 @@ date: 2018/11/15 23:57:05
 
 #### 框架整合 ####
 
-| 项目                       | 内容                                                 | 链接 | 备注 |
-| -------------------------- | ---------------------------------------------------- | ---- | ---- |
-| Struts-Spring-Hibernate    | 使用 IDEA 中创建 Struts-Spring-Hibernate 的 web 项目 |      |      |
-| Struts-Spring-MyBatis      |                                                      |      |      |
-| SpringMVC-Spring-Hibernate |                                                      |      |      |
-| SpringMVC-Spring-MyBatis   |                                                      |      |      |
-| SpringBoot-JPA             |                                                      |      |      |
-| SpringBoot-MyBatis         |                                                      |      |      |
+##### Struts-Spring-Hibernate
+
+- [使用 IDEA 中创建 Struts-Spring-Hibernate 的 web 项目](https://chanchifeng.com/2019/05/18/struts-spring-hibernate-demo/ "使用 IDEA 中创建 Struts-Spring-Hibernate 的 web 项目")
+
+- [在 STRUTS-SPRING-HIBERNATE 的 WEB 项目实现增删查改](https://chanchifeng.com/2019/05/20/struts-spring-hibernate-curd/ "在 STRUTS-SPRING-HIBERNATE 的 WEB 项目实现增删查改")
+
+- [在 STRUTS-SPRING-HIBERNATE 的 WEB 项目实现模糊查询 & 分页 & 上传文件](https://chanchifeng.com/2019/05/20/struts-spring-hibernate-curd/ "在 STRUTS-SPRING-HIBERNATE 的 WEB 项目实现模糊查询 & 分页 & 上传文件")
+
+##### Struts-Spring-MyBatis
+
+##### SpringMVC-Spring-Hibernate
+
+##### SpringMVC-Spring-MyBatis
+
+##### SpringBoot-JPA
+
+##### SpringBoot-MyBatis
 
 ----------
 
