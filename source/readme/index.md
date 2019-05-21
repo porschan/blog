@@ -348,6 +348,8 @@ date: 2018/11/15 23:57:05
 
 ##### SpringMVC-Spring-MyBatis
 
+- [使用 IDEA 中创建 SpringMVC-Spring-MyBatis-demo 的 web 项目]( "使用 IDEA 中创建 SpringMVC-Spring-MyBatis-demo 的 web 项目")
+
 ##### SpringBoot-JPA
 
 ##### SpringBoot-MyBatis
