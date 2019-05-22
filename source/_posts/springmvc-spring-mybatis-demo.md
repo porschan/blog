@@ -722,15 +722,62 @@ log4j.logger.com.youmeek.ssm.manage.mapper=debug
 
 24.WEB-INF中的statics中的静态文件，请在文章的最下提供的Github中获取并放入项目中。
 
-25.修改修改对应的数据库信息，并使用Mybatis生成Mapper和pojo，操作如下图：
+25.初始化数据，代码如下：
+
+```sql
+# 创建数据库，并创建权限用户
+# CREATE DATABASE 'ssm' CHARACTER SET utf8;
+CREATE DATABASE ssm CHARACTER SET utf8 COLLATE utf8_general_ci;
+CREATE USER 'ssm'@'%' IDENTIFIED BY 'ssm';
+GRANT ALL PRIVILEGES ON ssm.* TO 'ssm'@'%';
+FLUSH PRIVILEGES;
+
+
+# 创建表
+USE ssm;
+CREATE TABLE `sys_user` (
+  `sys_user_id` bigint(20) NOT NULL,
+  `sys_user_login_name` varchar(50) NOT NULL,
+  `sys_user_login_password` varchar(50) NOT NULL,
+  `sys_user_status` varchar(1) NOT NULL,
+  `sys_user_is_delete` varchar(1) NOT NULL,
+  `sys_user_register_datetime` datetime NOT NULL,
+  `sys_user_register_source` varchar(1) NOT NULL,
+  `sys_user_type` varchar(1) NOT NULL,
+  `sys_user_sex` varchar(1) NOT NULL,
+  `sys_user_is_email_active` varchar(1) NOT NULL,
+  `sys_user_is_mobile_active` varchar(1) NOT NULL,
+  `sys_user_register_type` varchar(1) NOT NULL,
+  `sys_user_pay_passwrod` varchar(50) DEFAULT NULL,
+  `sys_user_icon` varchar(100) DEFAULT NULL,
+  `sys_user_real_name` varchar(20) DEFAULT NULL,
+  `sys_user_email` varchar(50) DEFAULT NULL,
+  `sys_user_mobile` varchar(20) DEFAULT NULL,
+  `sys_user_weibo_id` varchar(36) DEFAULT NULL,
+  `sys_user_qq_id` varchar(36) DEFAULT NULL,
+  PRIMARY KEY (`sys_user_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+# 创建表数据
+USE ssm;
+insert  into `sys_user`(`sys_user_id`,`sys_user_login_name`,`sys_user_login_password`,`sys_user_status`,`sys_user_is_delete`,`sys_user_register_datetime`,`sys_user_register_source`,`sys_user_type`,`sys_user_sex`,`sys_user_is_email_active`,`sys_user_is_mobile_active`,`sys_user_register_type`,`sys_user_pay_passwrod`,`sys_user_icon`,`sys_user_real_name`,`sys_user_email`,`sys_user_mobile`,`sys_user_weibo_id`,`sys_user_qq_id`) values (1,'YouMeek1','e10adc3949ba59abbe56e057f20f883e','0','N','2016-02-24 00:12:23','0','0','0','Y','Y','0','e10adc3949ba59abbe56e057f20f883e','','张觉恩1','363379441@qq.com','13800000001','','');
+insert  into `sys_user`(`sys_user_id`,`sys_user_login_name`,`sys_user_login_password`,`sys_user_status`,`sys_user_is_delete`,`sys_user_register_datetime`,`sys_user_register_source`,`sys_user_type`,`sys_user_sex`,`sys_user_is_email_active`,`sys_user_is_mobile_active`,`sys_user_register_type`,`sys_user_pay_passwrod`,`sys_user_icon`,`sys_user_real_name`,`sys_user_email`,`sys_user_mobile`,`sys_user_weibo_id`,`sys_user_qq_id`) values (2,'YouMeek2','e10adc3949ba59abbe56e057f20f883e','0','N','2016-02-24 00:12:23','0','0','0','Y','Y','0','e10adc3949ba59abbe56e057f20f883e','','张觉恩2','363379442@qq.com','13800000002','','');
+insert  into `sys_user`(`sys_user_id`,`sys_user_login_name`,`sys_user_login_password`,`sys_user_status`,`sys_user_is_delete`,`sys_user_register_datetime`,`sys_user_register_source`,`sys_user_type`,`sys_user_sex`,`sys_user_is_email_active`,`sys_user_is_mobile_active`,`sys_user_register_type`,`sys_user_pay_passwrod`,`sys_user_icon`,`sys_user_real_name`,`sys_user_email`,`sys_user_mobile`,`sys_user_weibo_id`,`sys_user_qq_id`) values (3,'YouMeek3','e10adc3949ba59abbe56e057f20f883e','0','N','2016-02-24 00:12:23','0','0','0','Y','Y','0','e10adc3949ba59abbe56e057f20f883e','','张觉恩3','363379443@qq.com','13800000003','','');
+insert  into `sys_user`(`sys_user_id`,`sys_user_login_name`,`sys_user_login_password`,`sys_user_status`,`sys_user_is_delete`,`sys_user_register_datetime`,`sys_user_register_source`,`sys_user_type`,`sys_user_sex`,`sys_user_is_email_active`,`sys_user_is_mobile_active`,`sys_user_register_type`,`sys_user_pay_passwrod`,`sys_user_icon`,`sys_user_real_name`,`sys_user_email`,`sys_user_mobile`,`sys_user_weibo_id`,`sys_user_qq_id`) values (4,'YouMeek4','e10adc3949ba59abbe56e057f20f883e','0','N','2016-02-24 00:12:23','0','0','0','Y','Y','0','e10adc3949ba59abbe56e057f20f883e','','张觉恩4','363379444@qq.com','13800000004','','');
+insert  into `sys_user`(`sys_user_id`,`sys_user_login_name`,`sys_user_login_password`,`sys_user_status`,`sys_user_is_delete`,`sys_user_register_datetime`,`sys_user_register_source`,`sys_user_type`,`sys_user_sex`,`sys_user_is_email_active`,`sys_user_is_mobile_active`,`sys_user_register_type`,`sys_user_pay_passwrod`,`sys_user_icon`,`sys_user_real_name`,`sys_user_email`,`sys_user_mobile`,`sys_user_weibo_id`,`sys_user_qq_id`) values (5,'YouMeek5','e10adc3949ba59abbe56e057f20f883e','0','N','2016-02-24 00:12:23','0','0','0','Y','Y','0','e10adc3949ba59abbe56e057f20f883e','','张觉恩5','363379445@qq.com','13800000005','','');
+
+```
+
+26.修改对应的数据库信息，并使用Mybatis生成Mapper和pojo，操作如下图：
 
 ![](springmvc-spring-mybatis-demo/12.png)
 
-26.由于设置了生成Mapper和Pojo的指定路径在generator，生成的文件如下图所示：
+27.由于设置了生成Mapper和Pojo的指定路径在generator，生成的文件如下图所示：
 
 ![](springmvc-spring-mybatis-demo/13.png)
 
-27.我们将SysUserMapper.java、SysUserMapper.xml和SysUser修改路径和内容如下操作，最后的结构图如下：
+28.我们将SysUserMapper.java、SysUserMapper.xml和SysUser修改路径和内容如下操作，最后的结构图如下：
 
 - [ ] 将SysUserMapper移动至com.chanchifeng.module.user.mapper
 - [ ] 将SysUser移动至com.chanchifeng.module.user.pojo
@@ -739,11 +786,11 @@ log4j.logger.com.youmeek.ssm.manage.mapper=debug
 
 ![](springmvc-spring-mybatis-demo/14.png)
 
-28.最后补全Java代码和页面代码，结构图如下：
+29.最后补全Java代码和页面代码，结构图如下：
 
 ![](springmvc-spring-mybatis-demo/15.png)
 
-29.SysUserController
+30.SysUserController
 
 ```java
 import com.chanchifeng.module.user.pojo.SysUser;
@@ -797,7 +844,7 @@ public class SysUserController {
 }
 ```
 
-30.SysUserMapper
+31.SysUserMapper
 
 ```java
 import com.chanchifeng.module.user.pojo.SysUser;
@@ -853,7 +900,7 @@ public interface SysUserMapper {
 }
 ```
 
-31.SysUser
+32.SysUser
 
 ```java
 import java.util.Date;
@@ -1488,7 +1535,7 @@ public class SysUser {
 }
 ```
 
-32.SysUserServiceImpl
+33.SysUserServiceImpl
 
 ```java
 import com.chanchifeng.module.user.mapper.SysUserMapper;
@@ -1511,7 +1558,7 @@ public class SysUserServiceImpl implements SysUserService {
 }
 ```
 
-33.SysUserService
+34.SysUserService
 
 ```java
 import com.chanchifeng.module.user.pojo.SysUser;
@@ -1521,7 +1568,7 @@ public interface SysUserService {
 }
 ```
 
-34.WEB-INF/view/common/tagPage.jsp
+35.WEB-INF/view/common/tagPage.jsp
 
 ```html
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
@@ -1541,7 +1588,7 @@ public interface SysUserService {
 %>
 ```
 
-35.WEB-INF/view/showUser.jsp
+36.WEB-INF/view/showUser.jsp
 
 ```html
 <%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="utf-8" %>
@@ -1574,7 +1621,7 @@ public interface SysUserService {
 </html>
 ```
 
-36.index.jsp
+37.index.jsp
 
 ```html
 <%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="utf-8" %>
@@ -1608,31 +1655,31 @@ public interface SysUserService {
 </html>
 ```
 
-37.我们可以使用maven进行编译WEB项目，操作如下图所示：
+38.我们可以使用maven进行编译WEB项目，操作如下图所示：
 
 ![](springmvc-spring-mybatis-demo/16.png)
 
-38.设置WEB项目编译信息，操作如下图：
+39.设置WEB项目编译信息，操作如下图：
 
 ![](springmvc-spring-mybatis-demo/17.png)
 
-39.添加本地web容器，操作如下：
+40.添加本地web容器，操作如下：
 
 ![](springmvc-spring-mybatis-demo/18.png)
 
-40.点击Fix，选择对于的编译选择，操作如下图：
+41.点击Fix，选择对于的编译选择，操作如下图：
 
 ![](springmvc-spring-mybatis-demo/19.png)
 
-41.编辑项目的访问路径，操作如下图所示：
+42.编辑项目的访问路径，操作如下图所示：
 
 ![](springmvc-spring-mybatis-demo/20.png)
 
-42.在浏览器中输入<http://localhost:8080/demo/>，效果图如下图所示：
+43.在浏览器中输入<http://localhost:8080/demo/>，效果图如下图所示：
 
 ![](springmvc-spring-mybatis-demo/21.png)
 
-43.最后可以使用测试类继续测试，在com.chanchifeng.module.user.SSMTest编写以下代码：
+44.最后可以使用测试类继续测试，在com.chanchifeng.module.user.SSMTest编写以下代码：
 
 ```java
 import com.chanchifeng.module.user.pojo.SysUser;
@@ -1660,7 +1707,7 @@ public class SSMTest {
 }
 ```
 
-44.在resources中编写log4j.properties，代码如下：
+45.在resources中编写log4j.properties，代码如下：
 
 ```properties
 
@@ -1692,7 +1739,7 @@ log4j.logger.com.youmeek.ssm.manage.mapper=debug
 
 ```
 
-45.测试结果如下图所示：
+46.测试结果如下图所示：
 
 ![](springmvc-spring-mybatis-demo/22.png)
 
