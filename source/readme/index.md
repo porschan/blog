@@ -352,6 +352,8 @@ date: 2018/11/15 23:57:05
 
 - [使用 IDEA 中创建 SpringMVC-Spring-MyBatis-demo 的 web 项目实现增删查改]( "使用 IDEA 中创建 SpringMVC-Spring-MyBatis-demo 的 web 项目实现增删查改")
 
+- [使用 IDEA 中创建 SpringMVC-Spring-MyBatis-demo 的 WEB 项目实现模糊查询 & 分页 & 上传文件]( "使用 IDEA 中创建 SpringMVC-Spring-MyBatis-demo 的 WEB 项目实现模糊查询 & 分页 & 上传文件")
+
 ##### SpringBoot-JPA
 
 ##### SpringBoot-MyBatis
