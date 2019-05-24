@@ -357,7 +357,10 @@ date: 2018/11/15 23:57:05
 ##### SpringBoot-JPA
 
 - [使用 IDEA 中创建 SpringBoot-JPA 的 web 项目]( "使用 IDEA 中创建 SpringBoot-JPA 的 web 项目")
-- 
+
+- [使用 IDEA 中创建 SpringBoot-JPA 的 web 项目实现增删查改]( "使用 IDEA 中创建 SpringBoot-JPA 的 web 项目实现增删查改")
+
+
 ##### SpringBoot-MyBatis
 
 ----------

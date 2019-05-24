@@ -25,11 +25,88 @@ date: 2019-05-24 09:56:45
 
 ![](springboot-jpa-demo/5.png)
 
-7.建立com.chanchifeng.demo下的包，结构如下图所示：
+7.需要修改pom.xml,代码如下：
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.1.5.RELEASE</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+    <groupId>com.chanchifeng</groupId>
+    <artifactId>demo</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>demo</name>
+    <description>Demo project for Spring Boot</description>
+
+    <properties>
+        <java.version>1.8</java.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.46</version>
+            <scope>runtime</scope>
+        </dependency>
+
+        <!-- druid -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid</artifactId>
+            <version>1.1.10</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
+
+```
+
+8.建立com.chanchifeng.demo下的包，结构如下图所示：
 
 ![](springboot-jpa-demo/6.png)
 
-8.先创建sjpademo的数据库，再创建user表，SQL语句如下：
+9.先创建sjpademo的数据库，再创建user表，SQL语句如下：
 
 ```sql
 SET NAMES utf8mb4;
@@ -56,45 +133,45 @@ INSERT INTO `user` VALUES (3, '阿华', 'e10adc3949ba59abbe56e057f20f883e');
 SET FOREIGN_KEY_CHECKS = 1;
 ```
 
-9.连接MySQL数据库，操作如下图所示：
+10.连接MySQL数据库，操作如下图所示：
 
 ![](springboot-jpa-demo/7.png)
 
-10.在窗口中填写必须的信息，由于我MySQL较新，选择了驱动为Mysql for 5.1,操作如下图所示：
+11.在窗口中填写必须的信息，由于我MySQL较新，选择了驱动为Mysql for 5.1,操作如下图所示：
 
 ![](springboot-jpa-demo/8.png)
 
-11.配置项目中jpa,操作如下图所示：
+12.配置项目中jpa,操作如下图所示：
 
 ![](springboot-jpa-demo/9.png)
 
-12.添加完成后，点击Apply和OK，操作如下图所示：
+13.添加完成后，点击Apply和OK，操作如下图所示：
 
 ![](springboot-jpa-demo/10.png)
 
-13.生成user的model类，操作如下图所示：
+14.生成user的model类，操作如下图所示：
 
 ![](springboot-jpa-demo/11.png)
 
-14.在窗口中填写如下图所示的信息：
+15.在窗口中填写如下图所示的信息：
 
 ![](springboot-jpa-demo/12.png)
 
-15.需要补全User中的信息，在GetId方法头添加
+16.需要补全User中的信息，在GetId方法头添加
 
 ```java
 @GeneratedValue(strategy = GenerationType.IDENTITY)
 ```
 
-16.指定数据源，操作如下图所示：
+17.指定数据源，操作如下图所示：
 
 ![](springboot-jpa-demo/13.png)
 
-17.选择数据源，操作如下图所示：
+18.选择数据源，操作如下图所示：
 
 ![](springboot-jpa-demo/14.png)
 
-18.User：
+19.User：
 
 ```java
 import javax.persistence.*;
@@ -158,7 +235,7 @@ public class User {
 }
 ```
 
-19.UserRepository:
+20.UserRepository:
 
 ```java
 import com.chanchifeng.demo.model.User;
@@ -189,7 +266,7 @@ public interface UserRepository extends JpaRepository<User,Integer> {
 }
 ```
 
-20.UserServiceImpl:
+21.UserServiceImpl:
 
 ```java
 import com.chanchifeng.demo.model.User;
@@ -251,7 +328,7 @@ public class UserServiceImpl implements UserService {
 }
 ```
 
-21.UserService:
+22.UserService:
 
 ```java
 import com.chanchifeng.demo.model.User;
@@ -276,7 +353,7 @@ public interface UserService {
 }
 ```
 
-22.application.properties:
+23.application.properties:
 
 ```properties
 ###  MySQL 连接信息
@@ -312,7 +389,7 @@ spring.datasource.connectionProperties=druid.stat.mergeSql=true;druid.stat.slowS
 #spring.datasource.useGlobalDataSourceStat=true
 ```
 
-23.DemoApplicationTests:
+24.DemoApplicationTests:
 
 ```java
 import com.chanchifeng.demo.model.User;
@@ -373,7 +450,7 @@ public class DemoApplicationTests {
 }
 ```
 
-24.运行测试案例，输入结果如下图所示：
+25.运行测试案例，输入结果如下图所示：
 
 ![](springboot-jpa-demo/15.png)
 
