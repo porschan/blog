@@ -1,5 +1,5 @@
 ---
-title: 使用 IDEA 中创建 SpringMVC-Spring-MyBatis-demo 的 web 项目
+title: 使用 IDEA 中创建 SpringMVC-Spring-MyBatis 的 web 项目
 date: 2019-05-21 18:11:28
 ---
 

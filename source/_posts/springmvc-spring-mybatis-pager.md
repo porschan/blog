@@ -1,5 +1,5 @@
 ---
-title: 使用 IDEA 中创建 SpringMVC-Spring-MyBatis-demo 的 WEB 项目实现模糊查询 & 分页 & 上传文件
+title: 使用 IDEA 中创建 SpringMVC-Spring-MyBatis 的 WEB 项目实现模糊查询 & 分页 & 上传文件
 date: 2019-05-23 15:10:49
 ---
 

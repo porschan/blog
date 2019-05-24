@@ -348,14 +348,16 @@ date: 2018/11/15 23:57:05
 
 ##### SpringMVC-Spring-MyBatis
 
-- [使用 IDEA 中创建 SpringMVC-Spring-MyBatis-demo 的 web 项目]( "使用 IDEA 中创建 SpringMVC-Spring-MyBatis-demo 的 web 项目")
+- [使用 IDEA 中创建 SpringMVC-Spring-MyBatis 的 web 项目](https://chanchifeng.com/2019/05/21/springmvc-spring-mybatis-demo/ "使用 IDEA 中创建 SpringMVC-Spring-MyBatis 的 web 项目")
 
-- [使用 IDEA 中创建 SpringMVC-Spring-MyBatis-demo 的 web 项目实现增删查改]( "使用 IDEA 中创建 SpringMVC-Spring-MyBatis-demo 的 web 项目实现增删查改")
+- [使用 IDEA 中创建 SpringMVC-Spring-MyBatis 的 web 项目实现增删查改](https://chanchifeng.com/2019/05/22/springmvc-spring-mybatis-curd/ "使用 IDEA 中创建 SpringMVC-Spring-MyBatis 的 web 项目实现增删查改")
 
-- [使用 IDEA 中创建 SpringMVC-Spring-MyBatis-demo 的 WEB 项目实现模糊查询 & 分页 & 上传文件]( "使用 IDEA 中创建 SpringMVC-Spring-MyBatis-demo 的 WEB 项目实现模糊查询 & 分页 & 上传文件")
+- [使用 IDEA 中创建 SpringMVC-Spring-MyBatis 的 WEB 项目实现模糊查询 & 分页 & 上传文件]( "使用 IDEA 中创建 SpringMVC-Spring-MyBatis 的 WEB 项目实现模糊查询 & 分页 & 上传文件")
 
 ##### SpringBoot-JPA
 
+- [使用 IDEA 中创建 SpringBoot-JPA 的 web 项目]( "使用 IDEA 中创建 SpringBoot-JPA 的 web 项目")
+- 
 ##### SpringBoot-MyBatis
 
 ----------

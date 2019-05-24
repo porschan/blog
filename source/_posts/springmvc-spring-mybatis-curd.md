@@ -1,5 +1,5 @@
 ---
-title: 使用 IDEA 中创建 SpringMVC-Spring-MyBatis-demo 的 web 项目实现增删查改
+title: 使用 IDEA 中创建 SpringMVC-Spring-MyBatis 的 web 项目实现增删查改
 date: 2019-05-22 22:43:07
 ---
 
