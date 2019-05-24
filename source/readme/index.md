@@ -5,7 +5,7 @@ date: 2018/11/15 23:57:05
 
 ### 技术路线 ###
 
-![](20190519.png)
+![](20190524.png)
 
 # Porschan #
 
@@ -356,10 +356,11 @@ date: 2018/11/15 23:57:05
 
 ##### SpringBoot-JPA
 
-- [使用 IDEA 中创建 SpringBoot-JPA 的 web 项目]( "使用 IDEA 中创建 SpringBoot-JPA 的 web 项目")
+- [使用 IDEA 中创建 SpringBoot-JPA 的 web 项目](https://chanchifeng.com/2019/05/24/springboot-jpa-demo/ "使用 IDEA 中创建 SpringBoot-JPA 的 web 项目")
 
-- [使用 IDEA 中创建 SpringBoot-JPA 的 web 项目实现增删查改]( "使用 IDEA 中创建 SpringBoot-JPA 的 web 项目实现增删查改")
+- [使用 IDEA 中创建 SpringBoot-JPA 的 web 项目实现增删查改](https://chanchifeng.com/2019/05/24/springboot-jpa-curd/ "使用 IDEA 中创建 SpringBoot-JPA 的 web 项目实现增删查改")
 
+- [使用 IDEA 中创建 SpringBoot-JPA 的 WEB 项目实现模糊查询 & 分页 & 上传文件]( "使用 IDEA 中创建 SpringBoot-JPA 的 WEB 项目实现模糊查询 & 分页 & 上传文件")
 
 ##### SpringBoot-MyBatis
 
