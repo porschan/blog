@@ -360,10 +360,16 @@ date: 2018/11/15 23:57:05
 
 - [使用 IDEA 中创建 SpringBoot-JPA 的 web 项目实现增删查改](https://chanchifeng.com/2019/05/24/springboot-jpa-curd/ "使用 IDEA 中创建 SpringBoot-JPA 的 web 项目实现增删查改")
 
-- [使用 IDEA 中创建 SpringBoot-JPA 的 WEB 项目实现模糊查询 & 分页 & 上传文件]( "使用 IDEA 中创建 SpringBoot-JPA 的 WEB 项目实现模糊查询 & 分页 & 上传文件")
+- [使用 IDEA 中创建 SpringBoot-JPA 的 WEB 项目实现模糊查询 & 分页 & 上传文件](https://chanchifeng.com/2019/05/24/springboot-jpa-pager/ "使用 IDEA 中创建 SpringBoot-JPA 的 WEB 项目实现模糊查询 & 分页 & 上传文件")
 
 ##### SpringBoot-MyBatis
 
+- [使用 IDEA 中创建 SpringBoot-MyBatis 的 web 项目]( "使用 IDEA 中创建 SpringBoot-MyBatis 的 web 项目")
+
+- [使用 IDEA 中创建 SpringBoot-MyBatis 的 web 项目实现增删查改]( "使用 IDEA 中创建 SpringBoot-MyBatis 的 web 项目实现增删查改")
+
+- [使用 IDEA 中创建 SpringBoot-MyBatis 的 WEB 项目实现模糊查询 & 分页 & 上传文件]( "使用 IDEA 中创建 SpringBoot-MyBatis 的 WEB 项目实现模糊查询 & 分页 & 上传文件")
+- 
 ----------
 
 ## Tool ##

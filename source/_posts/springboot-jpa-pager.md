@@ -480,7 +480,3 @@ b.templates下创建file文件夹，在其内创建index.html
 ```
 
 > github：[SpringBoot-JPA](https://github.com/porschan/SpringBoot-JPA)
-
-```
-
-```
