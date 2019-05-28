@@ -271,6 +271,8 @@ date: 2018/11/15 23:57:05
 
 - [Maven - 单独下载pom.xml里的JAR包](https://chanchifeng.com/2019/03/05/maven-down/ "Maven - 单独下载pom.xml里的Jar包")
 
+- [Maven本地jar包部署与安装]( "Maven本地jar包部署与安装")
+
 ### Java ###
 
 #### 基础 ####
@@ -339,6 +341,8 @@ date: 2018/11/15 23:57:05
 #### Struts ####
 
 #### MyBatis ####
+
+- [使用 IDEA 创建 MyBatis plus 的 SpringBoot 测试项目]( "使用 IDEA 创建 MyBatis plus 的 SpringBoot 测试项目")
 
 #### Hibernate ####
 

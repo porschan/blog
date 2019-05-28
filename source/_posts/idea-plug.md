@@ -12,3 +12,7 @@ Alibaba Java Code Guidelines
 ### Maven Helper ###
 
 参考：[https://plugins.jetbrains.com/plugin/7179-maven-helper](https://plugins.jetbrains.com/plugin/7179-maven-helper "https://plugins.jetbrains.com/plugin/7179-maven-helper")
+
+### Lombok ###
+
+参考：[https://github.com/mplushnikov/lombok-intellij-plugin](https://github.com/mplushnikov/lombok-intellij-plugin "https://github.com/mplushnikov/lombok-intellij-plugin")
