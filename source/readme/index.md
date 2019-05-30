@@ -5,7 +5,7 @@ date: 2018/11/15 23:57:05
 
 ### 技术路线 ###
 
-![](20190527.png)
+![](20190530.png)
 
 # Porschan #
 
@@ -271,7 +271,7 @@ date: 2018/11/15 23:57:05
 
 - [Maven - 单独下载pom.xml里的JAR包](https://chanchifeng.com/2019/03/05/maven-down/ "Maven - 单独下载pom.xml里的Jar包")
 
-- [Maven本地jar包部署与安装]( "Maven本地jar包部署与安装")
+- [Maven本地jar包部署与安装](https://chanchifeng.com/2019/05/28/maven-add-location/ "Maven本地jar包部署与安装")
 
 ### Java ###
 
@@ -342,7 +342,7 @@ date: 2018/11/15 23:57:05
 
 #### MyBatis ####
 
-- [使用 IDEA 创建 MyBatis plus 的 SpringBoot 测试项目]( "使用 IDEA 创建 MyBatis plus 的 SpringBoot 测试项目")
+- [使用 IDEA 创建 MyBatis plus 的 SpringBoot 测试项目](https://chanchifeng.com/2019/05/28/springboot-mybatis-plus/ "使用 IDEA 创建 MyBatis plus 的 SpringBoot 测试项目")
 
 #### Hibernate ####
 
