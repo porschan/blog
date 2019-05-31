@@ -263,6 +263,20 @@ date: 2018/11/15 23:57:05
 
 - [JDK - Windows系统安装](https://chanchifeng.com/2019/04/23/windows-jdk-install/ "JDK - windows系统安装")
 
+- [JDK - Windows系统安装](https://chanchifeng.com/2019/04/23/windows-jdk-install/ "JDK - windows系统安装")
+
+- [在 Windows 下安装 VMware Workstation Pro]( "在 Windows 下安装 VMware Workstation Pro")
+
+- [在 VMware Workstation Pro 下安装 CentOS7]( "在 VMware Workstation Pro 下安装 CentOS7")
+
+- [在 Windows 下安装 Git]( "在 Windows 下安装 Git")
+
+- [在 Windows 下安装 Android Studio]( "在 Windows 下安装 Android Studio")
+
+- [在 Windows 下安装 Intellij IDEA]( "在 Windows 下安装 Intellij IDEA")
+
+- [在 Windows 下安装 Typora]( "在 Windows 下安装 Typora")
+
 ----------
 
 ## Back-end ##
