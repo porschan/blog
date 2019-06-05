@@ -411,6 +411,7 @@ date: 2018/11/15 23:57:05
 ##### SpringBoot-Sample
 
 - [使用 IDEA 中创建 SpringBoot + Neo4J 的 WEB 项目](/2019/06/01/springboot-neo4j-ui-shado/ "使用 IDEA 中创建 SpringBoot + Neo4J 的 WEB 项目")
+- [使用 IDEA 中创建 SpringBoot2.x + Neo4J 的 WEB 项目](/2019/06/05/springboot-neo4j-ui-upgrade/ "使用 IDEA 中创建 SpringBoot2.x + Neo4J 的 WEB 项目")
 
 ----------
 
