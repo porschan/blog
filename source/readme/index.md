@@ -47,6 +47,8 @@ date: 2018/11/15 23:57:05
 
 - [数据结构练习 - leetcode - 反转链表](/2019/01/30/leetcode-reverseLinkedList/ "数据结构练习 - leetcode - 反转链表")
 
+- [最大公约数 & 最少公倍数](/2019/06/05/algorithm-gcd/ "最大公约数 & 最少公倍数")
+
 ----------
 
 ### 计算机组成 ###
@@ -259,8 +261,6 @@ date: 2018/11/15 23:57:05
 
 - [Windows - 虚拟机安装 ubunt](/2019/02/17/windows-install-ubunt-vm/ "windows - 虚拟机安装 ubunt")
 
-- [ActiveMQ - Windows系统安装](/2019/02/28/windows-activeMQ-install/ "activeMQ - windows系统安装")
-
 - [JDK - Windows系统安装](/2019/04/23/windows-jdk-install/ "JDK - windows系统安装")
 
 - [JDK - Windows系统安装](/2019/04/23/windows-jdk-install/ "JDK - windows系统安装")
@@ -282,6 +282,10 @@ date: 2018/11/15 23:57:05
 ### MQ
 
 #### RabbitMQ
+
+#### ActiveMQ
+
+- [ActiveMQ - Windows系统安装](/2019/02/28/windows-activeMQ-install/ "activeMQ - windows系统安装")
 
 ### 集群
 
