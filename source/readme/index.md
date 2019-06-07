@@ -49,6 +49,10 @@ date: 2018/11/15 23:57:05
 
 - [最大公约数 & 最少公倍数](/2019/06/05/algorithm-gcd/ "最大公约数 & 最少公倍数")
 
+- [质数 & 素数](/2019/06/06/algorithm-prime-number/ "质数 & 素数")
+
+- [杨辉三角](/2019/06/06/algorithm-yanghui/ "杨辉三角")
+
 ----------
 
 ### 计算机组成 ###
@@ -414,9 +418,12 @@ date: 2018/11/15 23:57:05
 
 ##### SpringBoot-Sample
 
-- [使用 IDEA 中创建 SpringBoot + Neo4J 的 WEB 项目](/2019/06/01/springboot-neo4j-ui-shado/ "使用 IDEA 中创建 SpringBoot + Neo4J 的 WEB 项目")
+- [使用 IDEA 中创建 SpringBoot + Neo4J 的 WEB 项目](/2019/06/01/springboot-neo4j-ui-shadow/ "使用 IDEA 中创建 SpringBoot + Neo4J 的 WEB 项目")
+
 - [使用 IDEA 中创建 SpringBoot2.x + Neo4J 的 WEB 项目](/2019/06/05/springboot-neo4j-ui-upgrade/ "使用 IDEA 中创建 SpringBoot2.x + Neo4J 的 WEB 项目")
 
+- [使用 IDEA 中创建 SpringBoot + JPA + Redis + MySQL 的 WEB 项目](/2019/06/07/springboot-dbup-shadow/ "使用 IDEA 中创建 SpringBoot + JPA + Redis + MySQL 的 WEB 项目")
+- 
 ----------
 
 ## Tool ##

@@ -3,11 +3,13 @@ title: 最大公约数 & 最少公倍数
 date: 2019-06-05 23:08:58
 ---
 
-求最大公约数 &  最少公倍数
+### 求最大公约数 &  最少公倍数
 
 介绍从百度搜索出来，链接:https://baike.baidu.com/item/%E6%9C%80%E5%A4%A7%E5%85%AC%E7%BA%A6%E6%95%B0/869308?fr=aladdin
 
 ![](algorithm-gcd/1.png)
+
+![](algorithm-gcd/2.png)
 
 a.在网上看到一种写法如下：
 
