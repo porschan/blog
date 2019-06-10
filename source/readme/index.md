@@ -55,8 +55,8 @@ date: 2018/11/15 23:57:05
 
 - [二分查找](/2019/06/07/algorithm-binary-search/ "二分查找")
 
-- [冒泡排序](/2019/06/07/algorithm-sort/ "冒泡排序")
-- 
+- [冒泡排序 & 快速排序](/2019/06/07/algorithm-sort/ "冒泡排序")
+
 ----------
 
 ### 计算机组成 ###
@@ -312,7 +312,10 @@ date: 2018/11/15 23:57:05
 #### 基础 ####
 
 - [JAVA - Windows安装](/2019/02/16/java-install/ "java - windows安装")
+
 - [使用IDEA生成javadoc](/2019/05/10/java-idea-javadoc/ "使用IDEA生成javadoc")
+
+- [Java - 基础知识点](/2019/06/10/java-basic/ "Java - 基础知识点")
 
 #### JVM ####
 

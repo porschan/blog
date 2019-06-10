@@ -286,3 +286,15 @@ Java 7 引入了 Supressed 异常、try-with-resources，以及多异常捕获�
 使用 Constructor.newInstance(Object[]) 来生成该类的实例。
 使用 Field.get/set(Object) 来访问字段的值。
 使用 Method.invoke(Object, Object[]) 来调用方法。
+
+为了解答这个问题，我们先来回顾一下 Java 里的方法调用。在 Java 中，方法调用会被编译为 invokestatic，invokespecial，invokevirtual 以及 invokeinterface 四种指令。这些指令与包含目标方法类名、方法名以及方法描述符的符号引用捆绑。在实际运行之前，Java 虚拟机将根据这个符号引用链接到具体的目标方法。
+
+可以看到，在这四种调用指令中，Java 虚拟机明确要求方法调用需要提供目标方法的类名。
+
+今天我介绍了 invokedynamic 底层机制的基石：方法句柄。
+
+方法句柄是一个强类型的、能够被直接执行的引用。它仅关心所指向方法的参数类型以及返回类型，而不关心方法所在的类以及方法名。方法句柄的权限检查发生在创建过程中，相较于反射调用节省了调用时反复权限检查的开销。
+
+方法句柄可以通过 invokeExact 以及 invoke 来调用。其中，invokeExact 要求传入的参数和所指向方法的描述符严格匹配。方法句柄还支持增删改参数的操作，这些操作是通过生成另一个充当适配器的方法句柄来实现的。
+
+方法句柄的调用和反射调用一样，都是间接调用，同样会面临无法内联的问题。
