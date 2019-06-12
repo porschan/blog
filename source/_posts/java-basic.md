@@ -1752,3 +1752,2001 @@ public synchronized E remove(int index) {
 
 所以，最后，SynchronizedList和Vector最主要的区别： **1.SynchronizedList有很好的扩展和兼容功能。他可以将所有的List的子类转成线程安全的类。** **2.使用SynchronizedList的时候，进行遍历时要手动进行同步处理**。 **3.SynchronizedList可以指定锁定的对象。**
 
+##### HashMap、HashTable、ConcurrentHashMap区别？
+
+### HashMap和HashTable有何不同？
+
+线程安全：
+
+HashTable 中的方法是同步的，而HashMap中的方法在默认情况下是非同步的。在多线程并发的环境下，可以直接使用HashTable，但是要使用HashMap的话就要自己增加同步处理了。
+
+继承关系： HashTable是基于陈旧的Dictionary类继承来的。 HashMap继承的抽象类AbstractMap实现了Map接口。
+
+允不允许null值： HashTable中，key和value都不允许出现null值，否则会抛出NullPointerException异常。 HashMap中，null可以作为键，这样的键只有一个；可以有一个或多个键所对应的值为null。
+
+默认初始容量和扩容机制： HashTable中的hash数组初始大小是11，增加的方式是 old*2+1。HashMap中hash数组的默认大小是16，而且一定是2的指数。原因参考全网把Map中的hash()分析的最透彻的文章，别无二家。-HollisChuang's Blog
+
+哈希值的使用不同 ： HashTable直接使用对象的hashCode。 HashMap重新计算hash值。
+
+遍历方式的内部实现上不同 ： Hashtable、HashMap都使用了 Iterator。而由于历史原因，Hashtable还使用了Enumeration的方式 。 HashMap 实现 Iterator，支持fast-fail，Hashtable的 Iterator 遍历支持fast-fail，用 Enumeration 不支持 fast-fail
+
+### HashMap 和 ConcurrentHashMap 的区别？
+
+ConcurrentHashMap和HashMap的实现方式不一样，虽然都是使用桶数组实现的，但是还是有区别，ConcurrentHashMap对桶数组进行了分段，而HashMap并没有。
+
+ConcurrentHashMap在每一个分段上都用锁进行了保护。HashMap没有锁机制。所以，前者线程安全的，后者不是线程安全的。
+
+PS：以上区别基于jdk1.8以前的版本。
+
+##### Set和List区别？
+
+List,Set都是继承自Collection接口。都是用来存储一组相同类型的元素的。
+
+List特点：元素有放入顺序，元素可重复 。
+
+有顺序，即先放入的元素排在前面。
+
+Set特点：元素无放入顺序，元素不可重复。
+
+无顺序，即先放入的元素不一定排在前面。 不可重复，即相同元素在set中只会保留一份。所以，有些场景下，set可以用来去重。 不过需要注意的是，set在元素插入时是要有一定的方法来判断元素是否重复的。这个方法很重要，决定了set中可以保存哪些元素。
+
+##### Set如何保证元素不重复?
+
+在Java的Set体系中，根据实现方式不同主要分为两大类。HashSet和TreeSet。
+
+1、TreeSet 是二差树实现的,Treeset中的数据是自动排好序的，不允许放入null值 2、HashSet 是哈希表实现的,HashSet中的数据是无序的，可以放入null，但只能放入一个null，两者中的值都不能重复，就如数据库中唯一约束
+
+在HashSet中，基本的操作都是有HashMap底层实现的，因为HashSet底层是用HashMap存储数据的。当向HashSet中添加元素的时候，首先计算元素的hashcode值，然后通过扰动计算和按位与的方式计算出这个元素的存储位置，如果这个位置位空，就将元素添加进去；如果不为空，则用equals方法比较元素是否相等，相等就不添加，否则找一个空位添加。
+
+TreeSet的底层是TreeMap的keySet()，而TreeMap是基于红黑树实现的，红黑树是一种平衡二叉查找树，它能保证任何一个节点的左右子树的高度差不会超过较矮的那棵的一倍。
+
+TreeMap是按key排序的，元素在插入TreeSet时compareTo()方法要被调用，所以TreeSet中的元素要实现Comparable接口。TreeSet作为一种Set，它不允许出现重复元素。TreeSet是用compareTo()来判断重复元素的。
+
+##### Java 8中stream相关用法?
+
+在Java中，集合和数组是我们经常会用到的数据结构，需要经常对他们做增、删、改、查、聚合、统计、过滤等操作。相比之下，关系型数据库中也同样有这些操作，但是在Java 8之前，集合和数组的处理并不是很便捷。
+
+不过，这一问题在Java 8中得到了改善，Java 8 API添加了一个新的抽象称为流Stream，可以让你以一种声明的方式处理数据。本文就来介绍下如何使用Stream。特别说明一下，关于Stream的性能及原理不是本文的重点，如果大家感兴趣后面会出文章单独介绍。
+
+### Stream介绍
+
+Stream 使用一种类似用 SQL 语句从数据库查询数据的直观方式来提供一种对 Java 集合运算和表达的高阶抽象。
+
+Stream API可以极大提高Java程序员的生产力，让程序员写出高效率、干净、简洁的代码。
+
+这种风格将要处理的元素集合看作一种流，流在管道中传输，并且可以在管道的节点上进行处理，比如筛选，排序，聚合等。
+
+Stream有以下特性及优点：
+
+- 无存储。Stream不是一种数据结构，它只是某种数据源的一个视图，数据源可以是一个数组，Java容器或I/O channel等。
+- 为函数式编程而生。对Stream的任何修改都不会修改背后的数据源，比如对Stream执行过滤操作并不会删除被过滤的元素，而是会产生一个不包含被过滤元素的新Stream。
+- 惰式执行。Stream上的操作并不会立即执行，只有等到用户真正需要结果的时候才会执行。
+- 可消费性。Stream只能被“消费”一次，一旦遍历过就会失效，就像容器的迭代器那样，想要再次遍历必须重新生成。
+
+对于流的处理，主要有三种关键性操作：分别是流的创建、中间操作（intermediate operation）以及最终操作(terminal operation)。
+
+### Stream的创建
+
+在Java 8中，可以有多种方法来创建流。
+
+**1、通过已有的集合来创建流**
+
+在Java 8中，除了增加了很多Stream相关的类以外，还对集合类自身做了增强，在其中增加了stream方法，可以将一个集合类转换成流。
+
+```java
+List<String> strings = Arrays.asList("Hollis", "HollisChuang", "hollis", "Hello", "HelloWorld", "Hollis");
+Stream<String> stream = strings.stream();
+```
+
+以上，通过一个已有的List创建一个流。除此以外，还有一个parallelStream方法，可以为集合创建一个并行流。
+
+这种通过集合创建出一个Stream的方式也是比较常用的一种方式。
+
+**2、通过Stream创建流**
+
+可以使用Stream类提供的方法，直接返回一个由指定元素组成的流。
+
+```
+Stream<String> stream = Stream.of("Hollis", "HollisChuang", "hollis", "Hello", "HelloWorld", "Hollis");
+```
+
+如以上代码，直接通过of方法，创建并返回一个Stream。
+
+### Stream中间操作
+
+Stream有很多中间操作，多个中间操作可以连接起来形成一个流水线，每一个中间操作就像流水线上的一个工人，每人工人都可以对流进行加工，加工后得到的结果还是一个流。
+
+常用的中间操作:
+
+**filter**
+
+filter 方法用于通过设置的条件过滤出元素。以下代码片段使用 filter 方法过滤掉空字符串：
+
+```java
+List<String> strings = Arrays.asList("Hollis", "", "HollisChuang", "H", "hollis");
+strings.stream().filter(string -> !string.isEmpty()).forEach(System.out::println);
+//Hollis, , HollisChuang, H, hollis
+```
+
+**map**
+
+map 方法用于映射每个元素到对应的结果，以下代码片段使用 map 输出了元素对应的平方数：
+
+```java
+List<Integer> numbers = Arrays.asList(3, 2, 2, 3, 7, 3, 5);
+numbers.stream().map( i -> i*i).forEach(System.out::println);
+//9,4,4,9,49,9,25
+```
+
+**limit/skip**
+
+limit 返回 Stream 的前面 n 个元素；skip 则是扔掉前 n 个元素。以下代码片段使用 limit 方法保理4个元素：
+
+```java
+List<Integer> numbers = Arrays.asList(3, 2, 2, 3, 7, 3, 5);
+numbers.stream().limit(4).forEach(System.out::println);
+//3,2,2,3
+```
+
+**sorted**
+
+sorted 方法用于对流进行排序。以下代码片段使用 sorted 方法进行排序：
+
+```java
+List<Integer> numbers = Arrays.asList(3, 2, 2, 3, 7, 3, 5);
+numbers.stream().sorted().forEach(System.out::println);
+//2,2,3,3,3,5,7
+```
+
+**distinct**
+
+distinct主要用来去重，以下代码片段使用 distinct 对元素进行去重：
+
+```java
+List<Integer> numbers = Arrays.asList(3, 2, 2, 3, 7, 3, 5);
+numbers.stream().distinct().forEach(System.out::println);
+//3,2,7,5
+```
+
+接下来我们通过一个例子和一张图，来演示下，当一个Stream先后通过filter、map、sort、limit以及distinct处理后会发生什么。
+
+代码如下：
+
+```java
+List<String> strings = Arrays.asList("Hollis", "HollisChuang", "hollis", "Hello", "HelloWorld", "Hollis");
+Stream s = strings.stream().filter(string -> string.length()<= 6).map(String::length).sorted().limit(3)
+            .distinct();
+```
+
+### Stream最终操作
+
+Stream的中间操作得到的结果还是一个Stream，那么如何把一个Stream转换成我们需要的类型呢？比如计算出流中元素的个数、将流装换成集合等。这就需要最终操作（terminal operation）
+
+最终操作会消耗流，产生一个最终结果。也就是说，在最终操作之后，不能再次使用流，也不能在使用任何中间操作，否则将抛出异常：
+
+```
+java.lang.IllegalStateException: stream has already been operated upon or closed
+```
+
+俗话说，“你永远不会两次踏入同一条河”也正是这个意思。
+
+常用的最终操作如下:
+
+**forEach**
+
+Stream 提供了方法 'forEach' 来迭代流中的每个数据。以下代码片段使用 forEach 输出了10个随机数：
+
+```java
+Random random = new Random();
+random.ints().limit(10).forEach(System.out::println);
+```
+
+**count**
+
+count用来统计流中的元素个数。
+
+```java
+List<String> strings = Arrays.asList("Hollis", "HollisChuang", "hollis","Hollis666", "Hello", "HelloWorld", "Hollis");
+System.out.println(strings.stream().count());
+//7
+```
+
+**collect**
+
+collect就是一个归约操作，可以接受各种做法作为参数，将流中的元素累积成一个汇总结果：
+
+```java
+List<String> strings = Arrays.asList("Hollis", "HollisChuang", "hollis","Hollis666", "Hello", "HelloWorld", "Hollis");
+strings  = strings.stream().filter(string -> string.startsWith("Hollis")).collect(Collectors.toList());
+System.out.println(strings);
+//Hollis, HollisChuang, Hollis666, Hollis
+```
+
+接下来，我们还是使用一张图，来演示下，前文的例子中，当一个Stream先后通过filter、map、sort、limit以及distinct处理后会，在分别使用不同的最终操作可以得到怎样的结果：
+
+下图，展示了文中介绍的所有操作的位置、输入、输出以及使用一个案例展示了其结果。 
+
+### 总结
+
+本文介绍了Java 8中的Stream 的用途，优点等。还接受了Stream的几种用法，分别是Stream创建、中间操作和最终操作。
+
+Stream的创建有两种方式，分别是通过集合类的stream方法、通过Stream的of方法。
+
+Stream的中间操作可以用来处理Stream，中间操作的输入和输出都是Stream，中间操作可以是过滤、转换、排序等。
+
+Stream的最终操作可以将Stream转成其他形式，如计算出流中元素的个数、将流装换成集合、以及元素的遍历等。
+
+##### Collection和Collections区别?
+
+Collection 是一个集合接口。 它提供了对集合对象进行基本操作的通用接口方法。Collection接口在Java 类库中有很多具体的实现。是list，set等的父接口。
+
+Collections 是一个包装类。 它包含有各种有关集合操作的静态多态方法。此类不能实例化，就像一个工具类，服务于Java的Collection框架。
+
+日常开发中，不仅要了解Java中的Collection及其子类的用法，还要了解Collections用法。可以提升很多处理集合类的效率。
+
+##### Arrays.asList获得的List使用时需要注意什么?
+
+1. asList 得到的只是一个 Arrays 的内部类，一个原来数组的视图 List，因此如果对它进行增删操作会报错
+2. 用 ArrayList 的构造器可以将其转变成真正的 ArrayList
+
+##### Enumeration和Iterator区别？
+
+函数接口不同
+
+```
+    Enumeration只有2个函数接口。通过Enumeration，我们只能读取集合的数据，而不能对数据进行修改。
+    Iterator只有3个函数接口。Iterator除了能读取集合的数据之外，也能数据进行删除操作。
+```
+
+Iterator支持fail-fast机制，而Enumeration不支持。
+
+```
+    Enumeration 是JDK 1.0添加的接口。使用到它的函数包括Vector、Hashtable等类，这些类都是JDK 1.0中加入的，Enumeration存在的目的就是为它们提供遍历接口。Enumeration本身并没有支持同步，而在Vector、Hashtable实现Enumeration时，添加了同步。
+    而Iterator 是JDK 1.2才添加的接口，它也是为了HashMap、ArrayList等集合提供遍历接口。Iterator是支持fail-fast机制的：当多个线程对同一个集合的内容进行操作时，就可能会产生fail-fast事件。
+```
+
+注意：Enumeration迭代器只能遍历Vector、Hashtable这种古老的集合，因此通常不要使用它，除非在某些极端情况下，不得不使用Enumeration，否则都应该选择Iterator迭代器。
+
+##### fail-fast 和 fail-safe？
+
+### 什么是fail-fast
+
+首先我们看下维基百科中关于fail-fast的解释：
+
+> In systems design, a fail-fast system is one which immediately reports at its interface any condition that is likely to indicate a failure. Fail-fast systems are usually designed to stop normal operation rather than attempt to continue a possibly flawed process. Such designs often check the system's state at several points in an operation, so any failures can be detected early. The responsibility of a fail-fast module is detecting errors, then letting the next-highest level of the system handle them.
+
+大概意思是：在系统设计中，快速失效系统一种可以立即报告任何可能表明故障的情况的系统。快速失效系统通常设计用于停止正常操作，而不是试图继续可能存在缺陷的过程。这种设计通常会在操作中的多个点检查系统的状态，因此可以及早检测到任何故障。快速失败模块的职责是检测错误，然后让系统的下一个最高级别处理错误。
+
+其实，这是一种理念，说白了就是在做系统设计的时候先考虑异常情况，一旦发生异常，直接停止并上报。
+
+举一个最简单的fail-fast的例子：
+
+```java
+public int divide(int divisor,int dividend){
+    if(dividend == 0){
+        throw new RuntimeException("dividend can't be null");
+    }
+    return divisor/dividend;
+}
+```
+
+上面的代码是一个对两个整数做除法的方法，在divide方法中，我们对被除数做了个简单的检查，如果其值为0，那么就直接抛出一个异常，并明确提示异常原因。这其实就是fail-fast理念的实际应用。
+
+这样做的好处就是可以预先识别出一些错误情况，一方面可以避免执行复杂的其他代码，另外一方面，这种异常情况被识别之后也可以针对性的做一些单独处理。
+
+怎么样，现在你知道fail-fast了吧，其实他并不神秘，你日常的代码中可能经常会在使用的。
+
+既然，fail-fast是一种比较好的机制，为什么文章标题说fail-fast会有坑呢？
+
+原因是Java的集合类中运用了fail-fast机制进行设计，一旦使用不当，触发fail-fast机制设计的代码，就会发生非预期情况。
+
+### 集合类中的fail-fast
+
+我们通常说的Java中的fail-fast机制，默认指的是Java集合的一种错误检测机制。当多个线程对部分集合进行结构上的改变的操作时，有可能会产生fail-fast机制，这个时候就会抛出ConcurrentModificationException（后文用CME代替）。
+
+CMException，当方法检测到对象的并发修改，但不允许这种修改时就抛出该异常。
+
+很多时候正是因为代码中抛出了CMException，很多程序员就会很困惑，明明自己的代码并没有在多线程环境中执行，为什么会抛出这种并发有关的异常呢？这种情况在什么情况下才会抛出呢？我们就来深入分析一下。
+
+### 异常复现
+
+在Java中， 如果在foreach 循环里对某些集合元素进行元素的 remove/add 操作的时候，就会触发fail-fast机制，进而抛出CMException。
+
+如以下代码：
+
+```java
+List<String> userNames = new ArrayList<String>() {{
+    add("Hollis");
+    add("hollis");
+    add("HollisChuang");
+    add("H");
+}};
+
+for (String userName : userNames) {
+    if (userName.equals("Hollis")) {
+        userNames.remove(userName);
+    }
+}
+
+System.out.println(userNames);
+```
+
+以上代码，使用增强for循环遍历元素，并尝试删除其中的Hollis字符串元素。运行以上代码，会抛出以下异常：
+
+```java
+Exception in thread "main" java.util.ConcurrentModificationException
+at java.util.ArrayList$Itr.checkForComodification(ArrayList.java:909)
+at java.util.ArrayList$Itr.next(ArrayList.java:859)
+at com.hollis.ForEach.main(ForEach.java:22)
+```
+
+同样的，读者可以尝试下在增强for循环中使用add方法添加元素，结果也会同样抛出该异常。
+
+在深入原理之前，我们先尝试把foreach进行解语法糖，看一下foreach具体如何实现的。
+
+我们使用[jad](https://www.hollischuang.com/archives/58)工具，对编译后的class进行反编译，得到以下代码：
+
+```java
+public static void main(String[] args) {
+    // 使用ImmutableList初始化一个List
+    List<String> userNames = new ArrayList<String>() {{
+        add("Hollis");
+        add("hollis");
+        add("HollisChuang");
+        add("H");
+    }};
+
+    Iterator iterator = userNames.iterator();
+    do
+    {
+        if(!iterator.hasNext())
+            break;
+        String userName = (String)iterator.next();
+        if(userName.equals("Hollis"))
+            userNames.remove(userName);
+    } while(true);
+    System.out.println(userNames);
+}
+```
+
+可以发现，foreach其实是依赖了while循环和Iterator实现的。
+
+### 异常原理
+
+通过以上代码的异常堆栈，我们可以跟踪到真正抛出异常的代码是：
+
+```
+java.util.ArrayList$Itr.checkForComodification(ArrayList.java:909)
+```
+
+该方法是在iterator.next()方法中调用的。我们看下该方法的实现：
+
+```java
+final void checkForComodification() {
+    if (modCount != expectedModCount)
+        throw new ConcurrentModificationException();
+}
+```
+
+如上，在该方法中对modCount和expectedModCount进行了比较，如果二者不想等，则抛出CMException。
+
+那么，modCount和expectedModCount是什么？是什么原因导致他们的值不想等的呢？
+
+modCount是ArrayList中的一个成员变量。它表示该集合实际被修改的次数。
+
+```java
+List<String> userNames = new ArrayList<String>() {{
+    add("Hollis");
+    add("hollis");
+    add("HollisChuang");
+    add("H");
+}};
+```
+
+当使用以上代码初始化集合之后该变量就有了。初始值为0。
+
+expectedModCount 是 ArrayList中的一个内部类——Itr中的成员变量。
+
+```java
+Iterator iterator = userNames.iterator();
+```
+
+以上代码，即可得到一个 Itr类，该类实现了Iterator接口。
+
+expectedModCount表示这个迭代器预期该集合被修改的次数。其值随着Itr被创建而初始化。只有通过迭代器对集合进行操作，该值才会改变。
+
+那么，接着我们看下userNames.remove(userName);方法里面做了什么事情，为什么会导致expectedModCount和modCount的值不一样。
+
+通过翻阅代码，我们也可以发现，remove方法核心逻辑如下：
+
+```java
+private void fastRemove(int index) {
+    modCount++;
+    int numMoved = size - index - 1;
+    if (numMoved > 0)
+        System.arraycopy(elementData, index+1, elementData, index,
+                         numMoved);
+    elementData[--size] = null; // clear to let GC do its work
+}
+```
+
+可以看到，它只修改了modCount，并没有对expectedModCount做任何操作。
+
+简单总结一下，之所以会抛出CMException异常，是因为我们的代码中使用了增强for循环，而在增强for循环中，集合遍历是通过iterator进行的，但是元素的add/remove却是直接使用的集合类自己的方法。这就导致iterator在遍历的时候，会发现有一个元素在自己不知不觉的情况下就被删除/添加了，就会抛出一个异常，用来提示用户，可能发生了并发修改！
+
+所以，在使用Java的集合类的时候，如果发生CMException，优先考虑fail-fast有关的情况，实际上这里并没有真的发生并发，只是Iterator使用了fail-fast的保护机制，只要他发现有某一次修改是未经过自己进行的，那么就会抛出异常。
+
+关于如何解决这种问题，我们在《为什么阿里巴巴禁止在 foreach 循环里进行元素的 remove/add 操作》中介绍过，这里不再赘述了。
+
+##### CopyOnWriteArrayList?
+
+Copy-On-Write简称COW，是一种用于程序设计中的优化策略。其基本思路是，从一开始大家都在共享同一个内容，当某个人想要修改这个内容的时候，才会真正把内容Copy出去形成一个新的内容然后再改，这是一种延时懒惰策略。从JDK1.5开始Java并发包里提供了两个使用CopyOnWrite机制实现的并发容器,它们是CopyOnWriteArrayList和CopyOnWriteArraySet。CopyOnWrite容器非常有用，可以在非常多的并发场景中使用到。
+
+CopyOnWriteArrayList相当于线程安全的ArrayList，CopyOnWriteArrayList使用了一种叫写时复制的方法，当有新元素add到CopyOnWriteArrayList时，先从原有的数组中拷贝一份出来，然后在新的数组做写操作，写完之后，再将原来的数组引用指向到新数组。
+
+这样做的好处是我们可以对CopyOnWrite容器进行并发的读，而不需要加锁，因为当前容器不会添加任何元素。所以CopyOnWrite容器也是一种读写分离的思想，读和写不同的容器。
+
+注意：CopyOnWriteArrayList的整个add操作都是在锁的保护下进行的。也就是说add方法是线程安全的。
+
+CopyOnWrite并发容器用于读多写少的并发场景。比如白名单，黑名单，商品类目的访问和更新场景。
+
+和ArrayList不同的是，它具有以下特性：
+
+支持高效率并发且是线程安全的 因为通常需要复制整个基础数组，所以可变操作（add()、set() 和 remove() 等等）的开销很大 迭代器支持hasNext(), next()等不可变操作，但不支持可变 remove()等操作 使用迭代器进行遍历的速度很快，并且不会与其他线程发生冲突。在构造迭代器时，迭代器依赖于不变的数组快照
+
+##### ConcurrentSkipListMap?
+
+ConcurrentSkipListMap是一个内部使用跳表，并且支持排序和并发的一个Map，是线程安全的。一般很少会被用到，也是一个比较偏门的数据结构。
+
+简单介绍下跳表
+
+```
+跳表是一种允许在一个有顺序的序列中进行快速查询的数据结构。
+
+在普通的顺序链表中查询一个元素，需要从链表头部开始一个一个节点进行遍历，然后找到节点。如图1。
+
+跳表可以解决这种查询时间过长，其元素遍历的图示如图2，跳表是一种使用”空间换时间”的概念用来提高查询效率的链表。
+```
+
+ConcurrentSkipListMap 和 ConcurrentHashMap 的主要区别： a.底层实现方式不同。ConcurrentSkipListMap底层基于跳表。ConcurrentHashMap底层基于Hash桶和红黑树。 b.ConcurrentHashMap不支持排序。ConcurrentSkipListMap支持排序。
+
+##### 枚举的用法?
+
+### 1 背景
+
+在`java`语言中还没有引入枚举类型之前，表示枚举类型的常用模式是声明一组具有`int`常量。之前我们通常利用`public final static` 方法定义的代码如下，分别用1 表示春天，2表示夏天，3表示秋天，4表示冬天。
+
+```java
+public class Season {
+    public static final int SPRING = 1;
+    public static final int SUMMER = 2;
+    public static final int AUTUMN = 3;
+    public static final int WINTER = 4;
+}
+```
+
+这种方法称作int枚举模式。可这种模式有什么问题呢，我们都用了那么久了，应该没问题的。通常我们写出来的代码都会考虑它的**安全性**、**易用性**和**可读性**。 首先我们来考虑一下它的类型**安全性**。当然**这种模式不是类型安全的**。比如说我们设计一个函数，要求传入春夏秋冬的某个值。但是使用int类型，我们无法保证传入的值为合法。代码如下所示：
+
+```java
+private String getChineseSeason(int season){
+        StringBuffer result = new StringBuffer();
+        switch(season){
+            case Season.SPRING :
+                result.append("春天");
+                break;
+            case Season.SUMMER :
+                result.append("夏天");
+                break;
+            case Season.AUTUMN :
+                result.append("秋天");
+                break;
+            case Season.WINTER :
+                result.append("冬天");
+                break;
+            default :
+                result.append("地球没有的季节");
+                break;
+        }
+        return result.toString();
+    }
+
+    public void doSomething(){
+        System.out.println(this.getChineseSeason(Season.SPRING));//这是正常的场景
+
+        System.out.println(this.getChineseSeason(5));//这个却是不正常的场景，这就导致了类型不安全问题
+    }
+```
+
+程序`getChineseSeason(Season.SPRING)`是我们预期的使用方法。可`getChineseSeason(5)`显然就不是了，而且编译很通过，在运行时会出现什么情况，我们就不得而知了。这显然就不符合`Java`程序的类型安全。
+
+接下来我们来考虑一下这种模式的**可读性**。使用枚举的大多数场合，我都需要方便得到枚举类型的字符串表达式。如果将`int`枚举常量打印出来，我们所见到的就是一组数字，这是没什么太大的用处。我们可能会想到使用`String`常量代替`int`常量。虽然它为这些常量提供了可打印的字符串，但是它会导致性能问题，因为它依赖于字符串的比较操作，所以这种模式也是我们不期望的。 从**类型安全性**和**程序可读性**两方面考虑，`int`和`String`枚举模式的缺点就显露出来了。幸运的是，从`Java1.5`发行版本开始，就提出了另一种可以替代的解决方案，可以避免`int`和`String`枚举模式的缺点，并提供了许多额外的好处。那就是枚举类型（`enum type`）。接下来的章节将介绍枚举类型的定义、特征、应用场景和优缺点。
+
+### 2 定义
+
+枚举类型（`enum type`）是指由一组固定的常量组成合法的类型。`Java`中由关键字`enum`来定义一个枚举类型。下面就是`java`枚举类型的定义。
+
+```java
+public enum Season {
+    SPRING, SUMMER, AUTUMN, WINER;
+}
+```
+
+### 3 特点
+
+`Java`定义枚举类型的语句很简约。它有以下特点：
+
+> 1. 使用关键字`enum` 2) 类型名称，比如这里的`Season` 3) 一串允许的值，比如上面定义的春夏秋冬四季 4) 枚举可以单独定义在一个文件中，也可以嵌在其它`Java`类中
+
+除了这样的基本要求外，用户还有一些其他选择
+
+> 1. 枚举可以实现一个或多个接口（Interface） 6) 可以定义新的变量 7) 可以定义新的方法 8) 可以定义根据具体枚举值而相异的类
+
+### 4 应用场景
+
+以在背景中提到的类型安全为例，用枚举类型重写那段代码。代码如下：
+
+```java
+public enum Season {
+    SPRING(1), SUMMER(2), AUTUMN(3), WINTER(4);
+
+    private int code;
+    private Season(int code){
+        this.code = code;
+    }
+
+    public int getCode(){
+        return code;
+    }
+}
+public class UseSeason {
+    /**
+     * 将英文的季节转换成中文季节
+     * @param season
+     * @return
+     */
+    public String getChineseSeason(Season season){
+        StringBuffer result = new StringBuffer();
+        switch(season){
+            case SPRING :
+                result.append("[中文：春天，枚举常量:" + season.name() + "，数据:" + season.getCode() + "]");
+                break;
+            case AUTUMN :
+                result.append("[中文：秋天，枚举常量:" + season.name() + "，数据:" + season.getCode() + "]");
+                break;
+            case SUMMER : 
+                result.append("[中文：夏天，枚举常量:" + season.name() + "，数据:" + season.getCode() + "]");
+                break;
+            case WINTER :
+                result.append("[中文：冬天，枚举常量:" + season.name() + "，数据:" + season.getCode() + "]");
+                break;
+            default :
+                result.append("地球没有的季节 " + season.name());
+                break;
+        }
+        return result.toString();
+    }
+
+    public void doSomething(){
+        for(Season s : Season.values()){
+            System.out.println(getChineseSeason(s));//这是正常的场景
+        }
+        //System.out.println(getChineseSeason(5));
+        //此处已经是编译不通过了，这就保证了类型安全
+    }
+
+    public static void main(String[] arg){
+        UseSeason useSeason = new UseSeason();
+        useSeason.doSomething();
+    }
+}
+```
+
+[中文：春天，枚举常量:SPRING，数据:1] [中文：夏天，枚举常量:SUMMER，数据:2] [中文：秋天，枚举常量:AUTUMN，数据:3] [中文：冬天，枚举常量:WINTER，数据:4]
+
+这里有一个问题，为什么我要将域添加到枚举类型中呢？目的是想将数据与它的常量关联起来。如1代表春天，2代表夏天。
+
+### 5 总结
+
+那么什么时候应该使用枚举呢？每当需要一组固定的常量的时候，如一周的天数、一年四季等。或者是在我们编译前就知道其包含的所有值的集合。Java 1.5的枚举能满足绝大部分程序员的要求的，它的简明，易用的特点是很突出的。
+
+### 6 用法
+
+### 用法一：常量
+
+```java
+public enum Color {  
+  RED, GREEN, BLANK, YELLOW  
+}  
+```
+
+### 用法二：switch
+
+```java
+enum Signal {  
+    GREEN, YELLOW, RED  
+}  
+public class TrafficLight {  
+    Signal color = Signal.RED;  
+    public void change() {  
+        switch (color) {  
+        case RED:  
+            color = Signal.GREEN;  
+            break;  
+        case YELLOW:  
+            color = Signal.RED;  
+            break;  
+        case GREEN:  
+            color = Signal.YELLOW;  
+            break;  
+        }  
+    }  
+}  
+```
+
+### 用法三：向枚举中添加新方法
+
+```java
+public enum Color {  
+    RED("红色", 1), GREEN("绿色", 2), BLANK("白色", 3), YELLO("黄色", 4);  
+    // 成员变量  
+    private String name;  
+    private int index;  
+    // 构造方法  
+    private Color(String name, int index) {  
+        this.name = name;  
+        this.index = index;  
+    }  
+    // 普通方法  
+    public static String getName(int index) {  
+        for (Color c : Color.values()) {  
+            if (c.getIndex() == index) {  
+                return c.name;  
+            }  
+        }  
+        return null;  
+    }  
+    // get set 方法  
+    public String getName() {  
+        return name;  
+    }  
+    public void setName(String name) {  
+        this.name = name;  
+    }  
+    public int getIndex() {  
+        return index;  
+    }  
+    public void setIndex(int index) {  
+        this.index = index;  
+    }  
+}  
+```
+
+### 用法四：覆盖枚举的方法
+
+```java
+public enum Color {  
+    RED("红色", 1), GREEN("绿色", 2), BLANK("白色", 3), YELLO("黄色", 4);  
+    // 成员变量  
+    private String name;  
+    private int index;  
+    // 构造方法  
+    private Color(String name, int index) {  
+        this.name = name;  
+        this.index = index;  
+    }  
+    //覆盖方法  
+    @Override  
+    public String toString() {  
+        return this.index+"_"+this.name;  
+    }  
+}  
+```
+
+### 用法五：实现接口
+
+```java
+public interface Behaviour {  
+    void print();  
+    String getInfo();  
+}  
+public enum Color implements Behaviour{  
+    RED("红色", 1), GREEN("绿色", 2), BLANK("白色", 3), YELLO("黄色", 4);  
+    // 成员变量  
+    private String name;  
+    private int index;  
+    // 构造方法  
+    private Color(String name, int index) {  
+        this.name = name;  
+        this.index = index;  
+    }  
+//接口方法  
+    @Override  
+    public String getInfo() {  
+        return this.name;  
+    }  
+    //接口方法  
+    @Override  
+    public void print() {  
+        System.out.println(this.index+":"+this.name);  
+    }  
+}  
+```
+
+### 用法六：使用接口组织枚举
+
+```java
+public interface Food {  
+    enum Coffee implements Food{  
+        BLACK_COFFEE,DECAF_COFFEE,LATTE,CAPPUCCINO  
+    }  
+    enum Dessert implements Food{  
+        FRUIT, CAKE, GELATO  
+    }  
+}
+```
+
+##### 枚举的实现?
+
+Java SE5提供了一种新的类型-Java的枚举类型，关键字enum可以将一组具名的值的有限集合创建为一种新的类型，而这些具名的值可以作为常规的程序组件使用，这是一种非常有用的功能。
+
+要想看源码，首先得有一个类吧，那么枚举类型到底是什么类呢？是enum吗？答案很明显不是，enum就和class一样，只是一个关键字，他并不是一个类，那么枚举是由什么类维护的呢，我们简单的写一个枚举：
+
+```java
+public enum t {
+    SPRING,SUMMER;
+}
+```
+
+然后我们使用反编译，看看这段代码到底是怎么实现的，反编译后代码内容如下：
+
+```java
+public final class T extends Enum
+{
+    private T(String s, int i)
+    {
+        super(s, i);
+    }
+    public static T[] values()
+    {
+        T at[];
+        int i;
+        T at1[];
+        System.arraycopy(at = ENUM$VALUES, 0, at1 = new T[i = at.length], 0, i);
+        return at1;
+    }
+
+    public static T valueOf(String s)
+    {
+        return (T)Enum.valueOf(demo/T, s);
+    }
+
+    public static final T SPRING;
+    public static final T SUMMER;
+    private static final T ENUM$VALUES[];
+    static
+    {
+        SPRING = new T("SPRING", 0);
+        SUMMER = new T("SUMMER", 1);
+        ENUM$VALUES = (new T[] {
+            SPRING, SUMMER
+        });
+    }
+}
+```
+
+通过反编译后代码我们可以看到，public final class T extends Enum，说明，该类是继承了Enum类的，同时final关键字告诉我们，这个类也是不能被继承的。
+
+当我们使用enmu来定义一个枚举类型的时候，编译器会自动帮我们创建一个final类型的类继承Enum类，所以枚举类型不能被继承。
+
+##### 枚举与单例?
+
+关于单例模式，我的博客中有很多文章介绍过。作为23种设计模式中最为常用的设计模式，单例模式并没有想象的那么简单。因为在设计单例的时候要考虑很多问题，比如线程安全问题、序列化对单例的破坏等。
+
+### 哪种写单例的方式最好
+
+在StakcOverflow中，有一个关于[What is an efficient way to implement a singleton pattern in Java?](https://stackoverflow.com/questions/70689/what-is-an-efficient-way-to-implement-a-singleton-pattern-in-java)的讨论：
+
+如上图，得票率最高的回答是：使用枚举。
+
+回答者引用了Joshua Bloch大神在《Effective Java》中明确表达过的观点：
+
+> 使用枚举实现单例的方法虽然还没有广泛采用，但是单元素的枚举类型已经成为实现Singleton的最佳方法。
+
+如果你真的深入理解了单例的用法以及一些可能存在的坑的话，那么你也许也能得到相同的结论，那就是：使用枚举实现单例是一种很好的方法。
+
+### 枚举单例写法简单
+
+如果你看过《[单例模式的七种写法](http://www.hollischuang.com/archives/205)》中的实现单例的所有方式的代码，那就会发现，各种方式实现单例的代码都比较复杂。主要原因是在考虑线程安全问题。
+
+我们简单对比下“双重校验锁”方式和枚举方式实现单例的代码。
+
+“双重校验锁”实现单例：
+
+```java
+public class Singleton {  
+    private volatile static Singleton singleton;  
+    private Singleton (){}  
+    public static Singleton getSingleton() {  
+    if (singleton == null) {  
+        synchronized (Singleton.class) {  
+        if (singleton == null) {  
+            singleton = new Singleton();  
+        }  
+        }  
+    }  
+    return singleton;  
+    }  
+}  
+```
+
+枚举实现单例：
+
+```java
+public enum Singleton {  
+    INSTANCE;  
+    public void whateverMethod() {  
+    }  
+}  
+```
+
+相比之下，你就会发现，枚举实现单例的代码会精简很多。
+
+上面的双重锁校验的代码之所以很臃肿，是因为大部分代码都是在保证线程安全。为了在保证线程安全和锁粒度之间做权衡，代码难免会写的复杂些。但是，这段代码还是有问题的，因为他无法解决反序列化会破坏单例的问题。
+
+### 枚举可解决线程安全问题
+
+上面提到过。使用非枚举的方式实现单例，都要自己来保证线程安全，所以，这就导致其他方法必然是比较臃肿的。那么，为什么使用枚举就不需要解决线程安全问题呢？
+
+其实，并不是使用枚举就不需要保证线程安全，只不过线程安全的保证不需要我们关心而已。也就是说，其实在“底层”还是做了线程安全方面的保证的。
+
+那么，“底层”到底指的是什么？
+
+这就要说到关于枚举的实现了。这部分内容可以参考我的另外一篇博文[深度分析Java的枚举类型—-枚举的线程安全性及序列化问题](http://www.hollischuang.com/archives/197)，这里我简单说明一下：
+
+定义枚举时使用enum和class一样，是Java中的一个关键字。就像class对应用一个Class类一样，enum也对应有一个Enum类。
+
+通过将定义好的枚举[反编译](http://www.hollischuang.com/archives/58)，我们就能发现，其实枚举在经过`javac`的编译之后，会被转换成形如`public final class T extends Enum`的定义。
+
+而且，枚举中的各个枚举项同事通过`static`来定义的。如：
+
+```java
+public enum T {
+    SPRING,SUMMER,AUTUMN,WINTER;
+}
+```
+
+反编译后代码为：
+
+```java
+public final class T extends Enum
+{
+    //省略部分内容
+    public static final T SPRING;
+    public static final T SUMMER;
+    public static final T AUTUMN;
+    public static final T WINTER;
+    private static final T ENUM$VALUES[];
+    static
+    {
+        SPRING = new T("SPRING", 0);
+        SUMMER = new T("SUMMER", 1);
+        AUTUMN = new T("AUTUMN", 2);
+        WINTER = new T("WINTER", 3);
+        ENUM$VALUES = (new T[] {
+            SPRING, SUMMER, AUTUMN, WINTER
+        });
+    }
+}
+```
+
+了解JVM的类加载机制的朋友应该对这部分比较清楚。`static`类型的属性会在类被加载之后被初始化，我们在[深度分析Java的ClassLoader机制（源码级别）](http://www.hollischuang.com/archives/199)和[Java类的加载、链接和初始化](http://www.hollischuang.com/archives/201)两个文章中分别介绍过，当一个Java类第一次被真正使用到的时候静态资源被初始化、Java类的加载和初始化过程都是线程安全的（因为虚拟机在加载枚举的类的时候，会使用ClassLoader的loadClass方法，而这个方法使用同步代码块保证了线程安全）。所以，创建一个enum类型是线程安全的。
+
+也就是说，我们定义的一个枚举，在第一次被真正用到的时候，会被虚拟机加载并初始化，而这个初始化过程是线程安全的。而我们知道，解决单例的并发问题，主要解决的就是初始化过程中的线程安全问题。
+
+所以，由于枚举的以上特性，枚举实现的单例是天生线程安全的。
+
+### 枚举可解决反序列化会破坏单例的问题
+
+前面我们提到过，就是使用双重校验锁实现的单例其实是存在一定问题的，就是这种单例有可能被序列化锁破坏，关于这种破坏及解决办法，参看[单例与序列化的那些事儿](http://www.hollischuang.com/archives/1144)，这里不做更加详细的说明了。
+
+那么，对于序列化这件事情，为什么枚举又有先天的优势了呢？答案可以在[Java Object Serialization Specification](https://docs.oracle.com/javase/7/docs/platform/serialization/spec/serial-arch.html#6469) 中找到答案。其中专门对枚举的序列化做了如下规定：
+
+大概意思就是：在序列化的时候Java仅仅是将枚举对象的name属性输出到结果中，反序列化的时候则是通过`java.lang.Enum`的`valueOf`方法来根据名字查找枚举对象。同时，编译器是不允许任何对这种序列化机制的定制的，因此禁用了`writeObject`、`readObject`、`readObjectNoData`、`writeReplace`和`readResolve`等方法。
+
+普通的Java类的反序列化过程中，会通过反射调用类的默认构造函数来初始化对象。所以，即使单例中构造函数是私有的，也会被反射给破坏掉。由于反序列化后的对象是重新new出来的，所以这就破坏了单例。
+
+但是，枚举的反序列化并不是通过反射实现的。所以，也就不会发生由于反序列化导致的单例破坏问题。这部分内容在[深度分析Java的枚举类型—-枚举的线程安全性及序列化问题](http://www.hollischuang.com/archives/197)中也有更加详细的介绍，还展示了部分代码，感兴趣的朋友可以前往阅读。
+
+### 总结
+
+在所有的单例实现方式中，枚举是一种在代码写法上最简单的方式，之所以代码十分简洁，是因为Java给我们提供了`enum`关键字，我们便可以很方便的声明一个枚举类型，而不需要关心其初始化过程中的线程安全问题，因为枚举类在被虚拟机加载的时候会保证线程安全的被初始化。
+
+除此之外，在序列化方面，Java中有明确规定，枚举的序列化和反序列化是有特殊定制的。这就可以避免反序列化过程中由于反射而导致的单例被破坏问题。
+
+##### Java枚举如何比较?
+
+java 枚举值比较用 == 和 equals 方法没啥区别，两个随便用都是一样的效果。
+
+因为枚举 Enum 类的 equals 方法默认实现就是通过 == 来比较的；
+
+类似的 Enum 的 compareTo 方法比较的是 Enum 的 ordinal 顺序大小；
+
+类似的还有 Enum 的 name 方法和 toString 方法一样都返回的是 Enum 的 name 值。
+
+##### switch对枚举的支持？
+
+Java 1.7 之前 switch 参数可用类型为 short、byte、int、char，枚举类型之所以能使用其实是编译器层面实现的，编译器会将枚举 switch 转换为类似 switch(s.ordinal()) { case Status.START.ordinal() } 形式，所以实质还是 int 参数类型，感兴趣的可以自己写个使用枚举的 switch 代码然后通过 javap -v 去看下字节码就明白了。
+
+##### 枚举的序列化如何实现？
+
+> 写在前面：Java SE5提供了一种新的类型-[Java的枚举类型](https://github.com/hollischuang/toBeTopJavaer/blob/master/archives/195)，关键字enum可以将一组具名的值的有限集合创建为一种新的类型，而这些具名的值可以作为常规的程序组件使用，这是一种非常有用的功能。本文将深入分析枚举的源码，看一看枚举是怎么实现的，他是如何保证线程安全的，以及为什么用枚举实现的单例是最好的方式。
+
+### 枚举是如何保证线程安全的
+
+要想看源码，首先得有一个类吧，那么枚举类型到底是什么类呢？是enum吗？答案很明显不是，enum就和class一样，只是一个关键字，他并不是一个类，那么枚举是由什么类维护的呢，我们简单的写一个枚举：
+
+```java
+public enum t {
+    SPRING,SUMMER,AUTUMN,WINTER;
+}
+```
+
+然后我们使用反编译，看看这段代码到底是怎么实现的，反编译（[Java的反编译](https://github.com/hollischuang/toBeTopJavaer/blob/master/archives/58)）后代码内容如下：
+
+```java
+public final class T extends Enum
+{
+    private T(String s, int i)
+    {
+        super(s, i);
+    }
+    public static T[] values()
+    {
+        T at[];
+        int i;
+        T at1[];
+        System.arraycopy(at = ENUM$VALUES, 0, at1 = new T[i = at.length], 0, i);
+        return at1;
+    }
+
+    public static T valueOf(String s)
+    {
+        return (T)Enum.valueOf(demo/T, s);
+    }
+
+    public static final T SPRING;
+    public static final T SUMMER;
+    public static final T AUTUMN;
+    public static final T WINTER;
+    private static final T ENUM$VALUES[];
+    static
+    {
+        SPRING = new T("SPRING", 0);
+        SUMMER = new T("SUMMER", 1);
+        AUTUMN = new T("AUTUMN", 2);
+        WINTER = new T("WINTER", 3);
+        ENUM$VALUES = (new T[] {
+            SPRING, SUMMER, AUTUMN, WINTER
+        });
+    }
+}
+```
+
+通过反编译后代码我们可以看到，`public final class T extends Enum`，说明，该类是继承了Enum类的，同时final关键字告诉我们，这个类也是不能被继承的。当我们使用`enmu`来定义一个枚举类型的时候，编译器会自动帮我们创建一个final类型的类继承Enum类,所以枚举类型不能被继承，我们看到这个类中有几个属性和方法。
+
+我们可以看到：
+
+```java
+        public static final T SPRING;
+        public static final T SUMMER;
+        public static final T AUTUMN;
+        public static final T WINTER;
+        private static final T ENUM$VALUES[];
+        static
+        {
+            SPRING = new T("SPRING", 0);
+            SUMMER = new T("SUMMER", 1);
+            AUTUMN = new T("AUTUMN", 2);
+            WINTER = new T("WINTER", 3);
+            ENUM$VALUES = (new T[] {
+                SPRING, SUMMER, AUTUMN, WINTER
+            });
+        }
+```
+
+都是static类型的，因为static类型的属性会在类被加载之后被初始化，我们在[深度分析Java的ClassLoader机制（源码级别）](https://github.com/hollischuang/toBeTopJavaer/blob/master/archives/199)和[Java类的加载、链接和初始化](https://github.com/hollischuang/toBeTopJavaer/blob/master/archives/201)两个文章中分别介绍过，当一个Java类第一次被真正使用到的时候静态资源被初始化、Java类的加载和初始化过程都是线程安全的。所以，**创建一个enum类型是线程安全的**。
+
+### 为什么用枚举实现的单例是最好的方式
+
+在[[转+注\]单例模式的七种写法](https://github.com/hollischuang/toBeTopJavaer/blob/master/archives/205)中，我们看到一共有七种实现单例的方式，其中，**Effective Java**作者`Josh Bloch` 提倡使用枚举的方式，既然大神说这种方式好，那我们就要知道它为什么好？
+
+**1. 枚举写法简单**
+
+> 写法简单这个大家看看[转+注]单例模式的七种写法里面的实现就知道区别了。
+
+```java
+public enum EasySingleton{
+    INSTANCE;
+}
+```
+
+你可以通过`EasySingleton.INSTANCE`来访问。
+
+**2. 枚举自己处理序列化**
+
+> 我们知道，以前的所有的单例模式都有一个比较大的问题，就是一旦实现了Serializable接口之后，就不再是单例得了，因为，每次调用 readObject()方法返回的都是一个新创建出来的对象，有一种解决办法就是使用readResolve()方法来避免此事发生。但是，**为了保证枚举类型像Java规范中所说的那样，每一个枚举类型极其定义的枚举变量在JVM中都是唯一的，在枚举类型的序列化和反序列化上，Java做了特殊的规定。**原文如下：
+>
+> > Enum constants are serialized differently than ordinary serializable or externalizable objects. The serialized form of an enum constant consists solely of its name; field values of the constant are not present in the form. To serialize an enum constant, ObjectOutputStream writes the value returned by the enum constant's name method. To deserialize an enum constant, ObjectInputStream reads the constant name from the stream; the deserialized constant is then obtained by calling the java.lang.Enum.valueOf method, passing the constant's enum type along with the received constant name as arguments. Like other serializable or externalizable objects, enum constants can function as the targets of back references appearing subsequently in the serialization stream. The process by which enum constants are serialized cannot be customized: any class-specific writeObject, readObject, readObjectNoData, writeReplace, and readResolve methods defined by enum types are ignored during serialization and deserialization. Similarly, any serialPersistentFields or serialVersionUID field declarations are also ignored--all enum types have a fixedserialVersionUID of 0L. Documenting serializable fields and data for enum types is unnecessary, since there is no variation in the type of data sent.
+>
+> 大概意思就是说，在序列化的时候Java仅仅是将枚举对象的name属性输出到结果中，反序列化的时候则是通过java.lang.Enum的valueOf方法来根据名字查找枚举对象。同时，编译器是不允许任何对这种序列化机制的定制的，因此禁用了writeObject、readObject、readObjectNoData、writeReplace和readResolve等方法。 我们看一下这个`valueOf`方法：
+
+```java
+public static <T extends Enum<T>> T valueOf(Class<T> enumType,String name) {  
+            T result = enumType.enumConstantDirectory().get(name);  
+            if (result != null)  
+                return result;  
+            if (name == null)  
+                throw new NullPointerException("Name is null");  
+            throw new IllegalArgumentException(  
+                "No enum const " + enumType +"." + name);  
+        }  
+```
+
+从代码中可以看到，代码会尝试从调用`enumType`这个`Class`对象的`enumConstantDirectory()`方法返回的`map`中获取名字为`name`的枚举对象，如果不存在就会抛出异常。再进一步跟到`enumConstantDirectory()`方法，就会发现到最后会以反射的方式调用`enumType`这个类型的`values()`静态方法，也就是上面我们看到的编译器为我们创建的那个方法，然后用返回结果填充`enumType`这个`Class`对象中的`enumConstantDirectory`属性。
+
+所以，**JVM对序列化有保证。**
+
+**3.枚举实例创建是thread-safe(线程安全的)**
+
+> 我们在[深度分析Java的ClassLoader机制（源码级别）](https://github.com/hollischuang/toBeTopJavaer/blob/master/archives/199)和[Java类的加载、链接和初始化](https://github.com/hollischuang/toBeTopJavaer/blob/master/archives/201)两个文章中分别介绍过，当一个Java类第一次被真正使用到的时候静态资源被初始化、Java类的加载和初始化过程都是线程安全的。所以，**创建一个enum类型是线程安全的**。
+
+##### 枚举的线程安全性问题?
+
+### 枚举是如何保证线程安全的
+
+要想看源码，首先得有一个类吧，那么枚举类型到底是什么类呢？是enum吗？答案很明显不是，enum就和class一样，只是一个关键字，他并不是一个类，那么枚举是由什么类维护的呢，我们简单的写一个枚举：
+
+```java
+public enum t {
+    SPRING,SUMMER,AUTUMN,WINTER;
+}
+```
+
+然后我们使用反编译，看看这段代码到底是怎么实现的，反编译（[Java的反编译](https://github.com/hollischuang/toBeTopJavaer/blob/master/archives/58)）后代码内容如下：
+
+```java
+public final class T extends Enum
+{
+    private T(String s, int i)
+    {
+        super(s, i);
+    }
+    public static T[] values()
+    {
+        T at[];
+        int i;
+        T at1[];
+        System.arraycopy(at = ENUM$VALUES, 0, at1 = new T[i = at.length], 0, i);
+        return at1;
+    }
+
+    public static T valueOf(String s)
+    {
+        return (T)Enum.valueOf(demo/T, s);
+    }
+
+    public static final T SPRING;
+    public static final T SUMMER;
+    public static final T AUTUMN;
+    public static final T WINTER;
+    private static final T ENUM$VALUES[];
+    static
+    {
+        SPRING = new T("SPRING", 0);
+        SUMMER = new T("SUMMER", 1);
+        AUTUMN = new T("AUTUMN", 2);
+        WINTER = new T("WINTER", 3);
+        ENUM$VALUES = (new T[] {
+            SPRING, SUMMER, AUTUMN, WINTER
+        });
+    }
+}
+```
+
+通过反编译后代码我们可以看到，`public final class T extends Enum`，说明，该类是继承了Enum类的，同时final关键字告诉我们，这个类也是不能被继承的。当我们使用`enmu`来定义一个枚举类型的时候，编译器会自动帮我们创建一个final类型的类继承Enum类,所以枚举类型不能被继承，我们看到这个类中有几个属性和方法。
+
+我们可以看到：
+
+```java
+        public static final T SPRING;
+        public static final T SUMMER;
+        public static final T AUTUMN;
+        public static final T WINTER;
+        private static final T ENUM$VALUES[];
+        static
+        {
+            SPRING = new T("SPRING", 0);
+            SUMMER = new T("SUMMER", 1);
+            AUTUMN = new T("AUTUMN", 2);
+            WINTER = new T("WINTER", 3);
+            ENUM$VALUES = (new T[] {
+                SPRING, SUMMER, AUTUMN, WINTER
+            });
+        }
+```
+
+都是static类型的，因为static类型的属性会在类被加载之后被初始化，我们在[深度分析Java的ClassLoader机制（源码级别）](https://github.com/hollischuang/toBeTopJavaer/blob/master/archives/199)和[Java类的加载、链接和初始化](https://github.com/hollischuang/toBeTopJavaer/blob/master/archives/201)两个文章中分别介绍过，当一个Java类第一次被真正使用到的时候静态资源被初始化、Java类的加载和初始化过程都是线程安全的。所以，**创建一个enum类型是线程安全的**。
+
+##### 字符流、字节流?
+
+### 字节与字符
+
+Bit最小的二进制单位 ，是计算机的操作部分。取值0或者1
+
+Byte（字节）是计算机操作数据的最小单位由8位bit组成 取值（-128-127）
+
+Char（字符）是用户的可读写的最小单位，在Java里面由16位bit组成 取值（0-65535）
+
+### 字节流
+
+操作byte类型数据，主要操作类是OutputStream、InputStream的子类；不用缓冲区，直接对文件本身操作。
+
+### 字符流
+
+操作字符类型数据，主要操作类是Reader、Writer的子类；使用缓冲区缓冲字符，不关闭流就不会输出任何内容。
+
+### 互相转换
+
+整个IO包实际上分为字节流和字符流，但是除了这两个流之外，还存在一组字节流-字符流的转换类。
+
+OutputStreamWriter：是Writer的子类，将输出的字符流变为字节流，即将一个字符流的输出对象变为字节流输出对象。
+
+InputStreamReader：是Reader的子类，将输入的字节流变为字符流，即将一个字节流的输入对象变为字符流的输入对象。
+
+##### 输入流、输出流?
+
+输入、输出，有一个参照物，参照物就是存储数据的介质。如果是把对象读入到介质中，这就是输入。从介质中向外读数据，这就是输出。
+
+所以，输入流是把数据写入存储介质的。输出流是从存储介质中把数据读取出来。
+
+##### 同步、异步、阻塞、非阻塞?
+
+同步与异步描述的是被调用者的。
+
+如A调用B：
+
+如果是同步，B在接到A的调用后，会立即执行要做的事。A的本次调用可以得到结果。
+
+如果是异步，B在接到A的调用后，不保证会立即执行要做的事，但是保证会去做，B在做好了之后会通知A。A的本次调用得不到结果，但是B执行完之后会通知A。
+
+### 同步，异步 和 阻塞，非阻塞之间的区别
+
+同步，异步，是描述被调用方的。
+
+[阻塞、非阻塞](https://github.com/hollischuang/toBeTopJavaer/blob/master/basics/java-basic/block-vs-non-blocking.md)，是描述调用方的。
+
+同步不一定阻塞，异步也不一定非阻塞。没有必然关系。
+
+举个简单的例子，老张烧水。 1 老张把水壶放到火上，一直在水壶旁等着水开。（同步阻塞） 2 老张把水壶放到火上，去客厅看电视，时不时去厨房看看水开没有。（同步非阻塞） 3 老张把响水壶放到火上，一直在水壶旁等着水开。（异步阻塞） 4 老张把响水壶放到火上，去客厅看电视，水壶响之前不再去看它了，响了再去拿壶。（异步非阻塞）
+
+1和2的区别是，调用方在得到返回之前所做的事情不一行。 1和3的区别是，被调用方对于烧水的处理不一样。
+
+##### Linux 5种IO模型?
+
+### 阻塞式IO模型
+
+最传统的一种IO模型，即在读写数据过程中会发生阻塞现象。
+
+当用户线程发出IO请求之后，内核会去查看数据是否就绪，如果没有就绪就会等待数据就绪，而用户线程就会处于阻塞状态，用户线程交出CPU。当数据就绪之后，内核会将数据拷贝到用户线程，并返回结果给用户线程，用户线程才解除block状态。
+
+典型的阻塞IO模型的例子为：
+
+```
+data = socket.read();
+```
+
+如果数据没有就绪，就会一直阻塞在read方法。
+
+### 非阻塞IO模型
+
+当用户线程发起一个read操作后，并不需要等待，而是马上就得到了一个结果。如果结果是一个error时，它就知道数据还没有准备好，于是它可以再次发送read操作。一旦内核中的数据准备好了，并且又再次收到了用户线程的请求，那么它马上就将数据拷贝到了用户线程，然后返回。
+
+所以事实上，在非阻塞IO模型中，用户线程需要不断地询问内核数据是否就绪，也就说非阻塞IO不会交出CPU，而会一直占用CPU。
+
+典型的非阻塞IO模型一般如下：
+
+```
+while(true){
+    data = socket.read();
+    if(data!= error){
+        处理数据
+        break;
+    }
+}
+```
+
+但是对于非阻塞IO就有一个非常严重的问题，在while循环中需要不断地去询问内核数据是否就绪，这样会导致CPU占用率非常高，因此一般情况下很少使用while循环这种方式来读取数据。
+
+### IO复用模型
+
+多路复用IO模型是目前使用得比较多的模型。Java NIO实际上就是多路复用IO。
+
+在多路复用IO模型中，会有一个线程不断去轮询多个socket的状态，只有当socket真正有读写事件时，才真正调用实际的IO读写操作。因为在多路复用IO模型中，只需要使用一个线程就可以管理多个socket，系统不需要建立新的进程或者线程，也不必维护这些线程和进程，并且只有在真正有socket读写事件进行时，才会使用IO资源，所以它大大减少了资源占用。
+
+在Java NIO中，是通过selector.select()去查询每个通道是否有到达事件，如果没有事件，则一直阻塞在那里，因此这种方式会导致用户线程的阻塞。
+
+也许有朋友会说，我可以采用 多线程+ 阻塞IO 达到类似的效果，但是由于在多线程 + 阻塞IO 中，每个socket对应一个线程，这样会造成很大的资源占用，并且尤其是对于长连接来说，线程的资源一直不会释放，如果后面陆续有很多连接的话，就会造成性能上的瓶颈。
+
+而多路复用IO模式，通过一个线程就可以管理多个socket，只有当socket真正有读写事件发生才会占用资源来进行实际的读写操作。因此，多路复用IO比较适合连接数比较多的情况。
+
+另外多路复用IO为何比非阻塞IO模型的效率高是因为在非阻塞IO中，不断地询问socket状态时通过用户线程去进行的，而在多路复用IO中，轮询每个socket状态是内核在进行的，这个效率要比用户线程要高的多。
+
+不过要注意的是，多路复用IO模型是通过轮询的方式来检测是否有事件到达，并且对到达的事件逐一进行响应。因此对于多路复用IO模型来说，一旦事件响应体很大，那么就会导致后续的事件迟迟得不到处理，并且会影响新的事件轮询。
+
+### 信号驱动IO模型
+
+在信号驱动IO模型中，当用户线程发起一个IO请求操作，会给对应的socket注册一个信号函数，然后用户线程会继续执行，当内核数据就绪时会发送一个信号给用户线程，用户线程接收到信号之后，便在信号函数中调用IO读写操作来进行实际的IO请求操作。
+
+### 异步IO模型
+
+异步IO模型是比较理想的IO模型，在异步IO模型中，当用户线程发起read操作之后，立刻就可以开始去做其它的事。而另一方面，从内核的角度，当它受到一个asynchronous read之后，它会立刻返回，说明read请求已经成功发起了，因此不会对用户线程产生任何block。然后，内核会等待数据准备完成，然后将数据拷贝到用户线程，当这一切都完成之后，内核会给用户线程发送一个信号，告诉它read操作完成了。也就说用户线程完全不需要实际的整个IO操作是如何进行的，只需要先发起一个请求，当接收内核返回的成功信号时表示IO操作已经完成，可以直接去使用数据了。
+
+也就说在异步IO模型中，IO操作的两个阶段都不会阻塞用户线程，这两个阶段都是由内核自动完成，然后发送一个信号告知用户线程操作已完成。用户线程中不需要再次调用IO函数进行具体的读写。这点是和信号驱动模型有所不同的，在信号驱动模型中，当用户线程接收到信号表示数据已经就绪，然后需要用户线程调用IO函数进行实际的读写操作；而在异步IO模型中，收到信号表示IO操作已经完成，不需要再在用户线程中调用iO函数进行实际的读写操作。
+
+注意，异步IO是需要操作系统的底层支持，在Java 7中，提供了Asynchronous IO。
+
+前面四种IO模型实际上都属于同步IO，只有最后一种是真正的异步IO，因为无论是多路复用IO还是信号驱动模型，IO操作的第2个阶段都会引起用户线程阻塞，也就是内核进行数据拷贝的过程都会让用户线程阻塞。
+
+##### BIO、NIO和AIO的区别、三种IO的用法与原理？
+
+### IO
+
+什么是IO? 它是指计算机与外部世界或者一个程序与计算机的其余部分的之间的接口。它对于任何计算机系统都非常关键，因而所有 I/O 的主体实际上是内置在操作系统中的。单独的程序一般是让系统为它们完成大部分的工作。
+
+在 Java 编程中，直到最近一直使用 流 的方式完成 I/O。所有 I/O 都被视为单个的字节的移动，通过一个称为 Stream 的对象一次移动一个字节。流 I/O 用于与外部世界接触。它也在内部使用，用于将对象转换为字节，然后再转换回对象。
+
+### BIO
+
+Java BIO即Block I/O ， 同步并阻塞的IO。
+
+BIO就是传统的java.io包下面的代码实现。
+
+### NIO
+
+什么是NIO? NIO 与原来的 I/O 有同样的作用和目的, 他们之间最重要的区别是数据打包和传输的方式。原来的 I/O 以流的方式处理数据，而 NIO 以块的方式处理数据。
+
+面向流 的 I/O 系统一次一个字节地处理数据。一个输入流产生一个字节的数据，一个输出流消费一个字节的数据。为流式数据创建过滤器非常容易。链接几个过滤器，以便每个过滤器只负责单个复杂处理机制的一部分，这样也是相对简单的。不利的一面是，面向流的 I/O 通常相当慢。
+
+一个 面向块 的 I/O 系统以块的形式处理数据。每一个操作都在一步中产生或者消费一个数据块。按块处理数据比按(流式的)字节处理数据要快得多。但是面向块的 I/O 缺少一些面向流的 I/O 所具有的优雅性和简单性。
+
+### AIO
+
+Java AIO即Async非阻塞，是异步非阻塞的IO。
+
+### 区别及联系
+
+BIO （Blocking I/O）：同步阻塞I/O模式，数据的读取写入必须阻塞在一个线程内等待其完成。这里假设一个烧开水的场景，有一排水壶在烧开水，BIO的工作模式就是， 叫一个线程停留在一个水壶那，直到这个水壶烧开，才去处理下一个水壶。但是实际上线程在等待水壶烧开的时间段什么都没有做。
+
+NIO （New I/O）：同时支持阻塞与非阻塞模式，但这里我们以其同步非阻塞I/O模式来说明，那么什么叫做同步非阻塞？如果还拿烧开水来说，NIO的做法是叫一个线程不断的轮询每个水壶的状态，看看是否有水壶的状态发生了改变，从而进行下一步的操作。
+
+AIO （ Asynchronous I/O）：异步非阻塞I/O模型。异步非阻塞与同步非阻塞的区别在哪里？异步非阻塞无需一个线程去轮询所有IO操作的状态改变，在相应的状态改变后，系统会通知对应的线程来处理。对应到烧开水中就是，为每个水壶上面装了一个开关，水烧开之后，水壶会自动通知我水烧开了。
+
+### 各自适用场景
+
+BIO方式适用于连接数目比较小且固定的架构，这种方式对服务器资源要求比较高，并发局限于应用中，JDK1.4以前的唯一选择，但程序直观简单易理解。
+
+NIO方式适用于连接数目多且连接比较短（轻操作）的架构，比如聊天服务器，并发局限于应用中，编程比较复杂，JDK1.4开始支持。
+
+AIO方式适用于连接数目多且连接比较长（重操作）的架构，比如相册服务器，充分调用OS参与并发操作，编程比较复杂，JDK7开始支持。
+
+### 使用方式
+
+#### 使用BIO实现文件的读取和写入。
+
+```java
+       //Initializes The Object
+        User1 user = new User1();
+        user.setName("hollis");
+        user.setAge(23);
+        System.out.println(user);
+
+        //Write Obj to File
+        ObjectOutputStream oos = null;
+        try {
+            oos = new ObjectOutputStream(new FileOutputStream("tempFile"));
+            oos.writeObject(user);
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            IOUtils.closeQuietly(oos);
+        }
+
+        //Read Obj from File
+        File file = new File("tempFile");
+        ObjectInputStream ois = null;
+        try {
+            ois = new ObjectInputStream(new FileInputStream(file));
+            User1 newUser = (User1) ois.readObject();
+            System.out.println(newUser);
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } finally {
+            IOUtils.closeQuietly(ois);
+            try {
+                FileUtils.forceDelete(file);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
+       //Initializes The Object
+        User1 user = new User1();
+        user.setName("hollis");
+        user.setAge(23);
+        System.out.println(user);
+
+        //Write Obj to File
+        ObjectOutputStream oos = null;
+        try {
+            oos = new ObjectOutputStream(new FileOutputStream("tempFile"));
+            oos.writeObject(user);
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            IOUtils.closeQuietly(oos);
+        }
+
+        //Read Obj from File
+        File file = new File("tempFile");
+        ObjectInputStream ois = null;
+        try {
+            ois = new ObjectInputStream(new FileInputStream(file));
+            User1 newUser = (User1) ois.readObject();
+            System.out.println(newUser);
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } finally {
+            IOUtils.closeQuietly(ois);
+            try {
+                FileUtils.forceDelete(file);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+```
+
+#### 使用NIO实现文件的读取和写入。
+
+```java
+static void readNIO() {
+		String pathname = "C:\\Users\\adew\\Desktop\\jd-gui.cfg";
+		FileInputStream fin = null;
+		try {
+			fin = new FileInputStream(new File(pathname));
+			FileChannel channel = fin.getChannel();
+
+			int capacity = 100;// 字节
+			ByteBuffer bf = ByteBuffer.allocate(capacity);
+			System.out.println("限制是：" + bf.limit() + "容量是：" + bf.capacity()
+					+ "位置是：" + bf.position());
+			int length = -1;
+
+			while ((length = channel.read(bf)) != -1) {
+
+				/*
+				 * 注意，读取后，将位置置为0，将limit置为容量, 以备下次读入到字节缓冲中，从0开始存储
+				 */
+				bf.clear();
+				byte[] bytes = bf.array();
+				System.out.write(bytes, 0, length);
+				System.out.println();
+
+				System.out.println("限制是：" + bf.limit() + "容量是：" + bf.capacity()
+						+ "位置是：" + bf.position());
+
+			}
+
+			channel.close();
+
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		} finally {
+			if (fin != null) {
+				try {
+					fin.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
+		}
+	}
+
+	static void writeNIO() {
+		String filename = "out.txt";
+		FileOutputStream fos = null;
+		try {
+
+			fos = new FileOutputStream(new File(filename));
+			FileChannel channel = fos.getChannel();
+			ByteBuffer src = Charset.forName("utf8").encode("你好你好你好你好你好");
+			// 字节缓冲的容量和limit会随着数据长度变化，不是固定不变的
+			System.out.println("初始化容量和limit：" + src.capacity() + ","
+					+ src.limit());
+			int length = 0;
+
+			while ((length = channel.write(src)) != 0) {
+				/*
+				 * 注意，这里不需要clear，将缓冲中的数据写入到通道中后 第二次接着上一次的顺序往下读
+				 */
+				System.out.println("写入长度:" + length);
+			}
+
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		} finally {
+			if (fos != null) {
+				try {
+					fos.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
+		}
+	}
+```
+
+#### 使用AIO实现文件的读取和写入
+
+```java
+public class ReadFromFile {
+  public static void main(String[] args) throws Exception {
+    Path file = Paths.get("/usr/a.txt");
+    AsynchronousFileChannel channel = AsynchronousFileChannel.open(file);
+
+    ByteBuffer buffer = ByteBuffer.allocate(100_000);
+    Future<Integer> result = channel.read(buffer, 0);
+
+    while (!result.isDone()) {
+      ProfitCalculator.calculateTax();
+    }
+    Integer bytesRead = result.get();
+    System.out.println("Bytes read [" + bytesRead + "]");
+  }
+}
+class ProfitCalculator {
+  public ProfitCalculator() {
+  }
+  public static void calculateTax() {
+  }
+}
+
+public class WriteToFile {
+
+  public static void main(String[] args) throws Exception {
+    AsynchronousFileChannel fileChannel = AsynchronousFileChannel.open(
+        Paths.get("/asynchronous.txt"), StandardOpenOption.READ,
+        StandardOpenOption.WRITE, StandardOpenOption.CREATE);
+    CompletionHandler<Integer, Object> handler = new CompletionHandler<Integer, Object>() {
+
+      @Override
+      public void completed(Integer result, Object attachment) {
+        System.out.println("Attachment: " + attachment + " " + result
+            + " bytes written");
+        System.out.println("CompletionHandler Thread ID: "
+            + Thread.currentThread().getId());
+      }
+
+      @Override
+      public void failed(Throwable e, Object attachment) {
+        System.err.println("Attachment: " + attachment + " failed with:");
+        e.printStackTrace();
+      }
+    };
+
+    System.out.println("Main Thread ID: " + Thread.currentThread().getId());
+    fileChannel.write(ByteBuffer.wrap("Sample".getBytes()), 0, "First Write",
+        handler);
+    fileChannel.write(ByteBuffer.wrap("Box".getBytes()), 0, "Second Write",
+        handler);
+
+  }
+}
+```
+
+##### 反射?
+
+反射机制指的是程序在运行时能够获取自身的信息。在java中，只要给定类的名字，那么就可以通过反射机制来获得类的所有属性和方法。
+
+##### 反射有什么作用?
+
+在运行时判断任意一个对象所属的类。
+
+在运行时判断任意一个类所具有的成员变量和方法。
+
+在运行时任意调用一个对象的方法。
+
+在运行时构造任意一个类的对象。
+
+##### Class类？
+
+Java的Class类是java反射机制的基础,通过Class类我们可以获得关于一个类的相关信息
+
+Java.lang.Class是一个比较特殊的类，它用于封装被装入到JVM中的类（包括类和接口）的信息。当一个类或接口被装入的JVM时便会产生一个与之关联的java.lang.Class对象，可以通过这个Class对象对被装入类的详细信息进行访问。
+
+虚拟机为每种类型管理一个独一无二的Class对象。也就是说，每个类（型）都有一个Class对象。运行程序时，Java虚拟机(JVM)首先检查是否所要加载的类对应的Class对象是否已经加载。如果没有加载，JVM就会根据类名查找.class文件，并将其Class对象载入。
+
+##### 静态代理?
+
+所谓静态代理，就是代理类是由程序员自己编写的，在编译期就确定好了的。来看下下面的例子：
+
+```java
+public interface HelloSerivice {
+    public void say();
+}
+
+public class HelloSeriviceImpl implements HelloSerivice{
+
+    @Override
+    public void say() {
+        System.out.println("hello world");
+    }
+}
+```
+
+上面的代码比较简单，定义了一个接口和其实现类。这就是代理模式中的目标对象和目标对象的接口。接下类定义代理对象。
+
+```java
+public class HelloSeriviceProxy implements HelloSerivice{
+
+    private HelloSerivice target;
+    public HelloSeriviceProxy(HelloSerivice target) {
+        this.target = target;
+    }
+
+    @Override
+    public void say() {
+        System.out.println("记录日志");
+        target.say();
+        System.out.println("清理数据");
+    }
+}
+```
+
+上面就是一个代理类，他也实现了目标对象的接口，并且扩展了say方法。下面是一个测试类：
+
+```java
+public class Main {
+    @Test
+    public void testProxy(){
+        //目标对象
+        HelloSerivice target = new HelloSeriviceImpl();
+        //代理对象
+        HelloSeriviceProxy proxy = new HelloSeriviceProxy(target);
+        proxy.say();
+    }
+}
+```
+
+// 记录日志 // hello world // 清理数据
+
+这就是一个简单的静态的代理模式的实现。代理模式中的所有角色（代理对象、目标对象、目标对象的接口）等都是在编译期就确定好的。
+
+静态代理的用途 控制真实对象的访问权限 通过代理对象控制对真实对象的使用权限。
+
+避免创建大对象 通过使用一个代理小对象来代表一个真实的大对象，可以减少系统资源的消耗，对系统进行优化并提高运行速度。
+
+增强真实对象的功能 这个比较简单，通过代理可以在调用真实对象的方法的前后增加额外功能。
+
+##### 动态代理?
+
+前面介绍了[静态代理](https://github.com/hollischuang/toBeTopJavaer/blob/master/basics/java-basic/static-proxy.md)，虽然静态代理模式很好用，但是静态代理还是存在一些局限性的，比如使用静态代理模式需要程序员手写很多代码，这个过程是比较浪费时间和精力的。一旦需要代理的类中方法比较多，或者需要同时代理多个对象的时候，这无疑会增加很大的复杂度。
+
+有没有一种方法，可以不需要程序员自己手写代理类呢。这就是动态代理啦。
+
+动态代理中的代理类并不要求在编译期就确定，而是可以在运行期动态生成，从而实现对目标对象的代理功能。
+
+反射是动态代理的一种实现方式。
+
+##### 动态代理和反射的关系?
+
+反射是动态代理的一种实现方式。
+
+##### 动态代理的几种实现方式?
+
+Java中，实现动态代理有两种方式：
+
+1、JDK动态代理：java.lang.reflect 包中的Proxy类和InvocationHandler接口提供了生成动态代理类的能力。
+
+2、Cglib动态代理：Cglib (Code Generation Library )是一个第三方代码生成类库，运行时在内存中动态生成一个子类对象从而实现对目标对象功能的扩展。
+
+关于这两种动态代理的写法本文就不深入展开了，读者感兴趣的话，后面我再写文章单独介绍。本文主要来简单说一下这两种动态代理的区别和用途。
+
+JDK动态代理和Cglib动态代理的区别 JDK的动态代理有一个限制，就是使用动态代理的对象必须实现一个或多个接口。如果想代理没有实现接口的类，就可以使用CGLIB实现。
+
+Cglib是一个强大的高性能的代码生成包，它可以在运行期扩展Java类与实现Java接口。它广泛的被许多AOP的框架使用，例如Spring AOP和dynaop，为他们提供方法的interception（拦截）。
+
+Cglib包的底层是通过使用一个小而快的字节码处理框架ASM，来转换字节码并生成新的类。不鼓励直接使用ASM，因为它需要你对JVM内部结构包括class文件的格式和指令集都很熟悉。
+
+Cglib与动态代理最大的区别就是：
+
+使用动态代理的对象必须实现一个或多个接口
+
+使用cglib代理的对象则无需实现接口，达到代理类无侵入。
+
+### Java实现动态代理的大致步骤
+
+1、定义一个委托类和公共接口。
+
+2、自己定义一个类（调用处理器类，即实现 InvocationHandler 接口），这个类的目的是指定运行时将生成的代理类需要完成的具体任务（包括Preprocess和Postprocess），即代理类调用任何方法都会经过这个调用处理器类（在本文最后一节对此进行解释）。
+
+3、生成代理对象（当然也会生成代理类），需要为他指定(1)委托对象(2)实现的一系列接口(3)调用处理器类的实例。因此可以看出一个代理对象对应一个委托对象，对应一个调用处理器实例。
+
+### Java 实现动态代理主要涉及哪几个类
+
+java.lang.reflect.Proxy: 这是生成代理类的主类，通过 Proxy 类生成的代理类都继承了 Proxy 类，即 DynamicProxyClass extends Proxy。
+
+java.lang.reflect.InvocationHandler: 这里称他为"调用处理器"，他是一个接口，我们动态生成的代理类需要完成的具体内容需要自己定义一个类，而这个类必须实现 InvocationHandler 接口。
+
+### 动态代理实现
+
+使用动态代理实现功能：不改变Test类的情况下，在方法target 之前打印一句话，之后打印一句话。
+
+```java
+public class UserServiceImpl implements UserService {
+
+    @Override
+    public void add() {
+        // TODO Auto-generated method stub
+        System.out.println("--------------------add----------------------");
+    }
+}
+```
+
+#### jdk动态代理
+
+```java
+public class MyInvocationHandler implements InvocationHandler {
+
+    private Object target;
+
+    public MyInvocationHandler(Object target) {
+
+        super();
+        this.target = target;
+
+    }
+
+    @Override
+    public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+        PerformanceMonior.begin(target.getClass().getName()+"."+method.getName());
+        //System.out.println("-----------------begin "+method.getName()+"-----------------");
+        Object result = method.invoke(target, args);
+        //System.out.println("-----------------end "+method.getName()+"-----------------");
+        PerformanceMonior.end();
+        return result;
+    }
+
+    public Object getProxy(){
+
+        return Proxy.newProxyInstance(Thread.currentThread().getContextClassLoader(), target.getClass().getInterfaces(), this);
+    }
+
+}
+
+public static void main(String[] args) {
+
+  UserService service = new UserServiceImpl();
+  MyInvocationHandler handler = new MyInvocationHandler(service);
+  UserService proxy = (UserService) handler.getProxy();
+  proxy.add();
+}
+```
+
+### cglib动态代理
+
+```
+public class CglibProxy implements MethodInterceptor{  
+ private Enhancer enhancer = new Enhancer();  
+ public Object getProxy(Class clazz){  
+  //设置需要创建子类的类  
+  enhancer.setSuperclass(clazz);  
+  enhancer.setCallback(this);  
+  //通过字节码技术动态创建子类实例  
+  return enhancer.create();  
+ }  
+ //实现MethodInterceptor接口方法  
+ public Object intercept(Object obj, Method method, Object[] args,  
+   MethodProxy proxy) throws Throwable {  
+  System.out.println("前置代理");  
+  //通过代理类调用父类中的方法  
+  Object result = proxy.invokeSuper(obj, args);  
+  System.out.println("后置代理");  
+  return result;  
+ }  
+}  
+
+public class DoCGLib {  
+ public static void main(String[] args) {  
+  CglibProxy proxy = new CglibProxy();  
+  //通过生成子类的方式创建代理类  
+  UserServiceImpl proxyImp = (UserServiceImpl)proxy.getProxy(UserServiceImpl.class);  
+  proxyImp.add();  
+ }  
+}
+```
+
+##### AOP?
+
+Spring AOP中的动态代理主要有两种方式，JDK动态代理和CGLIB动态代理。
+
+JDK动态代理通过反射来接收被代理的类，并且要求被代理的类必须实现一个接口。JDK动态代理的核心是InvocationHandler接口和Proxy类。
+
+如果目标类没有实现接口，那么Spring AOP会选择使用CGLIB来动态代理目标类。
+
+CGLIB（Code Generation Library），是一个代码生成的类库，可以在运行时动态的生成某个类的子类，注意，CGLIB是通过继承的方式做的动态代理，因此如果某个类被标记为final，那么它是无法使用CGLIB做动态代理的。
+
+##### object等的含义?
+
+E - Element (在集合中使用，因为集合中存放的是元素)
+
+T - Type（Java 类）
+
+K - Key（键）
+
+V - Value（值）
+
+N - Number（数值类型）
+
+？ - 表示不确定的java类型（无限制通配符类型）
+
+S、U、V - 2nd、3rd、4th types
+
+Object - 是所有类的根类，任何类的对象都可以设置给该Object引用变量，使用的时候可能需要类型强制转换，但是用使用了泛型T、E等这些标识符后，在实际用之前类型就已经确定了，不需要再进行类型强制转换。
+
+##### 死锁？
+
+java级别死锁
+
+## 一、什么是死锁
+
+死锁不仅在个人学习中，甚至在开发中也并不常见。但是一旦出现死锁，后果将非常严重。 首先什么是死锁呢？打个比方，就好像有两个人打架，互相限制住了(锁住，抱住)彼此一样，互相动弹不得，而且互相欧气，你不松手我就不松手。好了谁也动弹不得。 在多线程的环境下，势必会对资源进行抢夺。当两个线程锁住了当前资源，但都需要对方的资源才能进行下一步操作，这个时候两方就会一直等待对方的资源释放。这就形成了死锁。这些永远在互相等待的进程称为死锁进程。
+
+那么我们来总结一下死锁产生的条件：
+
+1. 互斥:资源的锁是排他性的，加锁期间只能有一个线程拥有该资源。其他线程只能等待锁释放才能尝试获取该资源。
+2. 请求和保持:当前线程已经拥有至少一个资源，但其同时又发出新的资源请求，而被请求的资源被其他线程拥有。此时进入保持当前资源并等待下个资源的状态。
+3. 不剥夺：线程已拥有的资源，只能由自己释放，不能被其他线程剥夺。
+4. 循环等待：是指有多个线程互相的请求对方的资源，但同时拥有对方下一步所需的资源。形成一种循环，类似2)请求和保持。但此处指多个线程的关系。并不是指单个线程一直在循环中等待。
+
+什么？还是不理解？那我们直接上代码，动手写一个死锁。
+
+## 二、动手写死锁
+
+根据条件，我们让两个线程互相请求保持。
+
+```
+public class DeadLockDemo implements Runnable{
+
+    public static int flag = 1;
+
+    //static 变量是 类对象共享的
+    static Object o1 = new Object();
+    static Object o2 = new Object();
+
+    @Override
+    public void run() {
+        System.out.println(Thread.currentThread().getName() + "：此时 flag = " + flag);
+        if(flag == 1){
+            synchronized (o1){
+                try {
+                    System.out.println("我是" + Thread.currentThread().getName() + "锁住 o1");
+                    Thread.sleep(3000);
+                    System.out.println(Thread.currentThread().getName() + "醒来->准备获取 o2");
+                }catch (Exception e){
+                    e.printStackTrace();
+                }
+                synchronized (o2){
+                    System.out.println(Thread.currentThread().getName() + "拿到 o2");//第24行
+                }
+            }
+        }
+        if(flag == 0){
+            synchronized (o2){
+                try {
+                    System.out.println("我是" + Thread.currentThread().getName() + "锁住 o2");
+                    Thread.sleep(3000);
+                    System.out.println(Thread.currentThread().getName() + "醒来->准备获取 o2");
+                }catch (Exception e){
+                    e.printStackTrace();
+                }
+                synchronized (o1){
+                    System.out.println(Thread.currentThread().getName() + "拿到 o1");//第38行
+                }
+            }
+        }
+    }
+
+    public static  void main(String args[]){
+
+        DeadLockDemo t1 = new DeadLockDemo();
+        DeadLockDemo t2 = new DeadLockDemo();
+        t1.flag = 1;
+        new Thread(t1).start();
+
+        //让main线程休眠1秒钟,保证t2开启锁住o2.进入死锁
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        t2.flag = 0;
+        new Thread(t2).start();
+
+    }
+}
+```
+
+代码中， t1创建，t1先拿到o1的锁，开始休眠3秒。然后 t2线程创建，t2拿到o2的锁，开始休眠3秒。然后 t1先醒来，准备拿o2的锁，发现o2已经加锁，只能等待o2的锁释放。 t2后醒来，准备拿o1的锁，发现o1已经加锁，只能等待o1的锁释放。 t1,t2形成死锁。
+
+我们查看运行状态，
+
+## 四、解决办法
+
+死锁一旦发生，我们就无法解决了。所以我们只能避免死锁的发生。 既然死锁需要满足四种条件，那我们就从条件下手，只要打破任意规则即可。
+
+1. （互斥）尽量少用互斥锁，能加读锁，不加写锁。当然这条无法避免。
+2. （请求和保持）采用资源静态分配策略（进程资源静态分配方式是指一个进程在建立时就分配了它需要的全部资源）.我们尽量不让线程同时去请求多个锁，或者在拥有一个锁又请求不到下个锁时，不保持等待，先释放资源等待一段时间在重新请求。
+3. （不剥夺）允许进程剥夺使用其他进程占有的资源。优先级。
+4. （循环等待）尽量调整获得锁的顺序，不发生嵌套资源请求。加入超时。
+
+##### synchronized是如何实现的?
+
+在[再有人问你Java内存模型是什么，就把这篇文章发给他。](http://www.hollischuang.com/archives/2550)中我们曾经介绍过，Java语言为了解决并发编程中存在的原子性、可见性和有序性问题，提供了一系列和并发处理相关的关键字，比如`synchronized`、`volatile`、`final`、`concurren包`等。
+
+在《深入理解Java虚拟机》中，有这样一段话：
+
+> `synchronized`关键字在需要原子性、可见性和有序性这三种特性的时候都可以作为其中一种解决方案，看起来是“万能”的。的确，大部分并发控制操作都能使用synchronized来完成。
+
+海明威在他的《午后之死》说过的：“冰山运动之雄伟壮观，是因为他只有八分之一在水面上。”对于程序员来说，`synchronized`只是个关键字而已，用起来很简单。之所以我们可以在处理多线程问题时可以不用考虑太多，就是因为这个关键字帮我们屏蔽了很多细节。
+
+那么，本文就围绕`synchronized`展开，主要介绍`synchronized`的用法、`synchronized`的原理，以及`synchronized`是如何提供原子性、可见性和有序性保障的等。
+
+### synchronized的用法
+
+`synchronized`是Java提供的一个并发控制的关键字。主要有两种用法，分别是同步方法和同步代码块。也就是说，`synchronized`既可以修饰方法也可以修饰代码块。
+
+```
+/**
+ * @author Hollis 18/08/04.
+ */
+public class SynchronizedDemo {
+     //同步方法
+    public synchronized void doSth(){
+        System.out.println("Hello World");
+    }
+
+    //同步代码块
+    public void doSth1(){
+        synchronized (SynchronizedDemo.class){
+            System.out.println("Hello World");
+        }
+    }
+}
+```
+
+被`synchronized`修饰的代码块及方法，在同一时间，只能被单个线程访问。
+
+### synchronized的实现原理
+
+`synchronized`，是Java中用于解决并发情况下数据同步访问的一个很重要的关键字。当我们想要保证一个共享资源在同一时间只会被一个线程访问到时，我们可以在代码中使用`synchronized`关键字对类或者对象加锁。
+
+在[深入理解多线程（一）——Synchronized的实现原理](http://www.hollischuang.com/archives/1883)中我曾经介绍过其实现原理，为了保证知识的完整性，这里再简单介绍一下，详细的内容请去原文阅读。
+
+我们对上面的代码进行反编译，可以得到如下代码：
+
+```
+public synchronized void doSth();
+    descriptor: ()V
+    flags: ACC_PUBLIC, ACC_SYNCHRONIZED
+    Code:
+      stack=2, locals=1, args_size=1
+         0: getstatic     #2                  // Field java/lang/System.out:Ljava/io/PrintStream;
+         3: ldc           #3                  // String Hello World
+         5: invokevirtual #4                  // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+         8: return
+
+  public void doSth1();
+    descriptor: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=2, locals=3, args_size=1
+         0: ldc           #5                  // class com/hollis/SynchronizedTest
+         2: dup
+         3: astore_1
+         4: monitorenter
+         5: getstatic     #2                  // Field java/lang/System.out:Ljava/io/PrintStream;
+         8: ldc           #3                  // String Hello World
+        10: invokevirtual #4                  // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+        13: aload_1
+        14: monitorexit
+        15: goto          23
+        18: astore_2
+        19: aload_1
+        20: monitorexit
+        21: aload_2
+        22: athrow
+        23: return
+```
+
+通过反编译后代码可以看出：对于同步方法，JVM采用`ACC_SYNCHRONIZED`标记符来实现同步。 对于同步代码块。JVM采用`monitorenter`、`monitorexit`两个指令来实现同步。
+
+在[The Java® Virtual Machine Specification](https://docs.oracle.com/javase/specs/jvms/se8/html/jvms-2.html#jvms-2.11.10)中有关于同步方法和同步代码块的实现原理的介绍，我翻译成中文如下：
+
+> 方法级的同步是隐式的。同步方法的常量池中会有一个`ACC_SYNCHRONIZED`标志。当某个线程要访问某个方法的时候，会检查是否有`ACC_SYNCHRONIZED`，如果有设置，则需要先获得监视器锁，然后开始执行方法，方法执行之后再释放监视器锁。这时如果其他线程来请求执行方法，会因为无法获得监视器锁而被阻断住。值得注意的是，如果在方法执行过程中，发生了异常，并且方法内部并没有处理该异常，那么在异常被抛到方法外面之前监视器锁会被自动释放。
+>
+> 同步代码块使用`monitorenter`和`monitorexit`两个指令实现。可以把执行`monitorenter`指令理解为加锁，执行`monitorexit`理解为释放锁。 每个对象维护着一个记录着被锁次数的计数器。未被锁定的对象的该计数器为0，当一个线程获得锁（执行`monitorenter`）后，该计数器自增变为 1 ，当同一个线程再次获得该对象的锁的时候，计数器再次自增。当同一个线程释放锁（执行`monitorexit`指令）的时候，计数器再自减。当计数器为0的时候。锁将被释放，其他线程便可以获得锁。
+
+无论是`ACC_SYNCHRONIZED`还是`monitorenter`、`monitorexit`都是基于Monitor实现的，在Java虚拟机(HotSpot)中，Monitor是基于C++实现的，由ObjectMonitor实现。
+
+ObjectMonitor类中提供了几个方法，如`enter`、`exit`、`wait`、`notify`、`notifyAll`等。`sychronized`加锁的时候，会调用objectMonitor的enter方法，解锁的时候会调用exit方法。（关于Monitor详见[深入理解多线程（四）—— Moniter的实现原理](http://www.hollischuang.com/archives/2030)）
+
+### synchronized与原子性
+
+原子性是指一个操作是不可中断的，要全部执行完成，要不就都不执行。
+
+我们在[Java的并发编程中的多线程问题到底是怎么回事儿？](http://www.hollischuang.com/archives/2618)中分析过：线程是CPU调度的基本单位。CPU有时间片的概念，会根据不同的调度算法进行线程调度。当一个线程获得时间片之后开始执行，在时间片耗尽之后，就会失去CPU使用权。所以在多线程场景下，由于时间片在线程间轮换，就会发生原子性问题。
+
+在Java中，为了保证原子性，提供了两个高级的字节码指令`monitorenter`和`monitorexit`。前面中，介绍过，这两个字节码指令，在Java中对应的关键字就是`synchronized`。
+
+通过`monitorenter`和`monitorexit`指令，可以保证被`synchronized`修饰的代码在同一时间只能被一个线程访问，在锁未释放之前，无法被其他线程访问到。因此，在Java中可以使用`synchronized`来保证方法和代码块内的操作是原子性的。
+
+> 线程1在执行`monitorenter`指令的时候，会对Monitor进行加锁，加锁后其他线程无法获得锁，除非线程1主动解锁。即使在执行过程中，由于某种原因，比如CPU时间片用完，线程1放弃了CPU，但是，他并没有进行解锁。而由于`synchronized`的锁是可重入的，下一个时间片还是只能被他自己获取到，还是会继续执行代码。直到所有代码执行完。这就保证了原子性。
+
+### synchronized与可见性
+
+可见性是指当多个线程访问同一个变量时，一个线程修改了这个变量的值，其他线程能够立即看得到修改的值。
+
+我们在[再有人问你Java内存模型是什么，就把这篇文章发给他。](http://www.hollischuang.com/archives/2550)中分析过：Java内存模型规定了所有的变量都存储在主内存中，每条线程还有自己的工作内存，线程的工作内存中保存了该线程中是用到的变量的主内存副本拷贝，线程对变量的所有操作都必须在工作内存中进行，而不能直接读写主内存。不同的线程之间也无法直接访问对方工作内存中的变量，线程间变量的传递均需要自己的工作内存和主存之间进行数据同步进行。所以，就可能出现线程1改了某个变量的值，但是线程2不可见的情况。
+
+前面我们介绍过，被`synchronized`修饰的代码，在开始执行时会加锁，执行完成后会进行解锁。而为了保证可见性，有一条规则是这样的：对一个变量解锁之前，必须先把此变量同步回主存中。这样解锁后，后续线程就可以访问到被修改后的值。
+
+所以，synchronized关键字锁住的对象，其值是具有可见性的。
+
+### synchronized与有序性
+
+有序性即程序执行的顺序按照代码的先后顺序执行。
+
+我们在[再有人问你Java内存模型是什么，就把这篇文章发给他。](http://www.hollischuang.com/archives/2550)中分析过：除了引入了时间片以外，由于处理器优化和指令重排等，CPU还可能对输入代码进行乱序执行，比如load->add->save 有可能被优化成load->save->add 。这就是可能存在有序性问题。
+
+这里需要注意的是，`synchronized`是无法禁止指令重排和处理器优化的。也就是说，`synchronized`无法避免上述提到的问题。
+
+那么，为什么还说`synchronized`也提供了有序性保证呢？
+
+这就要再把有序性的概念扩展一下了。Java程序中天然的有序性可以总结为一句话：如果在本线程内观察，所有操作都是天然有序的。如果在一个线程中观察另一个线程，所有操作都是无序的。
+
+以上这句话也是《深入理解Java虚拟机》中的原句，但是怎么理解呢？周志明并没有详细的解释。这里我简单扩展一下，这其实和`as-if-serial语义`有关。
+
+`as-if-serial`语义的意思指：不管怎么重排序（编译器和处理器为了提高并行度），单线程程序的执行结果都不能被改变。编译器和处理器无论如何优化，都必须遵守`as-if-serial`语义。
+
+这里不对`as-if-serial语义`详细展开了，简单说就是，`as-if-serial语义`保证了单线程中，指令重排是有一定的限制的，而只要编译器和处理器都遵守了这个语义，那么就可以认为单线程程序是按照顺序执行的。当然，实际上还是有重排的，只不过我们无须关心这种重排的干扰。
+
+所以呢，由于`synchronized`修饰的代码，同一时间只能被同一线程访问。那么也就是单线程执行的。所以，可以保证其有序性。
+
+### synchronized与锁优化
+
+前面介绍了`synchronized`的用法、原理以及对并发编程的作用。是一个很好用的关键字。
+
+`synchronized`其实是借助Monitor实现的，在加锁时会调用objectMonitor的`enter`方法，解锁的时候会调用`exit`方法。事实上，只有在JDK1.6之前，synchronized的实现才会直接调用ObjectMonitor的`enter`和`exit`，这种锁被称之为重量级锁。
+
+所以，在JDK1.6中出现对锁进行了很多的优化，进而出现轻量级锁，偏向锁，锁消除，适应性自旋锁，锁粗化(自旋锁在1.4就有，只不过默认的是关闭的，jdk1.6是默认开启的)，这些操作都是为了在线程之间更高效的共享数据 ，解决竞争问题。
+
+关于自旋锁、锁粗化和锁消除可以参考[深入理解多线程（五）—— Java虚拟机的锁优化技术](http://www.hollischuang.com/archives/2344)。
