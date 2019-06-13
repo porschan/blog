@@ -367,6 +367,8 @@ date: 2018/11/15 23:57:05
 
 - [SpringBoot - 使用neo4j](/2019/05/14/springboot-neo4j/ "SpringBoot - 使用neo4j")
 
+- [SpringBoot - 查看当前版本的各依赖版本](/2019/06/13/springboot-dependencies/ "SpringBoot - 查看当前版本的各依赖版本")
+
 #### SpringMVC ####
 
 - [使用 IDEA 创建 SpringMVC 项目](/2019/04/26/springMVC-create/ "使用IDEA创建SPRING MVC 项目")
@@ -430,7 +432,8 @@ date: 2018/11/15 23:57:05
 - [使用 IDEA 中创建 SpringBoot2.x + Neo4J 的 WEB 项目](/2019/06/05/springboot-neo4j-ui-upgrade/ "使用 IDEA 中创建 SpringBoot2.x + Neo4J 的 WEB 项目")
 
 - [使用 IDEA 中创建 SpringBoot + JPA + Redis + MySQL 的 WEB 项目](/2019/06/07/springboot-dbup-shadow/ "使用 IDEA 中创建 SpringBoot + JPA + Redis + MySQL 的 WEB 项目")
-- 
+
+
 ----------
 
 ## Tool ##
