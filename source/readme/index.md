@@ -67,31 +67,43 @@ date: 2018/11/15 23:57:05
 
 ### 设计模式 ###
 
-- [设计模式 - 策略模式](/2019/03/06/designPattern-strategyPattern/ "设计模式 - 策略模式")
+- [软件设计原则及设计模式概述](/2019/05/16/designPattern-basic/ "软件设计原则及设计模式概述")
 
-- [设计模式 - 观察者模式](/2019/03/09/designPattern-observerPattern/ "设计模式 - 观察者模式")
+> 创建型模式
+
+- [创建型模式 - 工厂模式](/2019/04/26/designPattern-factoryPattern/ "创建型模式 - 工厂模式")
+
+- [创建型模式 - 单例模式](/2019/04/25/designPattern-singletonPattern/ "创建型模式 - 单例模式")
+
+- [创建型模式 - 原型模式](/2019/05/16/designPattern-protoPattern/ "创建型模式 - 原型模式")
+
+> 结构型模式
+
+- [结构型模式 - 适配器模式](/2019/04/29/designPattern-adapterPattern/ "结构型模式 - 适配器模式")
+
+- [结构型模式 - 代理模式](/2019/05/07/designPattern-agentmodePattern/ "结构型模式 - 代理模式")
+
+> 行为型模式
+
+- [行为型模式 - 策略模式](/2019/03/06/designPattern-strategyPattern/ "行为型模式 - 策略模式")
+
+- [行为型模式 - 模板模式](/2019/05/04/designPattern-templatemodePattern/ "行为型模式 - 模板模式")
+
+- [行为型模式 - 观察者模式](/2019/03/09/designPattern-observerPattern/ "行为型模式 - 观察者模式")
+
+> 其他
 
 - [设计模式 - 装饰者模式](/2019/04/25/designPattern-decoratorPattern/ "设计模式 - 装饰者模式")
 
-- [设计模式 - 单例模式](/2019/04/25/designPattern-singletonPattern/ "设计模式 - 单例模式")
-
-- [设计模式 - 工厂模式](/2019/04/26/designPattern-factoryPattern/ "设计模式 - 工厂模式")
-
 - [设计模式 - 命令模式](/2019/04/27/designPattern-commandPattern/ "设计模式 - 命令模式")
 
-- [设计模式 - 适配器模式](/2019/04/29/designPattern-adapterPattern/ "设计模式 - 适配器模式")
-
 - [设计模式 - 外观模式](/2019/05/04/designPattern-facadePattern/ "设计模式 - 外观模式")
-
-- [设计模式 - 模板模式](/2019/05/04/designPattern-templatemodePattern/ "设计模式 - 模板模式")
 
 - [设计模式 - 迭代器模式](/2019/05/04/designPattern-iteratormodePattern/ "设计模式 - 迭代器模式")
 
 - [设计模式 - 组合模式](/2019/05/05/designPattern-composemodePattern/ "设计模式 - 组合模式")
 
 - [设计模式 - 状态模式](/2019/05/06/designPattern-statemodePattern/ "设计模式 - 状态模式")
-
-- [设计模式 - 代理模式](/2019/05/07/designPattern-agentmodePattern/ "设计模式 - 代理模式")
 
 - [设计模式 - 复合模式](/2019/05/08/designPattern-compoundPattern/ "设计模式 - 复合模式")
 
@@ -109,11 +121,7 @@ date: 2018/11/15 23:57:05
 
 - [设计模式 - 备忘录模式](/2019/05/15/designPattern-mementoPattern/ "设计模式 - 备忘录模式")
 
-- [设计模式 - 原型模式](/2019/05/16/designPattern-protoPattern/ "设计模式 - 原型模式")
-
 - [设计模式 - 访问者模式](/2019/05/16/designPattern-visitorPattern/ "设计模式 - 访问者模式")
-
-- [设计模式 - 概要](/2019/05/16/designPattern-basic/ "设计模式 - 概要")
 
 ### Git ###
 
@@ -321,6 +329,8 @@ date: 2018/11/15 23:57:05
 
 - [JVM - 基础知识点](/2019/03/03/jvm-basic/ "JVM - 基础知识点")
 
+- [JVM - JVM内存管理机制](/2019/06/17/jvm-model/ "JVM - JVM内存管理机制")
+
 #### JFinal ####
 
 - [JFINAL初使用](/2018/08/10/jfinal-jar-main/ "JFINAL初使用")
@@ -432,7 +442,6 @@ date: 2018/11/15 23:57:05
 - [使用 IDEA 中创建 SpringBoot2.x + Neo4J 的 WEB 项目](/2019/06/05/springboot-neo4j-ui-upgrade/ "使用 IDEA 中创建 SpringBoot2.x + Neo4J 的 WEB 项目")
 
 - [使用 IDEA 中创建 SpringBoot + JPA + Redis + MySQL 的 WEB 项目](/2019/06/07/springboot-dbup-shadow/ "使用 IDEA 中创建 SpringBoot + JPA + Redis + MySQL 的 WEB 项目")
-
 
 ----------
 
