@@ -5,7 +5,7 @@ date: 2018/11/15 23:57:05
 
 ### 技术路线 ###
 
-![](20190603.png)
+![](20190619.png)
 
 # Porschan #
 
@@ -299,6 +299,8 @@ date: 2018/11/15 23:57:05
 
 #### RabbitMQ
 
+- [RabbitMQ - CentOS系统安装](/2019/06/19/centos-RabbitMQ-install/ "RabbitMQ - CentOS系统安装")
+
 #### ActiveMQ
 
 - [ActiveMQ - Windows系统安装](/2019/02/28/windows-activeMQ-install/ "activeMQ - windows系统安装")
@@ -314,6 +316,10 @@ date: 2018/11/15 23:57:05
 - [Maven - 单独下载pom.xml里的JAR包](/2019/03/05/maven-down/ "Maven - 单独下载pom.xml里的Jar包")
 
 - [Maven本地jar包部署与安装](/2019/05/28/maven-add-location/ "Maven本地jar包部署与安装")
+
+### Gradle ###
+
+- [Gradle - Windows系统安装](/2019/06/19/windows-Gradle-install/ "Gradle - windows系统安装")
 
 ### Java ###
 
@@ -442,6 +448,8 @@ date: 2018/11/15 23:57:05
 - [使用 IDEA 中创建 SpringBoot2.x + Neo4J 的 WEB 项目](/2019/06/05/springboot-neo4j-ui-upgrade/ "使用 IDEA 中创建 SpringBoot2.x + Neo4J 的 WEB 项目")
 
 - [使用 IDEA 中创建 SpringBoot + JPA + Redis + MySQL 的 WEB 项目](/2019/06/07/springboot-dbup-shadow/ "使用 IDEA 中创建 SpringBoot + JPA + Redis + MySQL 的 WEB 项目")
+
+- [使用 IDEA 中创建 SpringBoot + RabbitMQ 项目](/2019/06/19/springboot-rabbitMQ-comsumer-producer/ "使用 IDEA 中创建 SpringBoot + RabbitMQ 项目")
 
 ----------
 
