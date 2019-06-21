@@ -185,6 +185,8 @@ date: 2018/11/15 23:57:05
 
 - [Windows 下的 MySQL 即时打印 SQL 日志](/2019/04/22/windows-mysql-sql/ "WINDOWS 下的MYSQL即时打印SQL日志")
 
+- [MySQL - 基础知识点](/2019/06/21/mysql-basic/ "MySQL - 基础知识点")
+
 #### NoSQL Databases ####
 
 #### MongoDB ####
