@@ -295,6 +295,18 @@ date: 2018/11/15 23:57:05
 
 - [在 Windows 下安装 Typora](/2019/05/31/windows-typora/ "在 Windows 下安装 Typora")
 
+- [在 Windows 下安装 nvm](/2019/06/23/windows-nvm/ "在 Windows 下安装 nvm")
+
+- [在 Windows 下安装 NodeJS](/2019/06/23/windows-NodeJS/ "在 Windows 下安装 NodeJS")
+
+- [在 Windows 下安装 MySQL](/2019/06/23/windows-MySQL/ "在 Windows 下安装 MySQL")
+
+- [在 Windows 下安装 Navicat](/2019/06/23/windows-Navicat/ "在 Windows 下安装 Navicat")
+
+- [在 Windows 下安装 Weex](/2019/06/23/windows-Weex/ "在 Windows 下安装 Weex")
+
+- [在 Windows 下安装 Maven](/2019/06/23/windows-Maven/ "在 Windows 下安装 Maven")
+
 ### Zookeeper
 
 ### MQ
