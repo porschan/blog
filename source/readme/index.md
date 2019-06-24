@@ -187,6 +187,8 @@ date: 2018/11/15 23:57:05
 
 - [MySQL - 基础知识点](/2019/06/21/mysql-basic/ "MySQL - 基础知识点")
 
+- [MySQL - 在 docker 中主从复制](/2019/06/24/mysql-docker-master-slave/ "MySQL - 在 docker 中主从复制")
+
 #### NoSQL Databases ####
 
 #### MongoDB ####
