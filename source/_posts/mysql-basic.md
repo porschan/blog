@@ -33,7 +33,7 @@ mysqladmin  Ver 8.42 Distrib 5.5.48, for Linux on x86_64
 service mysql start 
 
 ps -ef|grep mysql
-
+ 
 top
 
 7.连接MySQL
@@ -514,3 +514,143 @@ table_locks_waited:出现表级锁定争用而发生的等待次数（不能立�
 行锁：
 偏向InnoDB存储引擎，开销大，加锁慢，会出现死锁，锁定粒度最小，发生锁冲突的概率最低，并发度也最高。
 InnoDB与MyISAM的最大不同有两点，意识支持事务（TRANSACTION）；二是采用了行级锁。
+
+查看支持事务级别：
+show variables like 'tx_isolation';
+
+31.什么是间隙锁？
+当我们用范围条件而不相同条件检索数据，并请求共享或排他锁时，innoDB会给符合条件的已有数据记录的索引加锁，对于键值在条件范围内但并不存在的记录，叫做“间隙（GAP）”，innoDB也会对这个“间隙”加锁，这种锁机制就是所谓的间隙锁（next-key锁）。
+
+32.如何锁定一行：
+begin;
+select * from test_innodb_lock where a=8 for update;
+commit;
+锁定某一行之后，其他的操作会被阻塞，知道锁定行的会话提交commit;
+
+33.查看行锁：
+show status like 'innodb_row_lock%';
+innodb_row_lock_time_avg(等待平均时长)
+innodb_row_lock_time_waits(等待总次数)
+innodb_row_lock_time(等待总时长)
+
+34.优化建议：
+1.尽可能让所有数据索引都通过索引来完成，避免无索引行锁升级为表锁。（比如索引列中varchar类型，比较单引号）
+2.合理设计索引，尽量缩小锁的范围。（避免间隙锁）
+3.尽可能较少检索条件，避免间隙锁。（where index > 1 and index <5,导致另外会话对index = 2操作阻塞）
+4.尽量控制事务大小，减少锁定资源量和时间长度。
+5.尽可能低级别事务隔离。
+
+35.什么是页锁？
+开销和加锁时间介于表锁和行锁之间；会出现死锁；锁定粒度介于表锁和行锁之间，并发度一般。
+
+36.主从复制：
+windows的my.ini:C:\ProgramData\MySQL\MySQL Server 5.7
+内容如下：
+[mysqld]
+# Binary Logging.
+log-bin=log-error="C:\ProgramData\MySQL\MySQL Server 5.7\Data\mysqlbin"
+
+# Error Logging.
+# 默认配置
+# log-error="DESKTOP-6FUJB64.err"
+log-error="C:\ProgramData\MySQL\MySQL Server 5.7\Data\mysqlerr"
+
+# Server Id.
+server-id=1
+
+linux的my.cnf：/etc/my.cnf
+由于我在dockers环境下所以在/etc/mysql/my.cnf
+内容如下：
+[mysqld]
+log-bin = mysql-bin
+server-id = 2
+
+重启MySQL。
+
+主数据库master:
+GRANT REPLICATION SLAVE ON *.* TO 'zhangsan'@'192.168.51.15' IDENTIFIED BY '123456';
+flush privileges;
+
+查看主机状态：
+show master status;
+
+mysql> show master status;
++-----------------+----------+--------------+------------------+-------------------+
+| File            | Position | Binlog_Do_DB | Binlog_Ignore_DB | Executed_Gtid_Set |
++-----------------+----------+--------------+------------------+-------------------+
+| mysqlbin.000001 |      605 |              |                  |                   |
++-----------------+----------+--------------+------------------+-------------------+
+1 row in set (0.00 sec)
+
+stop flave
+
+从数据库设置：
+mysql> CHANGE MASTER TO MASTER_HOST='192.168.51.232',MASTER_USER='zhangsan',MASTER_PASSWORD='123456',MASTER_LOG_FILE='mysqlbin.000001',MASTER_LOG_POS=605;
+Query OK, 0 rows affected, 2 warnings (0.01 sec)
+
+mysql> start slave;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> show slave status\G
+*************************** 1. row ***************************
+               Slave_IO_State: Connecting to master
+                  Master_Host: 192.168.51.232
+                  Master_User: zhangsan
+                  Master_Port: 3306
+                Connect_Retry: 60
+              Master_Log_File: mysqlbin.000001
+          Read_Master_Log_Pos: 605
+               Relay_Log_File: 097d05870add-relay-bin.000001
+                Relay_Log_Pos: 4
+        Relay_Master_Log_File: mysqlbin.000001
+             Slave_IO_Running: Connecting
+            Slave_SQL_Running: Yes
+              Replicate_Do_DB: 
+          Replicate_Ignore_DB: 
+           Replicate_Do_Table: 
+       Replicate_Ignore_Table: 
+      Replicate_Wild_Do_Table: 
+  Replicate_Wild_Ignore_Table: 
+                   Last_Errno: 0
+                   Last_Error: 
+                 Skip_Counter: 0
+          Exec_Master_Log_Pos: 605
+              Relay_Log_Space: 154
+              Until_Condition: None
+               Until_Log_File: 
+                Until_Log_Pos: 0
+           Master_SSL_Allowed: No
+           Master_SSL_CA_File: 
+           Master_SSL_CA_Path: 
+              Master_SSL_Cert: 
+            Master_SSL_Cipher: 
+               Master_SSL_Key: 
+        Seconds_Behind_Master: NULL
+Master_SSL_Verify_Server_Cert: No
+                Last_IO_Errno: 0
+                Last_IO_Error: 
+               Last_SQL_Errno: 0
+               Last_SQL_Error: 
+  Replicate_Ignore_Server_Ids: 
+             Master_Server_Id: 0
+                  Master_UUID: 
+             Master_Info_File: /var/lib/mysql/master.info
+                    SQL_Delay: 0
+          SQL_Remaining_Delay: NULL
+      Slave_SQL_Running_State: Slave has read all relay log; waiting for more updates
+           Master_Retry_Count: 86400
+                  Master_Bind: 
+      Last_IO_Error_Timestamp: 
+     Last_SQL_Error_Timestamp: 
+               Master_SSL_Crl: 
+           Master_SSL_Crlpath: 
+           Retrieved_Gtid_Set: 
+            Executed_Gtid_Set: 
+                Auto_Position: 0
+         Replicate_Rewrite_DB: 
+                 Channel_Name: 
+1 row in set (0.00 sec)
+
+ps:
+             Slave_IO_Running: Connecting
+            Slave_SQL_Running: Yes
