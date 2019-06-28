@@ -57,6 +57,12 @@ date: 2018/11/15 23:57:05
 
 - [冒泡排序 & 快速排序](/2019/06/07/algorithm-sort/ "冒泡排序")
 
+- [稀疏数组](/2019/06/28/dataStructures-sparseArray/ "稀疏数组")
+
+- [数组模拟环形队列](/2019/06/28/dataStructures-circleArray/ "数组模拟环形队列")
+
+- [根据编号有序的单向链表](/2019/06/28/dataStructures-singleLinkedList/ "根据编号有序的单向链表")
+
 ----------
 
 ### 计算机组成 ###
