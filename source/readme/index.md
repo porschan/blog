@@ -231,6 +231,8 @@ date: 2018/11/15 23:57:05
 
 - [Nginx - 编译](/2019/02/25/nginx-install/ "nginx - 编译")
 
+- [Nginx - 配置ssl证书](/2019/06/30/nginx-ssl/ "Nginx - 配置ssl证书")
+
 ----------
 
 #### Apache ####
