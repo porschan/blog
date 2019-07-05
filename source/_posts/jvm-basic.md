@@ -3006,3 +3006,271 @@ Java 中的 native 方法的链接方式主要有两种。一是按照 JNI 的�
 JNI 提供了一系列 API 来允许 C 代码使用 Java 语言特性。这些 API 不仅使用了特殊的数据结构来表示 Java 类，还拥有特殊的异常处理模式。
 
 JNI 中的引用可分为局部引用和全局引用。这两者都可以阻止垃圾回收器回收被引用的 Java 对象。不同的是，局部引用在 native 方法调用返回之后便会失效。传入参数以及大部分 JNI API 函数的返回值都属于局部引用。
+
+关于 Java agent，大家可能都听过大名鼎鼎的`premain`方法。顾名思义，这个方法指的就是在`main`方法之前执行的方法。
+
+```
+package org.example;
+ 
+public class MyAgent {
+  public static void premain(String args) {
+    System.out.println("premain");
+  }
+}
+```
+
+我在上面这段代码中定义了一个`premain`方法。这里需要注意的是，Java 虚拟机所能识别的`premain`方法接收的是字符串类型的参数，而并非类似于`main`方法的字符串数组。
+
+为了能够以 Java agent 的方式运行该`premain`方法，我们需要将其打包成 jar 包，并在其中的 MANIFEST.MF 配置文件中，指定所谓的`Premain-class`。具体的命令如下所示：
+
+```
+# 注意第一条命令会向 manifest.txt 文件写入两行数据，其中包括一行空行
+$ echo 'Premain-Class: org.example.MyAgent
+' > manifest.txt
+$ jar cvmf manifest.txt myagent.jar org/
+$ java -javaagent:myagent.jar HelloWorld
+premain
+Hello, World
+```
+
+除了在命令行中指定 Java agent 之外，我们还可以通过 Attach API 远程加载。具体用法如下面的代码所示：
+
+```
+import java.io.IOException;
+ 
+import com.sun.tools.attach.*;
+ 
+public class AttachTest {
+  public static void main(String[] args)
+      throws AttachNotSupportedException, IOException, AgentLoadException, AgentInitializationException {
+    if (args.length <= 1) {
+      System.out.println("Usage: java AttachTest <PID> /PATH/TO/AGENT.jar");
+      return;
+    }
+    VirtualMachine vm = VirtualMachine.attach(args[0]);
+    vm.loadAgent(args[1]);
+  }
+}
+ 
+```
+
+使用 Attach API 远程加载的 Java agent 不会再先于`main`方法执行，这取决于另一虚拟机调用 Attach API 的时机。并且，它运行的也不再是`premain`方法，而是名为`agentmain`的方法。
+
+```
+public class MyAgent { 
+  public static void agentmain(String args) {
+    System.out.println("agentmain");
+  }
+}
+```
+
+相应的，我们需要更新 jar 包中的 manifest 文件，使其包含`Agent-Class`的配置，例如`Agent-Class: org.example.MyAgent`。
+
+```
+$ echo 'Agent-Class: org.example.MyAgent
+' > manifest.txt
+$ jar cvmf manifest.txt myagent.jar org/
+$ java HelloWorld
+Hello, World
+$ jps
+$ java AttachTest <pid> myagent.jar
+agentmain
+// 最后一句输出来自于运行 HelloWorld 的 Java 进程
+```
+
+Java 虚拟机并不限制 Java agent 的数量。你可以在 java 命令后附上多个`-javaagent`参数，或者远程 attach 多个 Java agent，Java 虚拟机会按照定义顺序，或者 attach 的顺序逐个执行这些 Java agent。
+
+在`premain`方法或者`agentmain`方法中打印一些字符串并不出奇，我们完全可以将其中的逻辑并入`main`方法，或者其他监听端口的线程中。除此之外，Java agent 还提供了一套 instrumentation 机制，允许应用程序拦截类加载事件，并且更改该类的字节码。
+
+接下来，我们来了解一下基于这一机制的字节码注入。
+
+## 字节码注入
+
+```
+package org.example;
+ 
+import java.lang.instrument.*;
+import java.security.ProtectionDomain;
+ 
+public class MyAgent {
+  public static void premain(String args, Instrumentation instrumentation) {
+    instrumentation.addTransformer(new MyTransformer());
+  }
+ 
+  static class MyTransformer implements ClassFileTransformer {
+    public byte[] transform(ClassLoader loader, String className, Class<?> classBeingRedefined,
+        ProtectionDomain protectionDomain, byte[] classfileBuffer) throws IllegalClassFormatException {
+      System.out.printf("Loaded %s: 0x%X%X%X%X\n", className, classfileBuffer[0], classfileBuffer[1],
+          classfileBuffer[2], classfileBuffer[3]);
+      return null;
+    }
+  }
+}
+```
+
+我们先来看一个例子。在上面这段代码中，`premain`方法多出了一个`Instrumentation`类型的参数，我们可以通过它来注册类加载事件的拦截器。该拦截器需要实现`ClassFileTransformer`接口，并重写其中的`transform`方法。
+
+`transform`方法将接收一个 byte 数组类型的参数，它代表的是正在被加载的类的字节码。在上面这段代码中，我将打印该数组的前四个字节，也就是 Java class 文件的魔数（magic number）0xCAFEBABE。
+
+`transform`方法将返回一个 byte 数组，代表更新过后的类的字节码。当方法返回之后，Java 虚拟机会使用所返回的 byte 数组，来完成接下来的类加载工作。不过，如果`transform`方法返回 null 或者抛出异常，那么 Java 虚拟机将使用原来的 byte 数组完成类加载工作。
+
+基于这一类加载事件的拦截功能，我们可以实现字节码注入（bytecode instrumentation），往正在被加载的类中插入额外的字节码。
+
+Java agent 还提供了另外两个功能`redefine`和`retransform`。这两个功能针对的是已加载的类，并要求用户传入所要`redefine`或者`retransform`的类实例。
+
+其中，`redefine`指的是舍弃原本的字节码，并替换成由用户提供的 byte 数组。该功能比较危险，一般用于修复出错了的字节码。
+
+`retransform`则将针对所传入的类，重新调用所有已注册的`ClassFileTransformer`的`transform`方法。它的应用场景主要有如下两个。
+
+第一，在执行`premain`或者`agentmain`方法前，Java 虚拟机早已加载了不少类，而这些类的加载事件并没有被拦截，因此也没有被注入。使用`retransform`功能可以注入这些已加载但未注入的类。
+
+第二，在定义了多个 Java agent，多个注入的情况下，我们可能需要移除其中的部分注入。当调用`Instrumentation.removeTransformer`去除某个注入类后，我们可以调用`retransform`功能，重新从原始 byte 数组开始进行注入。
+
+Java agent 的这些功能都是通过 JVMTI agent，也就是 C agent 来实现的。JVMTI 是一个事件驱动的工具实现接口，通常，我们会在 C agent 加载后的入口方法`Agent_OnLoad`处注册各个事件的钩子（hook）方法。当 Java 虚拟机触发了这些事件时，便会调用对应的钩子方法。
+
+```
+JNIEXPORT jint JNICALL
+Agent_OnLoad(JavaVM *vm, char *options, void *reserved);
+```
+
+举个例子，我们可以为 JVMTI 中的`ClassFileLoadHook`事件设置钩子，从而在 C 层面拦截所有的类加载事件。关于 JVMTI 的其他事件，你可以参考该[链接](https://docs.oracle.com/en/java/javase/11/docs/specs/jvmti.html#EventIndex)。
+
+## 基于字节码注入的 profiler
+
+我们可以利用字节码注入来实现代码覆盖工具（例如[JaCoCo](https://www.jacoco.org/jacoco/)），或者各式各样的 profiler。
+
+通常，我们会定义一个运行时类，并在某一程序行为的周围，注入对该运行时类中方法的调用，以表示该程序行为正要发生或者已经发生。
+
+在 Java agent 中，我们会截获正在加载的类，并且在每条`new`字节码之后插入对`fireAllocationEvent`方法的调用，以表示当前正在新建某个类的实例。
+
+你或许已经留意到，我们不得不排除对 JDK 类以及该运行时类的注入。这是因为，对这些类的注入很可能造成死循环调用，并最终抛出`StackOverflowException`异常。
+
+举个例子，假设我们在`PrintStream.println`方法入口处注入`System.out.println("blahblah")`，由于`out`是`PrintStream`的实例，因此当执行注入代码时，我们又会调用`PrintStream.println`方法，从而造成死循环。
+
+解决这一问题的关键在于设置一个线程私有的标识位，用以区分应用代码的上下文以及注入代码的上下文。当即将执行注入代码时，我们将根据标识位判断是否已经位于注入代码的上下文之中。如果不是，则设置标识位并正常执行注入代码；如果是，则直接返回，不再执行注入代码。
+
+字节码注入的另一个技术难点则是命名空间。举个例子，不少应用程序都依赖于字节码工程库 ASM。当我们的注入逻辑依赖于 ASM 时，便有可能出现注入使用最新版本的 ASM，而应用程序使用较低版本的 ASM 的问题。
+
+JDK 本身也使用了 ASM 库，如用来生成 Lambda 表达式的适配器类。JDK 的做法是重命名整个 ASM 库，为所有类的包名添加`jdk.internal`前缀。我们显然不好直接更改 ASM 的包名，因此需要借助自定义类加载器来隔离命名空间。
+
+除了上述技术难点之外，基于字节码注入的工具还有另一个问题，那便是观察者效应（observer effect）对所收集的数据造成的影响。
+
+举个利用字节码注入收集每个方法的运行时间的例子。假设某个方法调用了另一个方法，而这两个方法都被注入了，那么统计被调用者运行时间的注入代码所耗费的时间，将不可避免地被计入至调用者方法的运行时间之中。
+
+再举一个统计新建对象数目的例子。我们知道，即时编译器中的逃逸分析可能会优化掉新建对象操作，但它不会消除相应的统计操作，比如上述例子中对`fireAllocationEvent`方法的调用。在这种情况下，我们将统计没有实际发生的新建对象操作。
+
+另一种情况则是，我们所注入的对`fireAllocationEvent`方法的调用，将影响到方法内联的决策。如果该新建对象的构造器调用恰好因此没有被内联，从而造成对象逃逸。在这种情况下，原本能够被逃逸分析优化掉的新建对象操作将无法优化，我们也将统计到原本不会发生的新建对象操作。
+
+总而言之，当使用字节码注入开发 profiler 时，需要辩证地看待所收集的数据。它仅能表示在被注入的情况下程序的执行状态，而非没有注入情况下的程序执行状态。
+
+## 面向方面编程
+
+说到字节码注入，就不得不提面向方面编程（Aspect-Oriented Programming，AOP）。面向方面编程的核心理念是定义切入点（pointcut）以及通知（advice）。程序控制流中所有匹配该切入点的连接点（joinpoint）都将执行这段通知代码。
+
+举个例子，我们定义一个指代所有方法入口的切入点，并指定在该切入点执行的“打印该方法的名字”这一通知。那么每个具体的方法入口便是一个连接点。
+
+面向方面编程的其中一种实现方式便是字节码注入，比如[AspectJ](https://www.eclipse.org/aspectj/)。
+
+在前面的例子中，我们也相当于使用了面向方面编程，在所有的`new`字节码之后执行了下面这样一段通知代码。
+
+```
+`MyProfiler.fireAllocationEvent(<Target>.class)`
+复制代码
+```
+
+我曾经参与开发过一个应用了面向方面编程思想的字节码注入框架[DiSL](https://disl.ow2.org/)。它支持用注解来定义切入点，用普通 Java 方法来定义通知。例如，在方法入口处打印所在的方法名，可以简单表示为如下代码：
+
+```
+@Before(marker = BodyMarker.class)
+static void onMethodEntry(MethodStaticContext msc) {
+  System.out.println(msc.thisMethodFullName());
+}
+```
+
+今天我介绍了 Java agent 以及字节码注入。
+
+我们可以通过 Java agent 的类加载拦截功能，修改某个类所对应的 byte 数组，并利用这个修改过后的 byte 数组完成接下来的类加载。
+
+基于字节码注入的 profiler，可以统计程序运行过程中某些行为的出现次数。如果需要收集 Java 核心类库的数据，那么我们需要小心避免无限递归调用。另外，我们还需通过自定义类加载器来解决命名空间的问题。
+
+由于字节码注入会产生观察者效应，因此基于该技术的 profiler 所收集到的数据并不能反映程序的真实运行状态。它所反映的是程序在被注入的情况下的执行状态。
+
+GraalVM 是一个高性能的、支持多种编程语言的执行环境。它既可以在传统的 OpenJDK 上运行，也可以通过 AOT（Ahead-Of-Time）编译成可执行文件单独运行，甚至可以集成至数据库中运行。
+
+除此之外，它还移除了编程语言之间的边界，并且支持通过即时编译技术，将混杂了不同的编程语言的代码编译到同一段二进制码之中，从而实现不同语言之间的无缝切换。
+
+今天这一篇，我们就来讲讲 GraalVM 的基石 Graal 编译器。
+
+在之前的篇章中，特别是介绍即时编译技术的第二部分，我们反反复复提到了 Graal 编译器。这是一个用 Java 写就的即时编译器，它从 Java 9u 开始便被集成自 JDK 中，作为实验性质的即时编译器。
+
+Graal 编译器可以通过 Java 虚拟机参数`-XX:+UnlockExperimentalVMOptions -XX:+UseJVMCICompiler`启用。当启用时，它将替换掉 HotSpot 中的 C2 编译器，并响应原本由 C2 负责的编译请求。
+
+在今天的文章中，我将详细跟你介绍一下 Graal 与 Java 虚拟机的交互、Graal 和 C2 的区别以及 Graal 的实现细节。
+
+## Graal 和 Java 虚拟机的交互
+
+我们知道，即时编译器是 Java 虚拟机中相对独立的模块，它主要负责接收 Java 字节码，并生成可以直接运行的二进制码。
+
+具体来说，即时编译器与 Java 虚拟机的交互可以分为如下三个方面。
+
+1. 响应编译请求；
+2. 获取编译所需的元数据（如类、方法、字段）和反映程序执行状态的 profile；
+3. 将生成的二进制码部署至代码缓存（code cache）里。
+
+即时编译器通过这三个功能组成了一个响应编译请求、获取编译所需的数据，完成编译并部署的完整编译周期。
+
+传统情况下，即时编译器是与 Java 虚拟机紧耦合的。也就是说，对即时编译器的更改需要重新编译整个 Java 虚拟机。这对于开发相对活跃的 Graal 来说显然是不可接受的。
+
+为了让 Java 虚拟机与 Graal 解耦合，我们引入了[Java 虚拟机编译器接口](http://openjdk.java.net/jeps/243)（JVM Compiler Interface，JVMCI），将上述三个功能抽象成一个 Java 层面的接口。这样一来，在 Graal 所依赖的 JVMCI 版本不变的情况下，我们仅需要替换 Graal 编译器相关的 jar 包（Java 9 以后的 jmod 文件），便可完成对 Graal 的升级。
+
+JVMCI 的作用并不局限于完成由 Java 虚拟机发出的编译请求。实际上，Java 程序可以直接调用 Graal，编译并部署指定方法。
+
+Graal 的单元测试便是基于这项技术。为了测试某项优化是否起作用，原本我们需要反复运行某一测试方法，直至 Graal 收到由 Java 虚拟机发出针对该方法的编译请求，而现在我们可以直接指定编译该方法，并进行测试。我们下一篇将介绍的 Truffle 语言实现框架，同样也是基于这项技术的。
+
+## Graal 和 C2 的区别
+
+Graal 和 C2 最为明显的一个区别是：Graal 是用 Java 写的，而 C2 是用 C++ 写的。相对来说，Graal 更加模块化，也更容易开发与维护，毕竟，连 C2 的作者 Cliff Click 大神都不想重蹈用 C++ 开发 Java 虚拟机的覆辙。
+
+许多开发者会觉得用 C++ 写的 C2 肯定要比 Graal 快。实际上，在充分预热的情况下，Java 程序中的热点代码早已经通过即时编译转换为二进制码，在执行速度上并不亚于静态编译的 C++ 程序。
+
+再者，即便是解释执行 Graal，也仅是会减慢编译效率，而并不影响编译结果的性能。
+
+换句话说，如果 C2 和 Graal 采用相同的优化手段，那么它们的编译结果是一样的。所以，程序达到稳定状态（即不再触发新的即时编译）的性能，也就是峰值性能，将也是一样的。
+
+由于 Java 语言容易开发维护的优势，我们可以很方便地将 C2 的新优化移植到 Graal 中。反之则不然，比如，在 Graal 中被证实有效的部分逃逸分析（partial escape analysis）至今未被移植到 C2 中。
+
+Graal 和 C2 另一个优化上的分歧则是方法内联算法。相对来说，Graal 的内联算法对新语法、新语言更加友好，例如 Java 8 的 lambda 表达式以及 Scala 语言。
+
+我们曾统计过数十个 Java 或 Scala 程序的峰值性能。总体而言，Graal 编译结果的性能要优于 C2。对于 Java 程序来说，Graal 的优势并不明显；对于 Scala 程序来说，Graal 的性能优势达到了 10%。
+
+大规模使用 Scala 的 Twitter 便在他们的生产环境中部署了 Graal 编译器，并取得了 11% 的性能提升。（[Slides](https://downloads.ctfassets.net/oxjq45e8ilak/6eh2A72b4IyWsWOIcig4K0/cbb664566fe86672d92ddfb210623920/Chris_Thalinger_Twitter_s_quest_for_a_wholly_Graal_runtime.pdf), [Video](https://youtu.be/G-vlQaPMAxg?t=20m15s)，该数据基于 GraalVM 社区版。）
+
+## Graal 的实现
+
+Graal 编译器将编译过程分为前端和后端两大部分。前端用于实现平台无关的优化（如方法内联），以及小部分平台相关的优化；而后端则负责大部分的平台相关优化（如寄存器分配），以及机器码的生成。
+
+在介绍即时编译技术时，我曾提到过，Graal 和 C2 都采用了 Sea-of-Nodes IR。严格来说，这里指的是 Graal 的前端，而后端采用的是另一种非 Sea-of-Nodes 的 IR。通常，我们将前端的 IR 称之为 High-level IR，或者 HIR；后端的 IR 则称之为 Low-level IR，或者 LIR。
+
+Graal 的前端是由一个个单独的优化阶段（optimization phase）构成的。我们可以将每个优化阶段想象成一个图算法：它会接收一个规则的图，遍历图上的节点并做出优化，并且返回另一个规则的图。前端中的编译阶段除了少数几个关键的之外，其余均可以通过配置选项来开启或关闭。
+
+我们知道，Graal 和 C2 都采用了激进的投机性优化手段（speculative optimization）。
+
+通常，这些优化都基于某种假设（assumption）。当假设出错的情况下，Java 虚拟机会借助去优化（deoptimization）这项机制，从执行即时编译器生成的机器码切换回解释执行，在必要情况下，它甚至会废弃这份机器码，并在重新收集程序 profile 之后，再进行编译。
+
+举个以前讲过的例子，类层次分析。在进行虚方法内联时（或者其他与类层次相关的优化），我们可能会发现某个接口仅有一个实现。
+
+在即时编译过程中，我们可以假设在之后的执行过程中仍旧只有这一个实现，并根据这个假设进行编译优化。当之后加载了接口的另一实现时，我们便会废弃这份机器码。
+
+Graal 与 C2 相比会更加激进。它从设计上便十分青睐这种基于假设的优化手段。在编译过程中，Graal 支持自定义假设，并且直接与去优化节点相关联。
+
+当对应的去优化被触发时，Java 虚拟机将负责记录对应的自定义假设。而 Graal 在第二次编译同一方法时，便会知道该自定义假设有误，从而不再对该方法使用相同的激进优化。
+
+Java 虚拟机的另一个能够大幅度提升性能的特性是 intrinsic 方法，我在之前的篇章中已经详细介绍过了。在 Graal 中，实现高性能的 intrinsic 方法也相对比较简单。Graal 提供了一种替换方法调用的机制，在解析 Java 字节码时会将匹配到的方法调用，替换成对另一个内部方法的调用，或者直接替换为特殊节点。
+
+举例来说，我们可以把比较两个 byte 数组的方法`java.util.Arrays.equals(byte[],byte[])`替换成一个特殊节点，用来代表整个数组比较的逻辑。这样一来，当前编译方法所对应的图将被简化，因而其适用于其他优化的可能性也将提升。
+
+## 总结与实践
+
+Graal 是一个用 Java 写就的、并能够将 Java 字节码转换成二进制码的即时编译器。它通过 JVMCI 与 Java 虚拟机交互，响应由后者发出的编译请求、完成编译并部署编译结果。
+
+对 Java 程序而言，Graal 编译结果的性能略优于 OpenJDK 中的 C2；对 Scala 程序而言，它的性能优势可达到 10%（企业版甚至可以达到 20%！）。这背后离不开 Graal 所采用的激进优化方式。
