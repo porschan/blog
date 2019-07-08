@@ -167,6 +167,8 @@ date: 2018/11/15 23:57:05
 
 - [使用 VS 创建 React 的 Hello world项目](/2019/07/08/react-helloworld/ "使用 VS 创建 React 的 Hello world项目")
 
+- [使用 React 的 定时器](/2019/07/08/reactTest-tick/ "使用 React 的 定时器")
+
 ----------
 
 ### 微信小程序 ###
