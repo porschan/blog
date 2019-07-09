@@ -419,6 +419,10 @@ date: 2018/11/15 23:57:05
 
 - [SpringBoot - 查看当前版本的各依赖版本](/2019/06/13/springboot-dependencies/ "SpringBoot - 查看当前版本的各依赖版本")
 
+- [SpringBoot - 自定义注解 - AOP切面统一打印出入参日志(CLASS)](/2019/07/09/springboot-aop-class-log/ "SpringBoot - 自定义注解 - AOP切面统一打印出入参日志(CLASS)")
+
+- [SpringBoot - 自定义注解 - AOP切面统一打印出入参日志(METHOD)](/2019/07/09/springboot-aop-method-log/ "SpringBoot - 自定义注解 - AOP切面统一打印出入参日志(METHOD)")
+
 #### SpringMVC ####
 
 - [使用 IDEA 创建 SpringMVC 项目](/2019/04/26/springMVC-create/ "使用IDEA创建SPRING MVC 项目")
@@ -494,7 +498,6 @@ date: 2018/11/15 23:57:05
 - [使用 IDEA 中创建 SpringBoot2.x + MySQL + Redis缓存 + Cache缓存 的 WEB 项目](/2019/06/26/springboot-MySQL-Redis-Cache/ "使用 IDEA 中创建 SpringBoot2.x + MySQL + Redis缓存 + Cache缓存 的 WEB 项目")
 
 - [使用 IDEA 中创建 SpringBoot2.x + Security 的 WEB 项目](/2019/06/29/springboot-Security/ "使用 IDEA 中创建 SpringBoot2.x + Security 的 WEB 项目")
-
 
 ----------
 
