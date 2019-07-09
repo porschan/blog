@@ -441,6 +441,8 @@ date: 2018/11/15 23:57:05
 
 - [使用 IDEA 中创建 JeeSite 的 web 项目](/2019/07/05/jeesite-curd/ "使用 IDEA 中创建 JeeSite 的 web 项目")
 
+- [JeeSite 的杂记](/2019/07/09/jeesite-basic/ "JeeSite 的杂记")
+
 #### 框架整合 ####
 
 ##### Struts-Spring-Hibernate
@@ -492,7 +494,8 @@ date: 2018/11/15 23:57:05
 - [使用 IDEA 中创建 SpringBoot2.x + MySQL + Redis缓存 + Cache缓存 的 WEB 项目](/2019/06/26/springboot-MySQL-Redis-Cache/ "使用 IDEA 中创建 SpringBoot2.x + MySQL + Redis缓存 + Cache缓存 的 WEB 项目")
 
 - [使用 IDEA 中创建 SpringBoot2.x + Security 的 WEB 项目](/2019/06/29/springboot-Security/ "使用 IDEA 中创建 SpringBoot2.x + Security 的 WEB 项目")
-- 
+
+
 ----------
 
 ## Tool ##
