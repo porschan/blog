@@ -404,3 +404,16 @@ logging.config=classpath:logback-spring.xml
 ![](springboot-aop-method-log/1.png)
 
 > 项目的Github地址：<https://github.com/porschan/springBootStudio/tree/master/springboot-aop-method-log>
+
+在配置 AOP 切面之前，我们需要了解下 `aspectj` 相关注解的作用：
+
+- **@Aspect**：声明该类为一个注解类；
+- **@Pointcut**：定义一个切点，后面跟随一个表达式，表达式可以定义为切某个注解，也可以切某个 package 下的方法；
+
+切点定义好后，就是围绕这个切点做文章了：
+
+- **@Before**: 在切点之前，织入相关代码；
+- **@After**: 在切点之后，织入相关代码;
+- **@AfterReturning**: 在切点返回内容后，织入相关代码，一般用于对返回值做些加工处理的场景；
+- **@AfterThrowing**: 用来处理当织入的代码抛出异常后的逻辑处理;
+- **@Around**: 环绕，可以在切入点前后织入代码，并且可以自由的控制何时执行切点；
