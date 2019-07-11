@@ -199,6 +199,8 @@ date: 2018/11/15 23:57:05
 
 #### Oracle ####
 
+- [Oracle - 资源正忙, 但指定以 NOWAIT 方式获取资源, 或者超时失效](/2019/07/11/oracle-nowait/ "Oracle - 资源正忙, 但指定以 NOWAIT 方式获取资源, 或者超时失效")
+
 #### MySQL ####
 
 - [Windows 下的 MySQL 即时打印 SQL 日志](/2019/04/22/windows-mysql-sql/ "WINDOWS 下的MYSQL即时打印SQL日志")
