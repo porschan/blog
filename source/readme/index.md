@@ -331,6 +331,8 @@ date: 2018/11/15 23:57:05
 
 - [在 Windows 下安装 Maven](/2019/06/23/windows-Maven/ "在 Windows 下安装 Maven")
 
+- [在 Windows 下安装 SVN](/2019/07/12/windows-SVN/ "在 Windows 下安装 SVN")
+
 ### Zookeeper
 
 ### MQ
