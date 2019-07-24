@@ -247,6 +247,8 @@ date: 2018/11/15 23:57:05
 
 - [Nginx - 配置ssl证书](/2019/06/30/nginx-ssl/ "Nginx - 配置ssl证书")
 
+- [Nginx - 部署 react 项目](/2019/07/24/nginx-react/ "Nginx - 部署 react 项目")
+
 ----------
 
 #### Apache ####
