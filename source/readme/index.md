@@ -371,6 +371,8 @@ date: 2018/11/15 23:57:05
 
 - [JAVA - Windows安装](/2019/02/16/java-install/ "java - windows安装")
 
+- [HttpURLConnection 的工具类](/2019/11/18/java-httpUtil/ "HttpURLConnection 的工具类")
+
 - [使用IDEA生成javadoc](/2019/05/10/java-idea-javadoc/ "使用IDEA生成javadoc")
 
 - [Java - 基础知识点](/2019/06/10/java-basic/ "Java - 基础知识点")
